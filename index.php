@@ -23,6 +23,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case "gioithieu":
             include_once "view/gioithieu.php";
             break;
+        case "category-list":
+            include_once "view/category-list.php";
+            break;
         default:
             ///
             echo "<h1>Fooder not file 404</h1>";
