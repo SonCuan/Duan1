@@ -204,7 +204,7 @@
                                     class="icon-magnifier"></i><span>Search</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q"
+                          body          <input type="search" class="form-control" name="q" id="q"
                                         placeholder="I'm searching for..." required>
                                     <div class="select-custom">
                                         <select id="cat" name="cat">
@@ -266,7 +266,7 @@
                                   
                                 </li>
                                 
-                                <li><a href="/view/blog.php">Liên hệ</a></li>
+                                <li><a href="?act=blog">Liên hệ</a></li>
                                
                             </ul>
                         </nav>

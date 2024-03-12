@@ -15,7 +15,7 @@ if(isset($_GET['act'])&& $_GET['act'] !=""){
             include_once "view/cart.php";
             break;
         case "blog":
-            include_once "view/home.php";
+            include_once "view/blog.php";
             break;
         default:
            ///
