@@ -5,12 +5,13 @@
                 <div class="col-lg-6 col-xl-4">
                     <a href="#">
                         <img class="logo mb-3" src="assets/images/demoes/demo23/logo.png" alt="Porto Logo" width="113" height="48"></a>
-
+                        <h5>Chúng tôi là một nhóm gồm các nhà thiết kế và phát triển chuyên nghiệp nhắm đưa đến cho người dùng những trải nghiệm hấp dẫn nhất.</h5>
 
                     <div class="social-icons mt-1 mb-3">
                         <a href="#" class="social-icon social-facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon social-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-icon social-linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6 col-xl-2">
