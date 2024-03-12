@@ -20,14 +20,10 @@
                             <div class="col-6 link-part">
                                 <ul class="links mb-0">
                                     <li>
-                                        <a href="dashboard.html">My Account</a>
+                                        <a href="index.php">Porto</a>
                                     </li>
-                                    <li><a href="#">Track Your Order</a></li>
-                                    <li><a href="#">Payment Methods</a></li>
-                                    <li><a href="#">Shipping Guide</a></li>
-                                    <li><a href="#">FAQs</a></li>
-                                    <li><a href="#">Product Support</a></li>
-                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="index.php?act=gioithieu">Giới Thiệu</a></li>
+                                   
                                 </ul>
                             </div>
 
