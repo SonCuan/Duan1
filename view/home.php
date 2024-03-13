@@ -3,30 +3,29 @@
                 <div class="home-slider slide-animate owl-carousel owl-theme" data-owl-options="{
                         'nav': false,
                         'responsive': {
-                            '1440': {
+                            '1900': {
                                 'nav': true
                             }
                         }
                     }">
                     <div class="home-slide home-slide-1 banner">
-                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/slide-1.jpg" alt="slider image"
-                            width="1200" height="575">
+                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner-nuochoa.jpg" alt="slider image"
+                            width="1900" height="575">
 
                         <div class="banner-layer banner-layer-middle banner-layer-left">
                             <div class="container-fluid">
                                 <div class="appear-animate" data-animation-name="fadeInLeftShorter"
                                     data-animation-delay="200">
-                                    <h2 class="font-weight-light ls-10 text-primary">Discover our Arrivals!</h2>
-                                    <a href="demo23-shop.html" class="btn btn-link"><i>View
-                                            our
-                                            Dresses</i><i class="icon-right-open-big"></i></a>
+                                    <h2 class="font-weight-light ls-10 text-primary">Sang trọng và huyền bí</h2>
+                                    <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY
+                                            </i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="home-slide home-slide-2 banner">
-                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/slide-2.jpg" alt="slider image"
-                            width="1200" height="575">
+                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.jpg" alt="slider image"
+                            width="1900" height="575">
 
                         <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                             <div class="container-fluid">
@@ -43,10 +42,10 @@
             <section class="welcome-section">
                 <div class="container">
                     <h2 class="section-title text-center text-uppercase appear-animate"
-                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Welcome to little Porto&rsquo;s
+                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Dior &
                         world</h2>
                     <p class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter"
-                        data-animation-delay="400">Enjoy the exceptional quality in all our products
+                        data-animation-delay="400">Tận hưởng chất lượng vượt trội trong tất cả các sản phẩm của chúng tôi
                     </p>
 
                     <div class="row mb-2">
@@ -193,7 +192,7 @@
                                         <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
-                                    <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                    <a href="?act=product" class="btn-quickview"
                                         title="Quick View">Quick
                                         View</a>
                                 </figure>

@@ -1,4 +1,5 @@
 <?php
+
 include_once "view/header.php";
 if (isset($_GET['act']) && $_GET['act'] != "") {
     switch ($_GET['act']) {
@@ -25,6 +26,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
         case "category-list":
             include_once "view/category-list.php";
+            break;
+        case "product":
+            include_once "view/product.php";
             break;
         default:
             ///
