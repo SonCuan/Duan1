@@ -39,7 +39,7 @@
                                 <ul class="links mb-0">
 
                                     <li>
-                                        <a href="#">Liên hệ</a>
+                                        <a href="?act=blog">Liên hệ</a>
                                     </li>
                                     <li><a href="#">Thông tin tài khoản</a></li>
                                 </ul>

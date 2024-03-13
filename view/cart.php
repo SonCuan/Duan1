@@ -1,16 +1,6 @@
 <main class="main">
 			<div class="container">
-				<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
-					<li class="active">
-						<a href="cart.html">Shopping Cart</a>
-					</li>
-					<li>
-						<a href="checkout.html">Checkout</a>
-					</li>
-					<li class="disabled">
-						<a href="cart.html">Order Complete</a>
-					</li>
-				</ul>
+			
 
 				<div class="row">
 					<div class="col-lg-8">
@@ -19,10 +9,10 @@
 								<thead>
 									<tr>
 										<th class="thumbnail-col"></th>
-										<th class="product-col">Product</th>
-										<th class="price-col">Price</th>
-										<th class="qty-col">Quantity</th>
-										<th class="text-right">Subtotal</th>
+										<th class="product-col">Tên sản phẩm</th>
+										<th class="price-col">Gía</th>
+										<th class="qty-col">Số lượng</th>
+										<th class="text-right">Thành tiền</th>
 									</tr>
 								</thead>
 								<tbody>
