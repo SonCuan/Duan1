@@ -16,7 +16,7 @@
                             <div class="container-fluid">
                                 <div class="appear-animate" data-animation-name="fadeInLeftShorter"
                                     data-animation-delay="200">
-                                    <h2 class="font-weight-light ls-10 text-primary">Sang trọng và huyền bí</h2>
+                                    <h2 class="font-weight-light ls-10 text-primary" >Sang trọng và huyền bí</h2>
                                     <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY
                                             </i><i class="icon-right-open-big"></i></a>
                                 </div>
@@ -145,35 +145,16 @@
                         </div>
                     </div>
 
-                    <div class="info-boxes-container appear-animate" data-animation-name="fadeInUpShorter"
-                        data-animation-delay="200">
-                        <div class="row m-0">
-                            <div class="info-box info-box-icon-left col-md-4">
-                                <i class="icon-shipping"></i>
+                        <!-- Phần thêm vào chữ  -->
+            <h2 class="section-title text-center text-uppercase appear-animate"
+                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Chanel
+                        </h2>
+                    <p style="font-style:italic;" class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter"
+                        data-animation-delay="400">"Hương thơm cao cấp, sang trọng, huyền bí"
+                    </p>
 
-                                <div class="info-box-content">
-                                    <h4 class="ls-n-25">FREE SHIPPING &amp; RETURN</h4>
-                                    <p class="font2 font-weight-light">Free shipping on all orders over $99.</p>
-                                </div><!-- End .info-box-content -->
-                            </div><!-- End .info-box -->
-                            <div class="info-box info-box-icon-left col-md-4">
-                                <i class="icon-money"></i>
 
-                                <div class="info-box-content">
-                                    <h4 class="ls-n-25">MONEY BACK GUARANTEE</h4>
-                                    <p class="font2 font-weight-light">100% money back guarantee</p>
-                                </div><!-- End .info-box-content -->
-                            </div><!-- End .info-box -->
-                            <div class="info-box info-box-icon-left col-md-4">
-                                <i class="icon-support"></i>
-
-                                <div class="info-box-content">
-                                    <h4 class="ls-n-25">ONLINE SUPPORT 24/7</h4>
-                                    <p class="font2 font-weight-light">Lorem ipsum dolor sit amet.</p>
-                                </div><!-- End .info-box-content -->
-                            </div><!-- End .info-box -->
-                        </div>
-                    </div>
+                   <!--End phần thêm chữ vào index  -->
 
                     <div class="row appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400">
                         <div class="col-6 col-md-4 col-xl-3">
@@ -351,71 +332,18 @@
                 </div>
             </section>
 
-            <div class="cats-banner-section mb-3">
-                <div class="row m-0 no-gutters">
-                    <div class="col-lg-3">
-                        <div class="cat-banner d-flex flex-column align-items-center justify-content-center h-100">
-                            <h4 class="font4 line-height-1 ls-0 text-primary mb-0">Best Collections</h4>
-                            <p class="font2 line-height-1 mb-0">Selected Products From Famous Brands</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="categories-slider owl-carousel owl-theme" data-owl-options="{
-                            'margin': 0,
-                            'nav': false,
-                            'items': 1,
-                            'responsive': {
-                                '576': {
-                                    'items': 2
-                                },
-                                '768': {
-                                    'items': 3
-                                },
-                                '992': {
-                                    'items': 3
-                                }
-                            }
-                        }">
-                            <div class="product-category" style="background-color: #d8dfe1;">
-                                <a href="demo23-shop.html">
-                                    <figure>
-                                        <img src="assets/images/demoes/demo23/products/cats/cat-1.jpg" alt="cat banner"
-                                            width="500" height="400">
-                                    </figure>
 
-                                    <div class="category-content">
-                                        <h3>Boys</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-category" style="background-color: #ebeae9;">
-                                <a href="demo23-shop.html">
-                                    <figure>
-                                        <img src="assets/images/demoes/demo23/products/cats/cat-2.jpg" alt="cat banner"
-                                            width="500" height="400">
-                                    </figure>
 
-                                    <div class="category-content">
-                                        <h3>Babies</h3>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product-category" style="background-color: #ead7d5;">
-                                <a href="demo23-shop.html">
-                                    <figure>
-                                        <img src="assets/images/demoes/demo23/products/cats/cat-3.jpg" alt="cat banner"
-                                            width="500" height="400">
-                                    </figure>
+            <!-- Phần thêm vào chữ  -->
+            <h2 class="section-title text-center text-uppercase appear-animate"
+                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Calvin Klein
+                        </h2>
+                    <p style="font-style:italic;" class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter"
+                        data-animation-delay="400">"Thời thượng, sang trọng, thanh lịch, phá cách"
+                    </p>
 
-                                    <div class="category-content">
-                                        <h3>Girls</h3>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+                   <!--End phần thêm chữ vào index  -->
 
             <div class="products-container appear-animate" data-animation-name="fadeIn" data-animation-delay="200">
                 <div class="container">
