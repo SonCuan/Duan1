@@ -46,7 +46,7 @@
 												me</label>
 										</div>
 
-										<a href="forgot-password.html"
+										<a href="?act=quenmk"
 											class="forget-password text-dark form-footer-right">Forgot
 											Password?</a>
 									</div>

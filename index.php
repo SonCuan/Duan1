@@ -30,6 +30,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case "product":
             include_once "view/product.php";
             break;
+        case "quenmk":
+            include_once "view/quenmk.php";
+            break;
         default:
             ///
             echo "<h1>Fooder not file 404</h1>";
