@@ -23,18 +23,18 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="heading mb-1">
-									<h2 class="title">Login</h2>
+									<h2 class="title">Đăng nhập</h2>
 								</div>
 
 								<form action="#">
 									<label for="login-email">
-										Username or email address
+										Tên người dùng hoặc email
 										<span class="required">*</span>
 									</label>
 									<input type="email" class="form-input form-wide" id="login-email" required />
 
 									<label for="login-password">
-										Password
+										Mật khẩu
 										<span class="required">*</span>
 									</label>
 									<input type="password" class="form-input form-wide" id="login-password" required />
@@ -42,33 +42,33 @@
 									<div class="form-footer">
 										<div class="custom-control custom-checkbox mb-0">
 											<input type="checkbox" class="custom-control-input" id="lost-password" />
-											<label class="custom-control-label mb-0" for="lost-password">Remember
-												me</label>
+											<label class="custom-control-label mb-0" for="lost-password">Lưu tài khoản
+												</label>
 										</div>
 
 										<a href="?act=quenmk"
-											class="forget-password text-dark form-footer-right">Forgot
-											Password?</a>
+											class="forget-password text-dark form-footer-right"> Quên mật khẩu
+											</a>
 									</div>
 									<button type="submit" class="btn btn-dark btn-md w-100">
-										LOGIN
+										ĐĂNG NHẬP
 									</button>
 								</form>
 							</div>
 							<div class="col-md-6">
 								<div class="heading mb-1">
-									<h2 class="title">Register</h2>
+									<h2 class="title">Đăng ký</h2>
 								</div>
 
 								<form action="#">
 									<label for="register-email">
-										Email address
+										Email
 										<span class="required">*</span>
 									</label>
 									<input type="email" class="form-input form-wide" id="register-email" required />
 
 									<label for="register-password">
-										Password
+										Mật khẩu
 										<span class="required">*</span>
 									</label>
 									<input type="password" class="form-input form-wide" id="register-password"
@@ -76,7 +76,7 @@
 
 									<div class="form-footer mb-2">
 										<button type="submit" class="btn btn-dark btn-md w-100 mr-0">
-											Register
+											ĐĂNG KÝ
 										</button>
 									</div>
 								</form>
