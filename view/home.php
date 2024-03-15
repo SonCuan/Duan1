@@ -42,8 +42,8 @@
             <section class="welcome-section">
                 <div class="container">
                     <h2 class="section-title text-center text-uppercase appear-animate"
-                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Dior &
-                        world</h2>
+                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Chanel
+                        </h2>
                     <p class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter"
                         data-animation-delay="400">Tận hưởng chất lượng vượt trội trong tất cả các sản phẩm của chúng tôi
                     </p>
@@ -228,7 +228,7 @@
                             
                         <!-- Phần thêm vào chữ  -->
             <h2 class="section-title text-center text-uppercase appear-animate"
-                        data-animation-name="fadeInUpShorter" data-animation-delay="200">Chanel
+                        data-animation-name="fadeInUpShorter" data-animation-delay="200">DIOR
                         </h2>
                     <p style="font-style:italic;" class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter"
                         data-animation-delay="400">"Hương thơm cao cấp, sang trọng, huyền bí"
@@ -241,7 +241,7 @@
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
                                     <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-2.jpg" width="217"
+                                        <img src="assets/images/demoes/demo23/products/nuochoa5.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
@@ -278,13 +278,57 @@
                                 </div><!-- End .product-details -->
                             </div>
                         </div>
+
+                        <!-- Them San Pham -->
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
                                     <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-3.jpg" width="217"
+                                        <img src="assets/images/demoes/demo23/products/nuochoa5.jpg" width="217"
                                             height="217" alt="product">
-                                        <img src="assets/images/demoes/demo23/products/product-1.jpg" width="217"
+                                    </a>
+                                    <div class="label-group">
+                                        <div class="product-label label-hot">HOT</div>
+                                    </div>
+                                    <div class="btn-icon-group">
+                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                                class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                    <a href="ajax/product-quick-view.html" class="btn-quickview"
+                                        title="Quick View">Quick
+                                        View</a>
+                                </figure>
+                                <div class="product-details">
+                                    <div class="category-wrap">
+                                        <div class="category-list">
+                                            <a href="demo23-shop.html" class="product-category">category</a>
+                                        </div>
+                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
+                                                class="icon-heart"></i></a>
+                                    </div>
+                                    <h3 class="product-title">
+                                        <a href="demo23-product.html">Porto Extended Camera</a>
+                                    </h3>
+                                    <div class="ratings-container">
+                                        <div class="product-ratings">
+                                            <span class="ratings" style="width:0%"></span><!-- End .ratings -->
+                                            <span class="tooltiptext tooltip-top"></span>
+                                        </div><!-- End .product-ratings -->
+                                    </div><!-- End .product-container -->
+                                    <div class="price-box">
+                                        <span class="product-price">$599.00</span>
+                                    </div><!-- End .price-box -->
+                                </div><!-- End .product-details -->
+                            </div>
+                        </div>
+                        <!-- End them san pham -->
+                        <div class="col-6 col-md-4 col-xl-3">
+                            <div class="product-default inner-quickview inner-icon">
+                                <figure>
+                                    <a href="demo23-product.html">
+                                        <img src="assets/images/demoes/demo23/products/nuochoa3.jpg" width="217"
+                                            height="217" alt="product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoa4.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
@@ -325,7 +369,7 @@
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
                                     <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-4.jpg" width="217"
+                                        <img src="assets/images/demoes/demo23/products/nuochoa2.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
