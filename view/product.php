@@ -149,6 +149,17 @@
                               
                             </div>
                             <!-- End .product single-share -->
+
+                            <!-- Bình luận -->
+                                <br>
+                                <br>
+                                <br>
+                            <div class="product-desc">
+                                <input style="width:500px;" type="text" name="" id="" placeholder="Nhập bình luận" >
+                                <input type="submit" value="Gửi">
+                            </div>
+
+                            <!-- End bình luận -->
                         </div>
                         <!-- End .product-single-details -->
                     </div>
