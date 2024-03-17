@@ -33,7 +33,7 @@
             <p>
               <a href="tel:987654321">Mobile: (+84) 987 654 321</a>
             </p>
-            <p><a href="tel:0988753813">Hotline: 0988 753 813</a></p>
+            <p><a href="tel:0988753813">Hotline:034 213 JQK</a></p>
           </div>
 
           <!-- End of single contact block -->
@@ -43,10 +43,10 @@
           <div class="single-contact-block">
             <h4><i class="fas fa-envelope"></i> Email</h4>
             <p>
-              <a href="mailto:khanhdattuananh@fpt.edu.vn">khanhdattuananh@fpt.edu.vn</a>
+              <a href="mailto:khanhdattuananh@fpt.edu.vn">quanhoanduy@fpt.edu.vn</a>
             </p>
             <p>
-              <a href="mailto:perfumeshop@gmail.com">perfumeshop@gmail.com</a>
+              <a href="mailto:perfumeshop@gmail.com">portoshop@gmail.com</a>
             </p>
           </div>
 

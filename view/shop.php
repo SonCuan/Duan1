@@ -2,21 +2,44 @@
             <div class="category-banner-container">
                 <div class="category-banner">
                     <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-md-4 text-center text-md-right">
-                                <h2 class="font4 font-weight-normal ls-n-25 line-height-1 text-uppercase mb-0">
-                                    Discounts</h2>
-                                <h3 class="ls-n-25 line-height-1 text-uppercase mb-0 ml-0">Up to 70%</h3>
-                            </div>
-                            <div class="col-md-4 text-center">
-                                <img src="assets/images/demoes/demo23/banners/category-banner.png" alt="banner"
-                                    width="267" height="241">
-                            </div>
-                            <div class="col-md-4 text-center text-md-left">
-                                <a href="#" class="btn btn-link ml-0 p-0"><i>View our Deals</i><i
-                                        class="icon-right-open-big"></i></a>
-                            </div>
-                        </div>
+                       <!-- Cửa hàng -->
+
+<!-- breadcrumb-section start -->
+<nav class="breadcrumb-section theme1 bg-lighten2 pt-110 pb-110">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title text-center">
+          <h2 class="title pb-4 text-dark text-capitalize">
+          <img src="assets/images/demoes/demo23/logo.png" alt="Porto Logo" width="113" height="48">
+          </h2>
+        </div>
+      </div>
+      <div class="col-12">
+        <ol class="breadcrumb bg-transparent m-0 p-0 align-items-center justify-content-center">
+          <li class="breadcrumb-item"><a href="index.php">Trang Chủ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Cửa Hàng
+            <?= $namedm ?? "" ?>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    margin-left: 10px;
+    border: 2px solid #fff;
+  }
+
+</style>
                     </div>
                 </div>
             </div>
@@ -24,7 +47,7 @@
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
                 <div class="container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="demo23.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Shop</li>
                     </ol>
                 </div>
@@ -57,16 +80,16 @@
                                 </a>
 
                                 <div class="toolbox-item toolbox-sort">
-                                    <label>Sort By:</label>
+                                    <label>Sắp xếp theo:</label>
 
                                     <div class="select-custom">
                                         <select name="orderby" class="form-control">
-                                            <option value="menu_order" selected="selected">Default sorting</option>
-                                            <option value="popularity">Sort by popularity</option>
-                                            <option value="rating">Sort by average rating</option>
-                                            <option value="date">Sort by newness</option>
-                                            <option value="price">Sort by price: low to high</option>
-                                            <option value="price-desc">Sort by price: high to low</option>
+                                            <option value="menu_order" selected="selected">Mức độ liên quan</option>
+                                            <option value="popularity">Tên từ A đến Z</option>
+                                            <option value="rating">Tên từ Z đến A</option>
+                                            <option value="date">Gía tăng dần</option>
+                                            <option value="price">Gía giảm dần</option>
+                                           
                                         </select>
                                     </div><!-- End .select-custom -->
 
@@ -75,16 +98,7 @@
                             </div><!-- End .toolbox-left -->
 
                             <div class="toolbox-right">
-                                <div class="toolbox-item toolbox-show">
-                                    <label>Show:</label>
-
-                                    <div class="select-custom">
-                                        <select name="count" class="form-control">
-                                            <option value="12">12</option>
-                                            <option value="24">24</option>
-                                            <option value="36">36</option>
-                                        </select>
-                                    </div><!-- End .select-custom -->
+                                
                                 </div><!-- End .toolbox-item -->
 
                                 <div class="toolbox-item layout-modes">
@@ -601,17 +615,7 @@
                         </div><!-- End .row -->
 
                         <nav class="toolbox toolbox-pagination">
-                            <div class="toolbox-item toolbox-show">
-                                <label class="mt-0">Show:</label>
-
-                                <div class="select-custom">
-                                    <select name="count" class="form-control">
-                                        <option value="12">12</option>
-                                        <option value="24">24</option>
-                                        <option value="36">36</option>
-                                    </select>
-                                </div><!-- End .select-custom -->
-                            </div><!-- End .toolbox-item -->
+                          
 
                             <ul class="pagination toolbox-item">
                                 <li class="page-item disabled">

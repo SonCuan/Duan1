@@ -97,7 +97,7 @@
                         </a>
 
                        
-                        <a href="?act=shop" class="header-icon">
+                        <a href="?act=cart" class="header-icon">
                             <i class="minicart-icon"></i>
                         </a>
 
@@ -141,9 +141,8 @@
                                 <li>
                                     <a href="?act=shop">Sản phẩm</a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                        <div class="row">   
-                                        </div>
-                                    </div><!-- End .megamenu -->
+                                        
+                                    
 
                                     
                                 </li>

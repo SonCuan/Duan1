@@ -8,7 +8,7 @@
                             }
                         }
                     }">
-                    <div class="home-slide home-slide-1 banner">
+                    <div class="home-slide home-slide-1 banner" style="display:inline; width:1536px; height:auto;" >
                         <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner-nuochoa.jpg" alt="slider image"
                             width="1900" height="575">
 
@@ -16,17 +16,27 @@
                             <div class="container-fluid">
                                 <div class="appear-animate" data-animation-name="fadeInLeftShorter"
                                     data-animation-delay="200">
-                                    <h2 class="font-weight-light ls-10 text-primary" >Sang trọng và huyền bí</h2>
-                                    <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY
+                                    <h2 class="font-weight-light ls-10 text-primary" >Sang trọng và huyền bí</h2><br>
+                                    <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY <br>
                                             </i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="home-slide home-slide-2 banner">
+                    <div class="home-slide home-slide-2 banner"style="display:inline; width:1536px; height:auto;">
                         <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.jpg" alt="slider image"
                             width="1900" height="575">
 
+                            <div class="banner-layer banner-layer-middle banner-layer-left">
+                            <div class="container-fluid">
+                                <div class="appear-animate" data-animation-name="fadeInLeftShorter"
+                                    data-animation-delay="200">
+                                    <h2 class="font-weight-light ls-10 text-primary" >Thời thượng, sang trọng, thanh lịch, phá cách</h2><br>
+                                    <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY <br>
+                                            </i><i class="icon-right-open-big"></i></a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                             <div class="container-fluid">
                                 <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter"
@@ -52,17 +62,17 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-1.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoacl1.jpg" width="217"
                                             height="217" alt="product">
-                                        <img src="assets/images/demoes/demo23/products/product-7.jpg" width="217"
+                                        <img src="assets/images/demoes/demo23/products/nuochoacl2.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="?act=product" class="btn-quickview"
@@ -78,7 +88,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Pink Winter Girl Shoes</a>
+                                        <a href="?act=product">Pink Winter Girl Shoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -95,15 +105,15 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-2.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoacl3.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -119,7 +129,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Porto Extended Camera</a>
+                                        <a href="?act=product">Porto Extended Camera</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -136,17 +146,17 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-3.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoacl4.jpg" width="217"
                                             height="217" alt="product">
-                                        <img src="assets/images/demoes/demo23/products/product-1.jpg" width="217"
+                                        <img src="assets/images/demoes/demo23/products/nuochoacl5.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -162,7 +172,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Blue Child Overshoes</a>
+                                        <a href="?act=product">Blue Child Overshoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -179,8 +189,8 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-4.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoacl6.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
@@ -205,7 +215,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Baby Summer Underclothes</a>
+                                        <a href="?act=product">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -240,7 +250,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/demoes/demo23/products/nuochoa5.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -248,7 +258,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -264,7 +274,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Porto Extended Camera</a>
+                                        <a href="?act=product">Porto Extended Camera</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -283,7 +293,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/demoes/demo23/products/nuochoa5.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -291,7 +301,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -307,7 +317,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Porto Extended Camera</a>
+                                        <a href="?act=product">Porto Extended Camera</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -325,7 +335,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/demoes/demo23/products/nuochoa3.jpg" width="217"
                                             height="217" alt="product">
                                         <img src="assets/images/demoes/demo23/products/nuochoa4.jpg" width="217"
@@ -335,7 +345,7 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -351,7 +361,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Blue Child Overshoes</a>
+                                        <a href="?act=product">Blue Child Overshoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -368,7 +378,7 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/demoes/demo23/products/nuochoa2.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
@@ -394,7 +404,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Baby Summer Underclothes</a>
+                                        <a href="?act=product">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -432,8 +442,8 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-5.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoack1.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
@@ -457,7 +467,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Smart Watches</a>
+                                        <a href="?act=product">Smart Watches</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -474,14 +484,14 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-6.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoack2.jpg" width="217"
                                             height="217" alt="product">
-                                        <img src="assets/images/demoes/demo23/products/product-9.jpg" width="217"
+                                        <img src="assets/images/demoes/demo23/products/nuochoack5.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -497,7 +507,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">White Girl Shoes</a>
+                                        <a href="?act=product">White Girl Shoes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -514,12 +524,12 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-7.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoack3.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="btn-icon-group">
-                                        <a href="demo23-product.html" class="btn-icon btn-add-cart"><i
+                                        <a href="?act=product" class="btn-icon btn-add-cart"><i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                     <a href="ajax/product-quick-view.html" class="btn-quickview"
@@ -535,7 +545,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Rag baby doll</a>
+                                        <a href="?act=product">Rag baby doll</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -552,8 +562,8 @@
                         <div class="col-6 col-md-4 col-xl-3">
                             <div class="product-default inner-quickview inner-icon">
                                 <figure>
-                                    <a href="demo23-product.html">
-                                        <img src="assets/images/demoes/demo23/products/product-4.jpg" width="217"
+                                    <a href="?act=product">
+                                        <img src="assets/images/demoes/demo23/products/nuochoack4.jpg" width="217"
                                             height="217" alt="product">
                                     </a>
                                     <div class="label-group">
@@ -578,7 +588,7 @@
                                                 class="icon-heart"></i></a>
                                     </div>
                                     <h3 class="product-title">
-                                        <a href="demo23-product.html">Baby Summer Underclothes</a>
+                                        <a href="?act=product">Baby Summer Underclothes</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
