@@ -146,9 +146,7 @@
                                 </div>
                                 <!-- End .social-icons -->
 
-                                <a href="wishlist.html" class="btn-icon-wish add-wishlist" title="Add to Wishlist"><i
-                                        class="icon-wishlist-2"></i><span>Add to
-                                        Wishlist</span></a>
+                              
                             </div>
                             <!-- End .product single-share -->
                         </div>
