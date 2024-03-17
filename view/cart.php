@@ -98,10 +98,10 @@
 													<form action="#">
 														<div class="input-group">
 															<input type="text" class="form-control form-control-sm"
-																placeholder="Coupon Code" required>
+																placeholder="Mã giảm giá" required>
 															<div class="input-group-append">
-																<button class="btn btn-sm" type="submit">Apply
-																	Coupon</button>
+																<button class="btn btn-sm" type="submit">Áp dụng phiếu giảm giá
+																	</button>
 															</div>
 														</div><!-- End .input-group -->
 													</form>
@@ -110,7 +110,7 @@
 
 											<div class="float-right">
 												<button type="submit" class="btn btn-shop btn-update-cart">
-													Update Cart
+													Cập nhật giỏ hàng
 												</button>
 											</div><!-- End .float-right -->
 										</td>
@@ -122,69 +122,59 @@
 
 					<div class="col-lg-4">
 						<div class="cart-summary">
-							<h3>CART TOTALS</h3>
+							<h3>Thông tin nhận hàng</h3>
 
 							<table class="table table-totals">
 								<tbody>
 									<tr>
-										<td>Subtotal</td>
+										<td>Tổng phụ</td>
 										<td>$17.90</td>
 									</tr>
 
 									<tr>
 										<td colspan="2" class="text-left">
-											<h4>Shipping</h4>
+											<h4>Phương thức thanh toán</h4>
 
 											<div class="form-group form-group-custom-control">
 												<div class="custom-control custom-radio">
 													<input type="radio" class="custom-control-input" name="radio"
 														checked>
-													<label class="custom-control-label">Local pickup</label>
+													<label class="custom-control-label">Thanh toán khi giao hàng (COD)</label>
 												</div><!-- End .custom-checkbox -->
 											</div><!-- End .form-group -->
 
 											<div class="form-group form-group-custom-control mb-0">
 												<div class="custom-control custom-radio mb-0">
 													<input type="radio" name="radio" class="custom-control-input">
-													<label class="custom-control-label">Flat rate</label>
+													<label class="custom-control-label">Thanh toán bằng VNPAY</label>
 												</div><!-- End .custom-checkbox -->
 											</div><!-- End .form-group -->
 
 											<form action="#">
-												<div class="form-group form-group-sm">
-													<label>Shipping to <strong>NY.</strong></label>
-													<div class="select-custom">
-														<select class="form-control form-control-sm">
-															<option value="USA">United States (US)</option>
-															<option value="Turkey">Turkey</option>
-															<option value="China">China</option>
-															<option value="Germany">Germany</option>
-														</select>
-													</div><!-- End .select-custom -->
-												</div><!-- End .form-group -->
+												
 
 												<div class="form-group form-group-sm">
 													<div class="select-custom">
 														<select class="form-control form-control-sm">
-															<option value="NY">New York</option>
-															<option value="CA">California</option>
-															<option value="TX">Texas</option>
+															<option value="NY">Hà Nội</option>
+															<option value="CA">TP Hồ Chí Minh</option>
+															<option value="TX">Đà nẵng</option>
 														</select>
 													</div><!-- End .select-custom -->
 												</div><!-- End .form-group -->
 
 												<div class="form-group form-group-sm">
 													<input type="text" class="form-control form-control-sm"
-														placeholder="Town / City">
+														placeholder="Huyện / Xã">
 												</div><!-- End .form-group -->
 
 												<div class="form-group form-group-sm">
 													<input type="text" class="form-control form-control-sm"
-														placeholder="ZIP">
+														placeholder="Số điện thoại">
 												</div><!-- End .form-group -->
 
 												<button type="submit" class="btn btn-shop btn-update-total">
-													Update Totals
+													Cập nhật tổng thể
 												</button>
 											</form>
 										</td>
@@ -193,14 +183,14 @@
 
 								<tfoot>
 									<tr>
-										<td>Total</td>
+										<td>Tổng cộng:</td>
 										<td>$17.90</td>
 									</tr>
 								</tfoot>
 							</table>
 
 							<div class="checkout-methods">
-								<a href="cart.html" class="btn btn-block btn-dark">Proceed to Checkout
+								<a href="cart.html" class="btn btn-block btn-dark">Tiền hành kiểm tra
 									<i class="fa fa-arrow-right"></i></a>
 							</div>
 						</div><!-- End .cart-summary -->

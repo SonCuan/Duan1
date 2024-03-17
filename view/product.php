@@ -122,11 +122,14 @@
                                 </div>
                                 <!-- End .product-single-qty -->
 
-                                <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Add to
-                                    Cart</a>
+                                <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào giỏ hàng
+                                    </a>
 
-                                <a href="?act=cart" class="btn btn-gray view-cart d-none">View cart</a>
+                                <a href="?act=cart" class="btn btn-gray view-cart d-none">Xem giỏ hàng</a>
                             </div>
+                            <!-- Mua hàng -->
+                           
+                            <!-- End mua hàng -->
                             <!-- End .product-action -->
 
                             <hr class="divider mb-0 mt-0">

@@ -12,9 +12,9 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#">Men</a>
+                            <a href="?act=shop">Shop</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Accessories</li>
+                        <li class="breadcrumb-item active" aria-current="page">Danh sách</li>
                     </ol>
                 </nav>
 
@@ -67,10 +67,10 @@
                                 <!-- End .toolbox-item -->
 
                                 <div class="toolbox-item layout-modes">
-                                    <a href="category.html" class="layout-btn btn-grid" title="Grid">
+                                    <a href="?act=shop" class="layout-btn btn-grid" title="Grid">
                                         <i class="icon-mode-grid"></i>
                                     </a>
-                                    <a href="category-list.html" class="layout-btn btn-list active" title="List">
+                                    <a href="?act=category-list" class="layout-btn btn-list active" title="List">
                                         <i class="icon-mode-list"></i>
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@
                         <div class="row pb-4">
                             <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/products/product-1.jpg" width="250" height="250" alt="product" />
                                         <img src="assets/images/products/product-1-2.jpg" width="250" height="250" alt="product" />
                                     </a>
@@ -91,7 +91,7 @@
                                     <div class="category-list">
                                         <a href="category.html" class="product-category">category</a>
                                     </div>
-                                    <h3 class="product-title"> <a href="product.html">Ultimate 3D Bluetooth Speaker</a>
+                                    <h3 class="product-title"> <a href="?act=product">Ultimate 3D Bluetooth Speaker</a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -126,7 +126,7 @@
 
                             <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/products/product-2.jpg" width="250" height="250" alt="product" />
                                         <img src="assets/images/products/product-2-2.jpg" width="250" height="250" alt="product" />
                                     </a>
@@ -137,7 +137,7 @@
                                         <a href="category.html" class="product-category">category</a>
                                     </div>
 
-                                    <h3 class="product-title"> <a href="product.html">Brown Women Casual HandBag</a>
+                                    <h3 class="product-title"> <a href="?act=product">Brown Women Casual HandBag</a>
                                     </h3>
 
                                     <div class="ratings-container">
@@ -159,7 +159,7 @@
                                     <!-- End .price-box -->
 
                                     <div class="product-action">
-                                        <a href="product.html" class="btn-icon btn-add-cart">
+                                        <a href="?act=product" class="btn-icon btn-add-cart">
                                             <i class="fa fa-arrow-right"></i>
                                             <span>SELECT OPTIONS</span>
                                         </a>
@@ -176,7 +176,7 @@
 
                             <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/products/product-3.jpg" width="250" height="250" alt="product" />
                                         <img src="assets/images/products/product-3-2.jpg" width="250" height="250" alt="product" />
                                     </a>
@@ -187,7 +187,7 @@
                                         <a href="category.html" class="product-category">category</a>
                                     </div>
 
-                                    <h3 class="product-title"> <a href="product.html">Circled Ultimate 3D Speaker</a>
+                                    <h3 class="product-title"> <a href="?act=product">Circled Ultimate 3D Speaker</a>
                                     </h3>
 
                                     <div class="ratings-container">
@@ -226,7 +226,7 @@
 
                             <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/products/product-4.jpg" width="250" height="250" alt="product" />
                                         <img src="assets/images/products/product-4-2.jpg" width="250" height="250" alt="product">
                                     </a>
@@ -237,7 +237,7 @@
                                         <a href="category.html" class="product-category">category</a>
                                     </div>
 
-                                    <h3 class="product-title"> <a href="product.html">Blue Backpack for the Young -
+                                    <h3 class="product-title"> <a href="?act=product">Blue Backpack for the Young -
 											S</a> </h3>
 
                                     <div class="ratings-container">
@@ -260,7 +260,7 @@
                                     <!-- End .price-box -->
 
                                     <div class="product-action">
-                                        <a href="product.html" class="btn-icon btn-add-cart">
+                                        <a href="?act=product" class="btn-icon btn-add-cart">
                                             <i class="fa fa-arrow-right"></i>
                                             <span>SELECT OPTIONS</span>
                                         </a>
@@ -277,7 +277,7 @@
 
                             <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/products/product-5.jpg" width="250" height="250" alt="product" />
                                         <img src="assets/images/products/product-5-2.jpg" width="250" height="250" alt="product" />
                                     </a>
@@ -288,7 +288,7 @@
                                         <a href="category.html" class="product-category">category</a>
                                     </div>
 
-                                    <h3 class="product-title"> <a href="product.html">Casual Spring Blue Shoes</a> </h3>
+                                    <h3 class="product-title"> <a href="?act=product">Casual Spring Blue Shoes</a> </h3>
 
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -327,7 +327,7 @@
 
                             <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                 <figure>
-                                    <a href="product.html">
+                                    <a href="?act=product">
                                         <img src="assets/images/products/product-6.jpg" width="250" height="250" alt="product">
                                         <img src="assets/images/products/product-6-2.jpg" width="250" height="250" alt="product" />
                                     </a>
@@ -338,7 +338,7 @@
                                         <a href="category.html" class="product-category">category</a>
                                     </div>
 
-                                    <h3 class="product-title"> <a href="product.html">Men Black Gentle Belt</a> </h3>
+                                    <h3 class="product-title"> <a href="?act=product">Men Black Gentle Belt</a> </h3>
 
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -360,7 +360,7 @@
                                     <!-- End .price-box -->
 
                                     <div class="product-action">
-                                        <a href="product.html" class="btn-icon btn-add-cart">
+                                        <a href="?act=product" class="btn-icon btn-add-cart">
                                             <i class="fa fa-arrow-right"></i>
                                             <span>SELECT OPTIONS</span>
                                         </a>

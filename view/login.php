@@ -5,7 +5,7 @@
 						<div class="container">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-								<li class="breadcrumb-item"><a href="category.html">Shop</a></li>
+								<li class="breadcrumb-item"><a href="?act=shop">Shop</a></li>
 								<li class="breadcrumb-item active" aria-current="page">
 									My Account
 								</li>
