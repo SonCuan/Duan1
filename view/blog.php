@@ -1,189 +1,60 @@
-<main class="main">
-			<nav aria-label="breadcrumb" class="breadcrumb-nav">
-				<div class="container">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="demo4.html"><i class="icon-home"></i></a></li>
-						<li class="breadcrumb-item active" aria-current="page">Blog</li>
-					</ol>
-				</div><!-- End .container -->
-			</nav>
+<div class="map" style="text-align: center;">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8636686990394!2d105.74467967486285!3d21.038140280613597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455e940879933%3A0xcf10b34e9f1a03df!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1701877694810!5m2!1svi!2s"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- map end -->
+<!-- contact-section satrt -->
+<section class="contact-section pt-80 pb-50">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 mb-30">
+        <!--  contact page side content  -->
+        <div class="contact-page-side-content">
+          <h3 class="contact-page-title">Liên hệ chúng tôi</h3>
+          <p class="contact-page-message mb-30">
+            Chúng tôi là một nhóm gồm các nhà thiết kế và phát triển chuyên nghiệp nhắm đưa đến cho người dùng những
+            trải nghiệm hấp dẫn nhất.
+          </p>
+          <!--  single contact block  -->
 
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-9">
-						<div class="blog-section row">
-							<div class="col-md-6 col-lg-4">
-								<article class="post">
-									<div class="post-media">
-										<a href="single.html">
-											<img src="assets/images/blog/home/post-1.jpg" alt="Post" width="225"
-												height="280">
-										</a>
-										<div class="post-date">
-											<span class="day">26</span>
-											<span class="month">Feb</span>
-										</div>
-									</div><!-- End .post-media -->
+          <div class="single-contact-block">
+            <h4><i class="fa fa-fax"></i> Địa chỉ</h4>
+            <p>P. Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm, Hà Nội, Việt Nam</p>
+          </div>
 
-									<div class="post-body">
-										<h2 class="post-title">
-											<a href="single.html">Top New Collection</a>
-										</h2>
-										<div class="post-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non
-												placerat mi.
-												Etiam non tellus sem. Aenean...</p>
-										</div><!-- End .post-content -->
-										<a href="single.html" class="post-comment">0 Comments</a>
-									</div><!-- End .post-body -->
-								</article><!-- End .post -->
-							</div>
-							<div class="col-md-6 col-lg-4">
-								<article class="post">
-									<div class="post-media">
-										<a href="single.html">
-											<img src="assets/images/blog/home/post-2.jpg" alt="Post" width="225"
-												height="280">
-										</a>
-										<div class="post-date">
-											<span class="day">26</span>
-											<span class="month">Feb</span>
-										</div>
-									</div><!-- End .post-media -->
+          <!--  End of single contact block -->
 
-									<div class="post-body">
-										<h2 class="post-title">
-											<a href="single.html">Fashion Trends</a>
-										</h2>
-										<div class="post-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non
-												placerat mi.
-												Etiam non tellus sem. Aenean...</p>
-										</div><!-- End .post-content -->
-										<a href="single.html" class="post-comment">0 Comments</a>
-									</div><!-- End .post-body -->
-								</article><!-- End .post -->
-							</div>
-							<div class="col-md-6 col-lg-4">
-								<article class="post">
-									<div class="post-media">
-										<a href="single.html">
-											<img src="assets/images/blog/home/post-3.jpg" alt="Post" width="225"
-												height="280">
-										</a>
-										<div class="post-date">
-											<span class="day">26</span>
-											<span class="month">Feb</span>
-										</div>
-									</div><!-- End .post-media -->
+          <!--  single contact block -->
 
-									<div class="post-body">
-										<h2 class="post-title">
-											<a href="single.html">Etiam laoreet sem</a>
-										</h2>
-										<div class="post-content">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non
-												placerat mi.
-												Etiam non tellus sem. Aenean...</p>
-										</div><!-- End .post-content -->
-										<a href="single.html" class="post-comment">0 Comments</a>
-									</div><!-- End .post-body -->
-								</article><!-- End .post -->
-							</div>
-							<div class="col-md-6 col-lg-4">
-								<article class="post">
-									<div class="post-media">
-										<a href="single.html">
-											<img src="assets/images/blog/home/post-4.jpg" alt="Post" width="225"
-												height="280">
-										</a>
-										<div class="post-date">
-											<span class="day">26</span>
-											<span class="month">Feb</span>
-										</div>
-									</div><!-- End .post-media -->
+          <div class="single-contact-block">
+            <h4><i class="fa fa-phone"></i> Số điện thoại</h4>
+            <p>
+              <a href="tel:987654321">Mobile: (+84) 987 654 321</a>
+            </p>
+            <p><a href="tel:0988753813">Hotline: 0988 753 813</a></p>
+          </div>
 
-									<div class="post-body">
-										<h2 class="post-title">
-											<a href="single.html">Perfect Accessories</a>
-										</h2>
-										<div class="post-content">
-											<p>Leap into electronic typesetting, remaining essentially unchanged. It was
-												popularised in the 1960s with the release of Letraset sheets...
-											</p>
-										</div><!-- End .post-content -->
-										<a href="single.html" class="post-comment">0 Comments</a>
-									</div><!-- End .post-body -->
-								</article><!-- End .post -->
-							</div>
-						</div>
-					</div><!-- End .col-lg-9 -->
+          <!-- End of single contact block -->
 
-					<div class="sidebar-toggle custom-sidebar-toggle">
-						<i class="fas fa-sliders-h"></i>
-					</div>
-					<div class="sidebar-overlay"></div>
-					<aside class="sidebar mobile-sidebar col-lg-3">
-						<div class="sidebar-wrapper" data-sticky-sidebar-options='{"offsetTop": 72}'>
-							<div class="widget widget-categories">
-								<h4 class="widget-title">Blog Categories</h4>
+          <!--  single contact block -->
 
-								<ul class="list">
-									<li>
-										<a href="#">All about clothing</a>
+          <div class="single-contact-block">
+            <h4><i class="fas fa-envelope"></i> Email</h4>
+            <p>
+              <a href="mailto:khanhdattuananh@fpt.edu.vn">khanhdattuananh@fpt.edu.vn</a>
+            </p>
+            <p>
+              <a href="mailto:perfumeshop@gmail.com">perfumeshop@gmail.com</a>
+            </p>
+          </div>
 
-										<ul class="list">
-											<li><a href="#">Dresses</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Make-up &amp; beauty</a></li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Fashion trends</a></li>
-									<li><a href="#">Haircuts &amp; hairstyles</a></li>
-								</ul>
-							</div><!-- End .widget -->
+          <!--=======  End of single contact block  =======-->
+        </div>
 
-							<div class="widget widget-post">
-								<h4 class="widget-title">Recent Posts</h4>
-
-								<ul class="simple-post-list">
-									<li>
-										<div class="post-media">
-											<a href="single.html">
-												<img src="assets/images/blog/widget/post-1.jpg" alt="Post">
-											</a>
-										</div><!-- End .post-media -->
-										<div class="post-info">
-											<a href="single.html">Top New Collection</a>
-											<div class="post-meta">February 26, 2018</div>
-											<!-- End .post-meta -->
-										</div><!-- End .post-info -->
-									</li>
-
-									<li>
-										<div class="post-media">
-											<a href="single.html">
-												<img src="assets/images/blog/widget/post-2.jpg" alt="Post">
-											</a>
-										</div><!-- End .post-media -->
-										<div class="post-info">
-											<a href="single.html">Fashion Trends</a>
-											<div class="post-meta">February 26, 2018</div><!-- End .post-meta -->
-										</div><!-- End .post-info -->
-									</li>
-								</ul>
-							</div><!-- End .widget -->
-
-							<div class="widget">
-								<h4 class="widget-title">Tags</h4>
-
-								<div class="tagcloud">
-									<a href="#">ARTICLES</a>
-									<a href="#">CHAT</a>
-								</div><!-- End .tagcloud -->
-							</div><!-- End .widget -->
-						</div><!-- End .sidebar-wrapper -->
-					</aside><!-- End .col-lg-3 -->
-				</div><!-- End .row -->
-			</div><!-- End .container -->
-		</main><!-- End .main -->
+        <!--=======  End of contact page side content  =======-->
+      </div>
+    
+    </div>
+  </div>
