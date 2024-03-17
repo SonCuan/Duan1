@@ -1,332 +1,64 @@
-<main class="main">
-			<nav aria-label="breadcrumb" class="breadcrumb-nav">
-				<div class="container">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="demo4.html"><i class="icon-home"></i></a></li>
-						<li class="breadcrumb-item active" aria-current="page">Blog Post</li>
-					</ol>
-				</div><!-- End .container -->
-			</nav>
+<style>
+    body{
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.75;
+        color: #565656;
+    }
+    .main{
+        margin: 0 auto;
+        box-sizing: border-box;
+        width: 1020px;
+    }
+    .title h2{
+        font-family: Raleway;
+    }
+    .title p{
+        margin :0;
+        line-height: 1.715;
+    }
+    .title-5c{
+        line-height: 1.5;
+    }
+  
+</style>
+<body>
+   <div class="main">
+    <div class="title">
+        <h2>VỀ CHÚNG TÔI</h2>
+        <p>Mỗi vùng đất mỗi vùng văn hóa đều có những nét đặc trưng riêng điều ấy không chỉ phác thảo bằng những giá trị hữu hình mà còn ẩn chứa trong đó những giá trị vô hình, và ta cảm nhận bằng tâm hồn, trái tim trong đó nổi bật có thể kể đến đó là mùi hương. Tại Perfume Shop chúng tôi tạo ra các mùi hương đa dạng theo phong cách của bạn. Perfume Shop cố gắng lột tả hình ảnh văn hóa, tính cách mang đến giá trị cho khách hàng sử dụng.</p>
+    </div>
+    <div class="title">
+        <h2>SỨ MỆNH</h2>
+        <p>“Mã số bí mật tô điểm mùi hương cho mỗi người”. Với mong muốn giúp với các bạn tạo dựng nên một phong cách cá nhân riêng. Perfume Shop là chìa khóa bí mật giúp bạn thu hút, hấp dẫn và tự tin hơn. Với mục tiêu và sứ mệnh, Perfume Shop mong rằng có thể đưa các sản phẩm nước hoa, những mùi hương được giữ nguyên vẹn tinh thần về với người tiêu dùng Việt Nam khắp cả nước. Với mức giá hợp túi tiền, đảm bảo chất lượng, dịch vụ tư vấn và sự trân trọng đối với người tiêu dùng. Giúp bạn có những trải nghiệm an tâm nhất khi lựa chọn sản phẩm tại Perfume Shop. Dựa trên phương châm “Chân thật từ lời nói đến mùi hương”.Perfume Shop luôn cố gắng đem đến những gì tốt nhất giúp bảo toàn cảm xúc sử dụng nước hoa của bạn. Bằng cách liên tục nâng cao kiến thức tư vấn cũng như sự chu đáo trong phong cách phục vụ.</p>
+    </div>
+    <div class="title">
+        <h2>SẢN PHẨM PORTO</h2>
+        <p>Thương hiệu Việt với sản phẩm chủ lực về tinh dầu nước hoa có đa dạng mùi hương dành cho nam, nữ, unisex. Sản phẩm dung tích chai 100ml được đa số khách hàng yêu thích và sử dụng bởi sự nhỏ gọn, tiện lợi, tính đa dụng khi có thể dễ dàng mang theo bên mình, sử dụng bất cứ nơi đâu. Phù hợp với những người có cuộc sống năng động, bận rộn, di chuyển nhiều. Hơn thế nữa, Perfume Shop với mùi hương phong phú, độc đáo và mới mẻ giúp thỏa mãn cá tính người dùng khó tính nhất nhưng với một mức giá dễ tiếp cận cho nhiều người. Chúng tôi gửi gắm vào từng sản phẩm với thông điệp “mỗi gói hàng như một gói quà”.</p>
+    </div>
+    <div class="title">
+        <h2>TẦM NHÌN</h2>
+        <p>Trở thành một Chuyên gia trong ngành kinh doanh nước hoa. Đưa những điều chân thật nhất đến với người tiêu dùng, đặc biệt là những người mới tham gia vào cộng đồng yêu mùi hương. Giúp cho 1 triệu người Việt Nam tìm thấy được mùi hương yêu thích của mình..</p>
+    </div>
+    <div class="title-5c">
+        <h2>GIÁ TRỊ CỐT LÕI 5C</h2>
+        <h4>Chân thật</h4>
+        <p>– “Nói thật, làm thật, sản phẩm thật.” 3 chữ thật luôn luôn xuất hiện trong mọi hoạt động và phương châm kinh doanh của Perfumer Shop . Giúp Perfumer Shop luôn giữ được lời hứa với khách hàng. Giữ vững uy tín trong nhiều năm và giữ được lòng người dù trong nội bộ hay bên ngoài. Chỉ cần đối đãi bằng sự chân thật thì sẽ luôn nhận được hồi đáp xứng đáng.</p>
 
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-9">
-						<article class="post single">
-							<div class="post-media">
-								<img src="assets/images/blog/post-1.jpg" alt="Post">
-							</div><!-- End .post-media -->
+        <h4>Chu đáo</h4>
+        <p>– Quan tâm khách hàng, đồng nghiệp lẫn bạn bè và người thân đúng chỗ, đúng người và đúng thời điểm. Nghĩa là dành cho họ điều họ cần, điều mang đến giá trị giúp mọi người cảm nhận được sự yêu thương. Yêu theo cách của người đó cần, chứ không làm theo cách mình muốn.</p>
+        
+        <h4>Con người</h4>
+        <p>–  Là yếu tố quan trọng nhất. Kể cả khách hàng lẫn nhân sự nội bộ đến các đối tác làm ăn phải luôn được đề cao và tôn trọng.</p>
+        
+        <h4>Cùng phát triển</h4>
+        <p>– Mọi sự góp ý và đánh giá luôn dựa trên tinh thần cùng cố gắng và phát triển. Khách hàng đánh giá Perfumer Shop, đánh giá nhân sự hay nội bộ nhân sự góp ý cho nhau. Đôi bên luôn ở thái độ tích cực, lắng nghe tích cực, đóng góp tích cực. Và một tinh thần tích cực để thay đổi và phát triển.</p>
+        
+        <h4>Chủ động</h4>
+        <p>– Làm việc dựa trên tinh thần chủ động. Chủ động học hỏi, chủ động phát triển và chủ động thực hiện công việc theo kế hoạch.</p>
 
-							<div class="post-body">
-								<div class="post-date">
-									<span class="day">22</span>
-									<span class="month">Jun</span>
-								</div><!-- End .post-date -->
-
-								<h2 class="post-title">Top New Collection</h2>
-
-								<div class="post-meta">
-									<a href="#" class="hash-scroll">0 Comments</a>
-								</div><!-- End .post-meta -->
-
-								<div class="post-content">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non placerat mi.
-										Etiam non tellus sem. Aenean pretium convallis lorem, sit amet dapibus ante
-										mollis a. Integer bibendum interdum sem, eget volutpat purus pulvinar in. Sed
-										tristique augue vitae sagittis porta. Phasellus ullamcorper, dolor suscipit
-										mattis viverra, sapien elit condimentum odio, ut imperdiet nisi risus sit amet
-										ante. Sed sem lorem, laoreet et facilisis quis, tincidunt non lorem. Etiam
-										tempus, dolor in sollicitudin faucibus, sem massa accumsan erat.
-									</p>
-
-									<h3>“ Many
-										desktop publishing packages and web page editors now use Lorem Ipsum as their
-										default model search for evolved over sometimes by accident, sometimes on
-										purpose ”
-									</h3>
-
-									<p>Aenean lorem diam, venenatis nec venenatis id, adipiscing ac massa. Nam vel dui
-										eget justo dictum pretium a rhoncus ipsum. Donec venenatis erat tincidunt nunc
-										suscipit, sit amet bibendum lacus posuere. Sed scelerisque, dolor a pharetra
-										sodales, mi augue consequat sapien, et interdum tellus leo et nunc. Nunc
-										imperdiet eu libero ut imperdiet.
-									</p>
-								</div><!-- End .post-content -->
-
-								<div class="post-share">
-									<h3 class="d-flex align-items-center">
-										<i class="fas fa-share"></i>
-										Share this post
-									</h3>
-
-									<div class="social-icons">
-										<a href="#" class="social-icon social-facebook" target="_blank"
-											title="Facebook">
-											<i class="icon-facebook"></i>
-										</a>
-										<a href="#" class="social-icon social-twitter" target="_blank" title="Twitter">
-											<i class="icon-twitter"></i>
-										</a>
-										<a href="#" class="social-icon social-linkedin" target="_blank"
-											title="Linkedin">
-											<i class="fab fa-linkedin-in"></i>
-										</a>
-										<a href="#" class="social-icon social-gplus" target="_blank" title="Google +">
-											<i class="fab fa-google-plus-g"></i>
-										</a>
-										<a href="#" class="social-icon social-mail" target="_blank" title="Email">
-											<i class="icon-mail-alt"></i>
-										</a>
-									</div><!-- End .social-icons -->
-								</div><!-- End .post-share -->
-
-								<div class="post-author">
-									<h3><i class="far fa-user"></i>Author</h3>
-
-									<figure>
-										<a href="#">
-											<img src="assets/images/blog/author.jpg" alt="author">
-										</a>
-									</figure>
-
-									<div class="author-content">
-										<h4><a href="#">John Doe</a></h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod
-											odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in
-											adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis
-											placerat, felis enim ornare nisi, vitae mattis nulla ante id dui.</p>
-									</div><!-- End .author.content -->
-								</div><!-- End .post-author -->
-
-								<div class="comment-respond">
-									<h3>Leave a Reply</h3>
-
-									<form action="#">
-										<p>Your email address will not be published. Required fields are marked *</p>
-
-										<div class="form-group">
-											<label>Comment</label>
-											<textarea cols="30" rows="1" class="form-control" required></textarea>
-										</div><!-- End .form-group -->
-
-										<div class="form-group">
-											<label>Name</label>
-											<input type="text" class="form-control" required>
-										</div><!-- End .form-group -->
-
-										<div class="form-group">
-											<label>Email</label>
-											<input type="email" class="form-control" required>
-										</div><!-- End .form-group -->
-
-										<div class="form-group">
-											<label>Website</label>
-											<input type="url" class="form-control">
-										</div><!-- End .form-group -->
-
-										<div class="form-group-custom-control mb-2">
-											<div class="custom-control custom-checkbox">
-												<input type="checkbox" class="custom-control-input" id="save-name">
-												<label class="custom-control-label" for="save-name">Save my name, email,
-													and website in this browser for the next time I comment.</label>
-											</div><!-- End .custom-checkbox -->
-										</div><!-- End .form-group-custom-control -->
-
-										<div class="form-footer my-0">
-											<button type="submit" class="btn btn-sm btn-primary">Post
-												Comment</button>
-										</div><!-- End .form-footer -->
-									</form>
-								</div><!-- End .comment-respond -->
-							</div><!-- End .post-body -->
-						</article><!-- End .post -->
-
-						<hr class="mt-2 mb-1">
-
-						<div class="related-posts">
-							<h4>Related <strong>Posts</strong></h4>
-
-							<div class="owl-carousel owl-theme related-posts-carousel" data-owl-options="{
-								'dots': false
-							}">
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-1.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">29</span>
-											<span class="month">Jun</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-2.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">23</span>
-											<span class="month">Mar</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-3.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">14</span>
-											<span class="month">May</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-
-								<article class="post">
-									<div class="post-media zoom-effect">
-										<a href="single.html">
-											<img src="assets/images/blog/related/post-1.jpg" alt="Post">
-										</a>
-									</div><!-- End .post-media -->
-
-									<div class="post-body">
-										<div class="post-date">
-											<span class="day">11</span>
-											<span class="month">Apr</span>
-										</div><!-- End .post-date -->
-
-										<h2 class="post-title">
-											<a href="single.html">Post Format - Image</a>
-										</h2>
-
-										<div class="post-content">
-											<p>Euismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu
-												ad litora torquent per conubia nostra, per incep tos himens.</p>
-
-											<a href="single.html" class="read-more">read more <i
-													class="fas fa-angle-right"></i></a>
-										</div><!-- End .post-content -->
-									</div><!-- End .post-body -->
-								</article>
-							</div><!-- End .owl-carousel -->
-						</div><!-- End .related-posts -->
-					</div><!-- End .col-lg-9 -->
-
-					<div class="sidebar-toggle custom-sidebar-toggle">
-						<i class="fas fa-sliders-h"></i>
-					</div>
-					<div class="sidebar-overlay"></div>
-					<aside class="sidebar mobile-sidebar col-lg-3">
-						<div class="sidebar-wrapper" data-sticky-sidebar-options='{"offsetTop": 72}'>
-							<div class="widget widget-categories">
-								<h4 class="widget-title">Blog Categories</h4>
-
-								<ul class="list">
-									<li>
-										<a href="#">All about clothing</a>
-
-										<ul class="list">
-											<li><a href="#">Dresses</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Make-up &amp; beauty</a></li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Fashion trends</a></li>
-									<li><a href="#">Haircuts &amp; hairstyles</a></li>
-								</ul>
-							</div><!-- End .widget -->
-
-							<div class="widget">
-								<h4 class="widget-title">Recent Posts</h4>
-
-								<ul class="simple-post-list">
-									<li>
-										<div class="post-media">
-											<a href="single.html">
-												<img src="assets/images/blog/widget/post-1.jpg" alt="Post">
-											</a>
-										</div><!-- End .post-media -->
-										<div class="post-info">
-											<a href="single.html">Post Format - Video</a>
-											<div class="post-meta">
-												April 08, 2018
-											</div><!-- End .post-meta -->
-										</div><!-- End .post-info -->
-									</li>
-
-									<li>
-										<div class="post-media">
-											<a href="single.html">
-												<img src="assets/images/blog/widget/post-2.jpg" alt="Post">
-											</a>
-										</div><!-- End .post-media -->
-										<div class="post-info">
-											<a href="single.html">Post Format - Image</a>
-											<div class="post-meta">
-												March 23, 2016
-											</div><!-- End .post-meta -->
-										</div><!-- End .post-info -->
-									</li>
-								</ul>
-							</div><!-- End .widget -->
-
-							<div class="widget">
-								<h4 class="widget-title">Tags</h4>
-
-								<div class="tagcloud">
-									<a href="#">ARTICLES</a>
-									<a href="#">CHAT</a>
-								</div><!-- End .tagcloud -->
-							</div><!-- End .widget -->
-						</div><!-- End .sidebar-wrapper -->
-					</aside><!-- End .col-lg-3 -->
-				</div><!-- End .row -->
-			</div><!-- End .container -->
-		</main><!-- End .main -->
+    </div>
+    
+   </div>
+</body>
