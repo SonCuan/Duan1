@@ -188,7 +188,7 @@
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="demo23-shop.html" class="product-category">category</a>
+                                        <a href="?act=shop" class="product-category">category</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>
@@ -231,7 +231,7 @@
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="demo23-shop.html" class="product-category">category</a>
+                                        <a href="?act=shop" class="product-category">category</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>
@@ -273,7 +273,7 @@
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="demo23-shop.html" class="product-category">category</a>
+                                        <a href="?act=shop" class="product-category">category</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>
@@ -316,7 +316,7 @@
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="demo23-shop.html" class="product-category">category</a>
+                                        <a href="?act=shop" class="product-category">category</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>
@@ -360,7 +360,7 @@
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="demo23-shop.html" class="product-category">category</a>
+                                        <a href="?act=shop" class="product-category">category</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>
@@ -403,7 +403,7 @@
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="demo23-shop.html" class="product-category">category</a>
+                                        <a href="?act=shop" class="product-category">category</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i
                                             class="icon-heart"></i></a>

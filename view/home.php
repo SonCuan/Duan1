@@ -80,15 +80,9 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                 
                                     <h3 class="product-title">
-                                        <a href="?act=product">Pink Winter Girl Shoes</a>
+                                        <a href="?act=product">Nước hoa </a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
@@ -121,13 +115,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                  
                                     <h3 class="product-title">
                                         <a href="?act=product">Porto Extended Camera</a>
                                     </h3>
@@ -164,13 +152,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                  
                                     <h3 class="product-title">
                                         <a href="?act=product">Blue Child Overshoes</a>
                                     </h3>
@@ -207,13 +189,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                   
                                     <h3 class="product-title">
                                         <a href="?act=product">Baby Summer Underclothes</a>
                                     </h3>
@@ -266,13 +242,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                 
                                     <h3 class="product-title">
                                         <a href="?act=product">Porto Extended Camera</a>
                                     </h3>
@@ -309,13 +279,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                
                                     <h3 class="product-title">
                                         <a href="?act=product">Porto Extended Camera</a>
                                     </h3>
@@ -353,13 +317,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                
                                     <h3 class="product-title">
                                         <a href="?act=product">Blue Child Overshoes</a>
                                     </h3>
@@ -396,13 +354,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                   
                                     <h3 class="product-title">
                                         <a href="?act=product">Baby Summer Underclothes</a>
                                     </h3>
@@ -459,13 +411,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                    
                                     <h3 class="product-title">
                                         <a href="?act=product">Smart Watches</a>
                                     </h3>
@@ -499,13 +445,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                    
                                     <h3 class="product-title">
                                         <a href="?act=product">White Girl Shoes</a>
                                     </h3>
@@ -537,13 +477,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                   
                                     <h3 class="product-title">
                                         <a href="?act=product">Rag baby doll</a>
                                     </h3>
@@ -580,13 +514,7 @@
                                         View</a>
                                 </figure>
                                 <div class="product-details">
-                                    <div class="category-wrap">
-                                        <div class="category-list">
-                                            <a href="demo23-shop.html" class="product-category">category</a>
-                                        </div>
-                                        <a href="wishlist.html" title="Add to Wishlist" class="btn-icon-wish"><i
-                                                class="icon-heart"></i></a>
-                                    </div>
+                                   
                                     <h3 class="product-title">
                                         <a href="?act=product">Baby Summer Underclothes</a>
                                     </h3>
