@@ -1,6 +1,16 @@
 <main class="main">
 			<div class="container">
-			
+				<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
+				<ol class="breadcrumb bg-transparent m-0 p-0 align-items-center justify-content-center">
+          <li class="breadcrumb-item"><a href="index.php">Giỏ hàng</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Thủ tục
+			<li class="breadcrumb-item active" aria-current="page">
+            Hoàn tất thanh toán
+            <?= $namedm ?? "" ?>
+          </li>
+        </ol>
+				</ul>
 
 				<div class="row">
 					<div class="col-lg-8">
@@ -9,10 +19,10 @@
 								<thead>
 									<tr>
 										<th class="thumbnail-col"></th>
-										<th class="product-col">Tên sản phẩm</th>
-										<th class="price-col">Gía</th>
+										<th class="product-col">Sản phẩm</th>
+										<th class="price-col">Gía </th>
 										<th class="qty-col">Số lượng</th>
-										<th class="text-right">Thành tiền</th>
+										<th class="text-right">Tổng tiền</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -90,39 +100,25 @@
 								</tbody>
 
 
-								<tfoot>
-									<tr>
-										<td colspan="5" class="clearfix">
-											<div class="float-left">
-												
-											</div><!-- End .float-left -->
-
-											<div class="float-right">
-												<button type="submit" class="btn btn-shop btn-update-cart">
-													Cập nhật giỏ hàng
-												</button>
-											</div><!-- End .float-right -->
-										</td>
-									</tr>
-								</tfoot>
+								
 							</table>
 						</div><!-- End .cart-table-container -->
 					</div><!-- End .col-lg-8 -->
 
 					<div class="col-lg-4">
 						<div class="cart-summary">
-							<h3>Thông tin nhận hàng</h3>
+							<h3>Tổng giỏ hàng</h3>
 
 							<table class="table table-totals">
 								<tbody>
 									<tr>
-										<td>Tổng phụ</td>
+										<td>Subtotal</td>
 										<td>$17.90</td>
 									</tr>
 
 									<tr>
 										<td colspan="2" class="text-left">
-											<h4>Phương thức thanh toán</h4>
+											<h4>Giao hàng</h4>
 
 											<div class="form-group form-group-custom-control">
 												<div class="custom-control custom-radio">
@@ -135,26 +131,23 @@
 											<div class="form-group form-group-custom-control mb-0">
 												<div class="custom-control custom-radio mb-0">
 													<input type="radio" name="radio" class="custom-control-input">
-													<label class="custom-control-label">Thanh toán bằng VNPAY</label>
+													<label class="custom-control-label">Thanh toán bằng ví VNPAY</label>
 												</div><!-- End .custom-checkbox -->
 											</div><!-- End .form-group -->
 
 											<form action="#">
-												
-
-												<div class="form-group form-group-sm">
-													<div class="select-custom">
-														<select class="form-control form-control-sm">
-															<option value="NY">Hà Nội</option>
-															<option value="CA">TP Hồ Chí Minh</option>
-															<option value="TX">Đà nẵng</option>
-														</select>
-													</div><!-- End .select-custom -->
+											<div class="form-group form-group-sm">
+													
+													<input type="text" class="form-control form-control-sm"
+														placeholder=" Tên người nhận">
+													
 												</div><!-- End .form-group -->
 
 												<div class="form-group form-group-sm">
+													
 													<input type="text" class="form-control form-control-sm"
-														placeholder="Huyện / Xã">
+														placeholder="Email:">
+													
 												</div><!-- End .form-group -->
 
 												<div class="form-group form-group-sm">
@@ -162,8 +155,13 @@
 														placeholder="Số điện thoại">
 												</div><!-- End .form-group -->
 
+												<div class="form-group form-group-sm">
+													<input type="text" class="form-control form-control-sm"
+														placeholder="Địa chỉ">
+												</div><!-- End .form-group -->
+
 												<button type="submit" class="btn btn-shop btn-update-total">
-													Cập nhật tổng thể
+													Cập nhật thông tin
 												</button>
 											</form>
 										</td>
@@ -172,14 +170,14 @@
 
 								<tfoot>
 									<tr>
-										<td>Tổng cộng:</td>
+										<td>Total</td>
 										<td>$17.90</td>
 									</tr>
 								</tfoot>
 							</table>
 
 							<div class="checkout-methods">
-								<a href="cart.html" class="btn btn-block btn-dark">Tiền hành kiểm tra
+								<a href="?act=donhangcuaban" class="btn btn-block btn-dark">Hoàn tất đặt hàng
 									<i class="fa fa-arrow-right"></i></a>
 							</div>
 						</div><!-- End .cart-summary -->
