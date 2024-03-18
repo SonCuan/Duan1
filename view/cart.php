@@ -94,18 +94,7 @@
 									<tr>
 										<td colspan="5" class="clearfix">
 											<div class="float-left">
-												<div class="cart-discount">
-													<form action="#">
-														<div class="input-group">
-															<input type="text" class="form-control form-control-sm"
-																placeholder="Mã giảm giá" required>
-															<div class="input-group-append">
-																<button class="btn btn-sm" type="submit">Áp dụng phiếu giảm giá
-																	</button>
-															</div>
-														</div><!-- End .input-group -->
-													</form>
-												</div>
+												
 											</div><!-- End .float-left -->
 
 											<div class="float-right">
