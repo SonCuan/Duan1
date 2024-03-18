@@ -23,7 +23,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="home-slide home-slide-2 banner"style="display:inline; width:1536px; height:auto;">
+                    <div class="home-slide home-slide-2 banner"style="display:inline; width:1536px; ">
                         <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.jpg" alt="slider image"
                             width="1900" height="575">
 

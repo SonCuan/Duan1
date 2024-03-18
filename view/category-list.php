@@ -111,7 +111,7 @@
                                     <div class="product-action">
                                         <a href="#" class="btn-icon btn-add-cart product-type-simple">
                                             <i class="icon-shopping-cart"></i>
-                                            <span>ADD TO CART</span>
+                                            <span>Thêm vào giỏ hàng</span>
                                         </a>
                                         <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
                                             <i class="icon-heart"></i>
@@ -161,7 +161,7 @@
                                     <div class="product-action">
                                         <a href="?act=product" class="btn-icon btn-add-cart">
                                             <i class="fa fa-arrow-right"></i>
-                                            <span>SELECT OPTIONS</span>
+                                            <span>Xem chi tiết</span>
                                         </a>
                                         <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
                                             <i class="icon-heart"></i>
@@ -211,7 +211,7 @@
                                     <div class="product-action">
                                         <a href="#" class="btn-icon btn-add-cart product-type-simple">
                                             <i class="icon-shopping-cart"></i>
-                                            <span>ADD TO CART</span>
+                                            <span>Thêm vào giỏ hàng</span>
                                         </a>
                                         <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
                                             <i class="icon-heart"></i>
@@ -262,7 +262,7 @@
                                     <div class="product-action">
                                         <a href="?act=product" class="btn-icon btn-add-cart">
                                             <i class="fa fa-arrow-right"></i>
-                                            <span>SELECT OPTIONS</span>
+                                            <span>Xem chi tiết</span>
                                         </a>
                                         <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
                                             <i class="icon-heart"></i>
@@ -312,7 +312,7 @@
                                     <div class="product-action">
                                         <a href="#" class="btn-icon btn-add-cart product-type-simple">
                                             <i class="icon-shopping-cart"></i>
-                                            <span>ADD TO CART</span>
+                                            <span>Thêm vào giỏ hàng</span>
                                         </a>
                                         <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
                                             <i class="icon-heart"></i>
@@ -362,7 +362,7 @@
                                     <div class="product-action">
                                         <a href="?act=product" class="btn-icon btn-add-cart">
                                             <i class="fa fa-arrow-right"></i>
-                                            <span>SELECT OPTIONS</span>
+                                            <span>Xem chi tiết</span>
                                         </a>
                                         <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
                                             <i class="icon-heart"></i>
