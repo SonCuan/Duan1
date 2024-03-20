@@ -9,21 +9,36 @@
                         }
                     }">
                     <div class="home-slide home-slide-1 banner" style="display:inline; width:1536px; height:auto;" >
-                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner-nuochoa.jpg" alt="slider image"
+                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/slide3.jpg" alt="slider image"
                             width="1900" height="575">
 
                         <div class="banner-layer banner-layer-middle banner-layer-left">
                             <div class="container-fluid">
                                 <div class="appear-animate" data-animation-name="fadeInLeftShorter"
                                     data-animation-delay="200">
-                                    <h2 class="font-weight-light ls-10 text-primary" >Sang trọng và huyền bí</h2><br>
+                                    <h2 class="font-weight-light ls-10 text-primary" >Thơm tho </h2><br>
                                     <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY <br>
                                             </i><i class="icon-right-open-big"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="home-slide home-slide-2 banner"style="display:inline; width:1536px; ">
+                    <div class="home-slide home-slide-1 banner" style="display:inline; width:1536px; height:auto;" >
+                        <img class="slide-bg" src="assets/images/demoes/demo23/slider/slide-1.jpg" alt="slider image"
+                            width="1900" height="575">
+
+                        <div class="banner-layer banner-layer-middle banner-layer-left">
+                            <div class="container-fluid">
+                                <div class="appear-animate" data-animation-name="fadeInLeftShorter"
+                                    data-animation-delay="200">
+                                    <h2 class="font-weight-light ls-10 text-primary" >Trẻ trung & năng động</h2><br>
+                                    <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY <br>
+                                            </i><i class="icon-right-open-big"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-slide home-slide-2 banner"style="display:inline; width:1536px; height:360px; ">
                         <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.jpg" alt="slider image"
                             width="1900" height="575">
 
