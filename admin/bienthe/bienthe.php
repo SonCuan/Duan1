@@ -30,7 +30,7 @@ document.getElementById("times").innerHTML=hour+" giờ "+min+" phút "+sec+" gi
 </script>
 </section>
 <section class="danhmuc">
-<section class="themmoi"><a href="taodm.html"><i class="fa-solid fa-plus"></i> thêm biến thể sản phẩm</a></section>
+<section class="themmoi"><a href="?act=addbienthe"><i class="fa-solid fa-plus"></i> thêm biến thể sản phẩm</a></section>
 <section class="danhsach">
     <form action="" method="post">
     <table>

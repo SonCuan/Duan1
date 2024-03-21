@@ -50,6 +50,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'bienthe':
             include "bienthe/bienthe.php";
             break;
+        case 'addbienthe':
+            include "bienthe/add.php";
         default:
             # code...
             break;
