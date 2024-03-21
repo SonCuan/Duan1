@@ -49,7 +49,7 @@
                                     <td>' . $madm . '</td>
                                     <td>' . $tendm . '</td>
                                     <td>' . $noidungdm . '</td>
-                                    <td><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="'.$xoadm.'" onclick = "return confirm('.$thongbaoxoa.')" ><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                                    <td><a href="'.$suadm.'"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="'.$xoadm.'" onclick = "return confirm('.$thongbaoxoa.')" ><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
                                     </tr>';
                 }
 

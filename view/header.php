@@ -3,7 +3,9 @@
 
 
 <!-- Mirrored from portotheme.com/html/porto_ecommerce/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 08 Mar 2024 06:46:18 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,8 +46,7 @@
         <div class="top-notice font2">
             <div class="container-fluid text-center text-dark">
                 <i class="icon-shipping align-middle"></i><b class="text-uppercase">Miễn phí vận chuyển</b>&nbsp;đối với đơn hàng từ $30 trở lên,
-                Code:&nbsp;<b class="text-uppercase">Nhóm 10</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a
-                    href="?act=shop" class="text-dark">Xem tất cả ưu đãi</a>
+                Code:&nbsp;<b class="text-uppercase">Nhóm 10</b>&nbsp;| Hạn chế áp dụng.&nbsp;<a href="?act=shop" class="text-dark">Xem tất cả ưu đãi</a>
             </div>
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
@@ -96,23 +97,20 @@
                             </div>
                         </a>
 
-                       
+
                         <a href="?act=cart" class="header-icon">
                             <i class="minicart-icon"></i>
                         </a>
 
-                            <!-- End phần đầu header -->
+                        <!-- End phần đầu header -->
 
-                        <div
-                            class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
-                            <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier"></i><span>Tìm kiếm</span></a>
+                        <div class="header-search header-search-popup header-search-category text-right d-flex d-lg-none">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q"
-                                        placeholder="I'm searching for..." required>
+                                    <input type="search" class="form-control" name="q" id="q" placeholder="I'm searching for..." required>
                                     <div class="select-custom">
-                             
+
                                     </div><!-- End .select-custom -->
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
                                 </div><!-- End .header-search-wrapper -->
@@ -141,30 +139,34 @@
                                 <li>
                                     <a href="?act=shop">Sản phẩm</a>
                                     <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                        
-                                    
+                                        <?php
+                                        foreach ($list_danhmuc as $dm) {
+                                            extract($dm);
+                                            echo '<option value=' . $madm . '>' . $tendm . '</option>';
+                                        }
 
-                                    
+                                        ?>
+                                    </div>
+
+
                                 </li>
                                 <li class="d-none d-xl-block">
                                     <a href="?act=gioithieu">Giới thiệu</a>
-                                  
+
                                 </li>
-                                
+
                                 <li><a href="?act=blog">Liên hệ</a></li>
-                               
+
                             </ul>
                         </nav>
                     </div>
                     <div class="header-right d-flex pr-0">
                         <div class="header-search header-search-popup header-search-category text-right">
-                            <a href="#" class="search-toggle" role="button"><i
-                                    class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
+                            <a href="#" class="search-toggle" role="button"><i class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q1"
-                                        placeholder="Tìm kiếm đơn hàng" required>
-                                    
+                                    <input type="search" class="form-control" name="q" id="q1" placeholder="Tìm kiếm đơn hàng" required>
+
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
                                 </div><!-- End .header-search-wrapper -->
                             </form>

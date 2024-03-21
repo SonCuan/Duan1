@@ -31,23 +31,26 @@
         <section class="danhmuc">
             <section class="them"> Tạo mới danh mục</section>
             <section class="taodm">
-                <form action="#" method="post">
+                <form action="index.php?act=taodm" method="post">
                 <div class="dm">
                    <p>Mã danh mục</p>  <br>
-                    <input type="text" name="" id="" disabled placeholder="Tăng dần !" style="background: white;">
+                    <input type="text" name="madm"  disabled placeholder="Tăng dần !" style="background: white;">
                 </div>
                 <div class="dm">
                     <p>Tên danh mục </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập Tên Danh Mục">
+                    <input type="text" name="tendm" required placeholder="Nhập Tên Danh Mục">
                 </div>
                 <div class="dm">
                     <p>Nội dung danh mục </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập Nội Dung">
+                    <input type="text" name="noidungdm" required placeholder="Nhập Nội Dung">
                 </div>
                 <div class="nut">
-                    <input type="submit" name="" id="" value="Thêm mới">
+                    <input type="submit" name="themmoi"  value="Thêm mới">
                     <a href="index.php?act=homedanhmuc"><input type="button" value="Danh Sách" name="" id=""></a>
                 </div>
+                <?php 
+                   if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+                ?>
                 </form>
             </section><br>
         </section>

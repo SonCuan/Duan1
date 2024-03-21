@@ -1,5 +1,8 @@
 <?php
+include "model/pdo.php";
+include "model/danhmuc.php";
 
+$list_danhmuc=loadall_danhmuc();
 include_once "view/header.php";
 if (isset($_GET['act']) && $_GET['act'] != "") {
     switch ($_GET['act']) {

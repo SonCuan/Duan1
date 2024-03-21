@@ -1,5 +1,10 @@
+<?php
+    if(is_array($dm)){
+        extract($dm);
+    }
+?>
 <section class="tieude">
-            <h4><a href="?act=taodm"  style="text-decoration: none; color: #000;">Danh sách danh mục</a> / Cập nhập danh mục</h4>
+            <h4><a href="index.php?act=home"  style="text-decoration: none; color: #000;">Danh sách danh mục</a> / Cập nhập danh mục</h4>
             <div class="lich">
                 <div id="days"></div>
                 <div id="dates"></div>
@@ -29,21 +34,25 @@
             </script>
         </section>
         <section class="danhmuc">
-            <section class="them"> Cập nhập danh mục</section>
+            <section class="them"> Tạo mới danh mục</section>
             <section class="taodm">
-                <form action="#" method="post">
-                <div class="dm">
-                   <p>Mã danh mục</p>  <br>
-                    <input type="text" name="" id="" disabled placeholder="Tăng dần !" style="background: white;">
-                </div>
+                <form action="index.php?act=updatedm" method="post">
                 <div class="dm">
                     <p>Tên danh mục </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập Tên Danh Mục">
+                    <input type="text" name="tendm"  value="<?php  if(isset($tendm) && ($tendm !="")) echo $tendm; ?>">
+                </div>
+                <div class="dm">
+                    <p>Nội dung danh mục </p>  <br>
+                    <input type="text" name="noidungdm"  value="<?php  if(isset($noidungdm) && ($noidungdm !="")) echo $noidungdm; ?>">
                 </div>
                 <div class="nut">
-                    <input type="submit" name="" id="" value="Cập nhập">
-                    <a href="index.php?act=home"><input type="button" value="Danh Sách" name="" id=""></a>
+                <input type="hidden" name="madm" value="<?php  if(isset($madm) && ($madm>0)) echo $madm; ?>">
+                    <input type="submit" name="capnhap"  value="Cập nhập">
+                    <a href="index.php?act=homedanhmuc"><input type="button" value="Danh Sách" name="" id=""></a>
                 </div>
+                <?php 
+                   if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+                ?>
                 </form>
             </section><br>
         </section>
