@@ -80,11 +80,20 @@
 				.bottom-text {
 					margin-top: 20px;
 					text-align: center;
+					font-size: 16px;
+					cursor: pointer;
+					transition: font-size 0.3s ease;
 				}
 
 				.bottom-text a {
 					text-decoration: none;
 					color: #007bff;
+				}
+
+				.bottom-text a:hover {
+					color: red;
+					font-size: 18px;
+					text-decoration: underline;
 				}
 			</style>
 			<h2>Đăng nhập</h2>
@@ -98,7 +107,10 @@
 				<button type="submit" class="btn">Đăng nhập</button>
 			</form>
 			<div class="bottom-text">
-				Bạn chưa có tài khoản ? <a href="?act=dangky">Đăng ký tại đây</a>
+				Bạn chưa có tài khoản? <a href="?act=dangky">Đăng ký tại đây</a>
+			</div>
+			<div class="bottom-text">
+				<a href="?act=quenmk">Quên mật khẩu</a>
 			</div>
 		</div>
 	</div>
