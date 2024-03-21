@@ -4,96 +4,103 @@
 			<nav aria-label="breadcrumb" class="breadcrumb-nav">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="index.php">Home</a></li>
-						<li class="breadcrumb-item"><a href="?act=shop">Shop</a></li>
+						<li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+
 						<li class="breadcrumb-item active" aria-current="page">
-							My Account
+							Đăng nhập tài khoản
 						</li>
 					</ol>
 				</div>
 			</nav>
-
-			<h1>My Account</h1>
+			<br>
+			<h1>Đăng nhập và đăng ký</h1>
 		</div>
 	</div>
+	<div class="container">
+		<div class="login-box">
+			<style>
+				body {
+					margin: 0;
+					padding: 0;
+					font-family: Arial, sans-serif;
+					background: #f4f4f4;
+				}
 
-	<div class="container login-container">
-		<div class="row">
-			<div class="col-lg-10 mx-auto">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="heading mb-1">
-							<h2 class="title">Đăng nhập</h2>
-						</div>
+				.container {
+					display: flex;
+					justify-content: center;
+					align-items: center;
 
-						<form action="#">
-							<label for="login-email">
-								Tên người dùng hoặc email
-								<span class="required">*</span>
-							</label>
-							<input type="email" class="form-input form-wide" id="login-email" required />
+				}
 
-							<label for="login-password">
-								Mật khẩu
-								<span class="required">*</span>
-							</label>
-							<input type="password" class="form-input form-wide" id="login-password" required />
+				.login-box,
+				.register-box {
+					width: 600px;
+					padding: 40px;
+					background: #fff;
+					border-radius: 10px;
+					box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+				}
 
-							<div class="form-footer">
-								<div class="custom-control custom-checkbox mb-0">
-									<input type="checkbox" class="custom-control-input" id="lost-password" />
-									<label class="custom-control-label mb-0" for="lost-password">Lưu tài khoản
-									</label>
-								</div>
+				h2 {
+					margin: 0 0 20px;
+					padding: 0;
+					color: #333;
+					text-align: center;
+				}
 
-								<a href="?act=quenmk" class="forget-password text-dark form-footer-right"> Quên mật khẩu
-								</a>
-							</div>
-							<button type="submit" class="btn btn-dark btn-md w-100">
-								ĐĂNG NHẬP
-							</button>
-						</form>
-					</div>
-					<div class="col-md-6">
-						<div class="heading mb-1">
-							<h2 class="title">Đăng ký</h2>
-						</div>
+				.textbox {
+					position: relative;
+					margin-bottom: 30px;
+				}
 
-						<form action="#">
-							<label for="register-email">
-								Email
-								<span class="required">*</span>
-							</label>
-							<input type="email" class="form-input form-wide" id="register-email" required />
+				.textbox input {
+					width: 100%;
+					padding: 10px;
+					background: #f0f0f0;
+					border: none;
+					outline: none;
+					border-radius: 5px;
+				}
 
-							<label for="register-password">
-								Tài khoản
-								<span class="required">*</span>
-							</label>
-							<input type="text" class="form-input form-wide" id="register-password" required />
-							<label for="register-password">
-								Mật khẩu
-								<span class="required">*</span>
-								<!--js  -->
+				.btn {
+					width: 100%;
+					padding: 10px;
+					background: #007bff;
+					border: none;
+					border-radius: 5px;
+					color: #fff;
+					cursor: pointer;
+				}
 
-								<!-- end js -->
-							</label>
-							<input type="password" class="form-input form-wide" id="register-password" required />
-							<label for="register-password">
-								Số điện thoại
-								<span class="required">*</span>
-							</label>
-							<input type="text" class="form-input form-wide" id="register-password" required />
+				.btn:hover {
+					background: #0056b3;
+				}
 
-							<div class="form-footer mb-2">
-								<button type="submit" class="btn btn-dark btn-md w-100 mr-0">
-									ĐĂNG KÝ
-								</button>
-							</div>
-						</form>
-					</div>
+				.bottom-text {
+					margin-top: 20px;
+					text-align: center;
+				}
+
+				.bottom-text a {
+					text-decoration: none;
+					color: #007bff;
+				}
+			</style>
+			<h2>Đăng nhập</h2>
+			<form action="/login" method="POST">
+				<div class="textbox">
+					<input type="text" name="username" placeholder="Tên đăng nhập" required>
 				</div>
+				<div class="textbox">
+					<input type="password" name="password" placeholder="Mật khẩu" required>
+				</div>
+				<button type="submit" class="btn">Đăng nhập</button>
+			</form>
+			<div class="bottom-text">
+				Bạn chưa có tài khoản ? <a href="?act=dangky">Đăng ký tại đây</a>
 			</div>
 		</div>
 	</div>
+
 </main><!-- End .main -->
