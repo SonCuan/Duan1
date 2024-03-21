@@ -62,7 +62,7 @@
                         <td>12.500.000 đ</td>
                         <td>channer</td>
                         <td>0</td>
-                        <td><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a><a href=""onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                        <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href=""onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -72,7 +72,7 @@
                         <td>13.500.000 đ</td>
                         <td>channer</td>
                         <td>0</td>
-                        <td><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a><a href=""onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                        <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href=""onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -82,7 +82,7 @@
                         <td>16.000.000 đ</td>
                         <td>channer</td>
                         <td>0</td>
-                        <td><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a><a href=""onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                        <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href=""onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
                     </tr>
                 </table>
                 </form>

@@ -41,8 +41,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'sanpham':
             include "sanpham/sanpham.php";
             break;
+        case 'suasp':
+                include "sanpham/suasp.php";
+                break;
         case 'taosp':
             include "sanpham/taosp.php";
+            break;
+        case 'bienthe':
+            include "bienthe/bienthe.php";
             break;
         default:
             # code...
