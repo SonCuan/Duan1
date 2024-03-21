@@ -143,6 +143,7 @@
                                         foreach ($list_danhmuc as $dm) {
                                             extract($dm);
                                             echo '<option value=' . $madm . '>' . $tendm . '</option>';
+                                            
                                         }
 
                                         ?>

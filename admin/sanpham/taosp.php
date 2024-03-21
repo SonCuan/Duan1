@@ -31,41 +31,46 @@
         <section class="danhmuc">
             <section class="them"> Thêm mới sản phẩm</section>
             <section class="taotk">
-                <form action="#" method="post">
+                <form action="index.php?act=taosp" method="post" enctype="multipart/form-data">
                 <div class="dm">
                    <p>Tên Sản Phẩm</p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập tên đăng nhập" style="background: white;">
+                    <input type="text" name="tensp"  required placeholder="Nhập tên sản phẩm" style="background: white;">
                 </div>
                 
                 <div class="dm">
                     <p>Số Lượng </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập số điện thoại">
+                    <input type="text" name="soluong"  required placeholder="Nhập số lượng">
                 </div>
                 <div class="dm">
                     <p>Giá Tiền </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập mật khẩu">
+                    <input type="text" name="gia"  required placeholder="Nhập giá tiền">
                 </div>
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
-                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="" id="">
-                        <option value="">Tất cả</option>
-                        <option value="">Channer</option>
-                        <option value="">Dior</option>
-                        <option value="">men</option>
+                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="madm" >
+                        <?php
+                            foreach ($listdanhmuc as $danhmuc) {
+                                extract($danhmuc);
+                                echo '<option value='.$madm.'>'.$tendm.'</option>';
+                            }
+                        ?>
                     </select>
                 </div>
                 <div class="anh">
                     <p>Hình Ảnh </p>  <br>
-                    <input type="file" name="" id="" required >
+                    <input type="file" name="hinh"  required >
                 </div>
                 <div class="anhmoi">
                     <p>Mô tả </p>  <br>
-                    <input type="text"  name="" id="" required >
+                    <input type="text"  name="mota"  required >
                 </div>
                 <div class="nut">
-                    <input type="submit" name="" id="" value="Thêm mới">
-                    <a href="?act=sanpham"><input type="button" value="Danh Sách" name="" id=""></a>
+                    <input type="submit" name="themmoi"  value="Thêm mới">
+                    <a href="?act=homesanpham"><input type="button" value="Danh Sách" name="" ></a>
                 </div>
+                <?php 
+                   if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+                ?>
                 </form>
             </section><br>
         </section>

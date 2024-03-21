@@ -32,7 +32,7 @@
     <section class="themmoi"><a href="?act=taosp"><i class="fa-solid fa-plus"></i> Tạo mới sản phẩm</a></section>
     <section class="danhsach">
         <section class="from">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <input type="text" name="" placeholder="Tìm Kiếm Tên Sản Phẩm ...">
                 <select name="">
                     <option value="0" selected>Tất cả</option>
@@ -57,7 +57,30 @@
                     <th>Danh Mục</th>
                     <th>Chức Năng</th>
                 </tr>
-                <tr>
+                <?php
+                foreach ($listsanpham as $sanpham) {
+                    extract($sanpham);
+                    $suasp = "index.php?act=suasp&masp=" . $masp;
+                    $xoasp = "index.php?act=xoasp&masp=" . $masp;
+                    $thongbaoxoa= "'"."Bạn có muốn xóa: ".$tensp."'";
+                    $hinhpath = "../upload/" . $hinh;
+                    if (is_file($hinhpath)) {
+                        $hinh = "<img src='" . $hinhpath . "' height = '80'>";
+                    } else {
+                        $hinh = "no photo";
+                    }
+                    echo ' <tr>
+                    <td>'.$masp.'</td>
+                    <td>'.$tensp.'</td>
+                    <td><img src="'.$hinh.'" style="width: 100px; height: 100px;" alt=""></td>
+                    <td>'.$soluong.'</td>
+                    <td>'.$gia.' đ</td>
+                    <td>'.$tendm.'</td>
+                    <td><a href="'.$suasp.'"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href="'.$xoasp.'" onclick = "return confirm('.$thongbaoxoa.')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                </tr>';
+                }
+                ?>
+                <!-- <tr>
                     <td>1</td>
                     <td>Dior nữ</td>
                     <td><img src="img/adidas3.png" style="width: 100px; height: 100px;" alt=""></td>
@@ -83,7 +106,7 @@
                     <td>16.000.000 đ</td>
                     <td>channer</td>
                     <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href="" onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
-                </tr>
+                </tr> -->
             </table>
         </form>
     </section><br>
