@@ -32,7 +32,7 @@
     <section class="themmoi"><a href="?act=taosp"><i class="fa-solid fa-plus"></i> Tạo mới sản phẩm</a></section>
     <section class="danhsach">
         <section class="from">
-            <form action="index.php?act=listok" method="post" enctype="multipart/form-data">
+            <form action="index.php?act=homesanpham" method="post" enctype="multipart/form-data">
                 <input type="text" name="kyw" placeholder="Tìm Kiếm Tên Sản Phẩm ...">
                 <select name="madm">
                     <option value="0" selected>Tất cả</option>
