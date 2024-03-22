@@ -68,7 +68,7 @@ document.getElementById("times").innerHTML=hour+" giờ "+min+" phút "+sec+" gi
         </tr>
     </table>
     <div class="nut">
-        <a href="?act=sanpham"><input style="margin: 10px 20px;" type="button" value="Danh Sách sản phẩm" name="" id=""></a>
+        <a href="?act=homesanpham"><input style="margin: 10px 20px;" type="button" value="Danh Sách sản phẩm" name="" id=""></a>
     </div>
     </form>
 </section><br>

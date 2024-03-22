@@ -31,7 +31,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'suadm':
             if (isset($_GET['madm']) && ($_GET['madm'] > 0)) {
-                $sql = "select * from danhmuc where madm=" . $_GET['madm'];
+                $sql = "select * from danhmuc where madm=".$_GET['madm'];
                 $dm = pdo_query_one($sql);
             }
             include "danhmuc/update.php";
