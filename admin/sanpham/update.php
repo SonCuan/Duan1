@@ -1,5 +1,16 @@
+<?php
+if (is_array($sanpham)) {
+    extract($sanpham);
+}
+$hinhpath = "../upload/" . $hinh;
+if (is_file($hinhpath)) {
+    $hinh = "<img src='" . $hinhpath . "' height = '80'>";
+} else {
+    $hinh = "no photo";
+}
+?>
 <section class="tieude">
-            <h4><a href="?act=sanpham"  style="text-decoration: none; color: #000;">Danh sách sản phẩm</a> / Thêm mới sản phẩm</h4>
+            <h4><a href="?act=sanpham"  style="text-decoration: none; color: #000;">Danh sách sản phẩm</a> / Cập nhập sản phẩm</h4>
             <div class="lich">
                 <div id="days"></div>
                 <div id="dates"></div>
@@ -29,42 +40,46 @@
             </script>
         </section>
         <section class="danhmuc">
-            <section class="them"> Thêm mới sản phẩm</section>
+            <section class="them"> Cập nhập sản phẩm</section>
             <section class="taotk">
-                <form action="#" method="post">
+                <form action="index.php?act=updatesp" method="post" enctype="multipart/form-data">
                 <div class="dm">
                    <p>Tên Sản Phẩm</p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập tên đăng nhập" style="background: white;">
+                    <input type="text" name="tensp" value="<?= $tensp ?>"    style="background: white;">
                 </div>
                 
                 <div class="dm">
                     <p>Số Lượng </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập số điện thoại">
+                    <input type="text" name="soluong" value="<?= $soluong ?>" >
                 </div>
                 <div class="dm">
                     <p>Giá Tiền </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập mật khẩu">
+                    <input type="text" name="gia" value="<?= $gia ?>" >
                 </div>
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
-                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="" id="">
-                        <option value="">Tất cả</option>
-                        <option value="">Channer</option>
-                        <option value="">Dior</option>
-                        <option value="">men</option>
+                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="madm" >
+                        <?php 
+                        foreach($listdanhmuc as $danhmuc){
+                            if ($madm == $danhmuc['madm']) $s="selected"; else $s="";
+                            echo '<option value="'.$danhmuc['madm'].'" '.$s.'>'.$danhmuc['tendm'].'</option>';
+                        }
+                        ?>
                     </select>
                 </div>
                 <div class="anh">
                     <p>Hình Ảnh </p>  <br>
-                    <input type="file" name="" id="" required >
+                    <input type="file" name="hinh"   >
+                    <?= $hinh ?>
                 </div>
                 <div class="anhmoi">
                     <p>Mô tả </p>  <br>
-                    <input type="text"  name="" id="" required >
+                    <input type="text"  name="mota" value="<?= $mota ?>"   >
                 </div>
                 <div class="nut">
-                    <input type="submit" name="" id="" value="Thêm mới">
-                    <a href="?act=sanpham"><input type="button" value="Danh Sách" name="" id=""></a>
+                    <input type="hidden" name="masp" value="<?= $masp ?>">
+                    <input type="submit" name="capnhap"  value="Cập nhập">
+                    <a href="?act=homesanpham"><input type="button" value="Danh Sách" name="" ></a>
                 </div>
                 </form>
             </section><br>

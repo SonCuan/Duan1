@@ -87,8 +87,36 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "sanpham/suasp.php";
             break;
         case 'suasp':
-            include "sanpham/suasp.php";
+            if(isset($_GET['masp'])&& ($_GET['masp']>0)){              
+                $sanpham= loadone_sanpham($_GET['masp']);
+                }
+                $listdanhmuc = loadall_danhmuc();
+                include "sanpham/update.php";
+                break;
+        case 'updatesp':
+            if(isset($_POST['capnhap'])&&($_POST['capnhap'])){
+                $madm = $_POST['madm'];
+                $masp = $_POST['masp'];
+                $tensp = $_POST['tensp'];
+                $soluong = $_POST['soluong'];
+                $gia = $_POST['gia'];
+                $mota = $_POST['mota'];
+                $hinh = $_FILES['hinh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
+                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                    // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                  } else {
+                    // echo "Sorry, there was an error uploading your file.";
+                  }
+                  update_sanpham($masp,$tensp,$hinh,$soluong,$gia,$mota,$madm);
+                $thongbao = "cap nhat thanh cong";
+            }
+            $listdanhmuc = loadall_danhmuc();
+            $listsanpham = loadall_sanpham();
+            include "sanpham/sanpham.php";
             break;
+            
         case 'bienthe':
             include "bienthe/bienthe.php";
             break;

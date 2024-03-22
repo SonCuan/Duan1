@@ -72,7 +72,7 @@
                     echo ' <tr>
                     <td>'.$masp.'</td>
                     <td>'.$tensp.'</td>
-                    <td><img src="'.$hinh.'" style="width: 100px; height: 100px;" alt=""></td>
+                    <td>'.$hinh.'</td>
                     <td>'.$soluong.'</td>
                     <td>'.$gia.' đ</td>
                     <td>'.$tendm.'</td>

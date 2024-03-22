@@ -13,5 +13,18 @@
         $sql="delete from sanpham where masp=".$masp;
         pdo_execute($sql);
     }   
+    function loadone_sanpham($masp){
+        $sql="select * from sanpham where masp=" .$masp;
+        $sp=pdo_query_one($sql);
+        return $sp;
+    }
+    function update_sanpham($masp,$tensp,$hinh,$soluong,$gia,$mota,$madm){
+        if($hinh!="")
+        $sql = "update sanpham set madm ='".$madm."', tensp ='".$tensp."',gia ='".$gia."',mota ='".$mota."',soluong ='".$soluong."',hinh ='".$hinh."' where masp=" .$masp;
+        else 
+        $sql = "update sanpham set madm ='".$madm."', tensp ='".$tensp."',gia ='".$gia."',mota ='".$mota."',soluong ='".$soluong."' where masp=" .$masp;
+        pdo_execute($sql);
+    }
+    
    
 ?>
