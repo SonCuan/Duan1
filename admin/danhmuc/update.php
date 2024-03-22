@@ -4,7 +4,7 @@
     }
 ?>
 <section class="tieude">
-            <h4><a href="index.php?act=home"  style="text-decoration: none; color: #000;">Danh sách danh mục</a> / Cập nhập danh mục</h4>
+            <h4><a href="index.php?act=homedanhmuc"  style="text-decoration: none; color: #000;">Danh sách danh mục</a> / Cập nhập danh mục</h4>
             <div class="lich">
                 <div id="days"></div>
                 <div id="dates"></div>

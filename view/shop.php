@@ -117,7 +117,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-8.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -159,7 +159,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-4.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -202,7 +202,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-9.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -244,7 +244,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-10.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -286,7 +286,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-10.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -328,7 +328,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-3.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                             <img src="assets/images/demoes/demo23/products/product-1.jpg" width="217"
                                                 height="217" alt="product">
@@ -371,7 +371,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-12.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="btn-icon-group">
@@ -408,7 +408,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-13.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -449,7 +449,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-14.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -491,7 +491,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-15.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">
@@ -532,7 +532,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-1.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                             <img src="assets/images/demoes/demo23/products/product-7.jpg" width="217"
                                                 height="217" alt="product">
@@ -575,7 +575,7 @@
                                 <div class="product-default inner-quickview inner-icon">
                                     <figure>
                                         <a href="?act=product">
-                                            <img src="assets/images/demoes/demo23/products/product-2.jpg" width="217"
+                                            <img src="assets/images/demoes/demo23/products/nuochoa.jpg" width="217"
                                                 height="217" alt="product">
                                         </a>
                                         <div class="label-group">

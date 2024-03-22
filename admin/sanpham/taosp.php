@@ -1,5 +1,5 @@
 <section class="tieude">
-            <h4><a href="?act=sanpham"  style="text-decoration: none; color: #000;">Danh sách sản phẩm</a> / Thêm mới sản phẩm</h4>
+            <h4><a href="?act=homesanpham"  style="text-decoration: none; color: #000;">Danh sách sản phẩm</a> / Thêm mới sản phẩm</h4>
             <div class="lich">
                 <div id="days"></div>
                 <div id="dates"></div>
