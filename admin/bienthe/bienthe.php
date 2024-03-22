@@ -1,6 +1,6 @@
 <section class="tieude">
 
-    <h3>Danh sách danh mục</h3>
+    <h4><a href="?act=homesanpham" style="text-decoration: none; color: #000;">Danh sách sản phẩm</a> / Biến thể sản phẩm</h4>
     <div class="lich">
         <div id="days"></div>
         <div id="dates"></div>
@@ -48,7 +48,7 @@
                 <td>50ml</td>
                 <td>56</td>
                 <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: #ccc; border-radius:5px; ">
+                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
                         Còn hàng
                     </div>
                 </td>
@@ -61,7 +61,7 @@
                 <td>50ml</td>
                 <td>56</td>
                 <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: #ccc; border-radius:5px; ">
+                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
                         Còn hàng
                     </div>
                 </td>
@@ -74,7 +74,7 @@
                 <td>50ml</td>
                 <td>56</td>
                 <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: #ccc; border-radius:5px; ">
+                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
                         Còn hàng
                     </div>
                 </td>
