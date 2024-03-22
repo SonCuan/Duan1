@@ -32,9 +32,9 @@
     <section class="themmoi"><a href="?act=taosp"><i class="fa-solid fa-plus"></i> Tạo mới sản phẩm</a></section>
     <section class="danhsach">
         <section class="from">
-            <form action="" method="post" enctype="multipart/form-data">
-                <input type="text" name="" placeholder="Tìm Kiếm Tên Sản Phẩm ...">
-                <select name="">
+            <form action="index.php?act=listok" method="post" enctype="multipart/form-data">
+                <input type="text" name="kyw" placeholder="Tìm Kiếm Tên Sản Phẩm ...">
+                <select name="madm">
                     <option value="0" selected>Tất cả</option>
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
@@ -43,10 +43,10 @@
                     }
                     ?>
                 </select>
-                <input type="submit" name="" value="OK">
+                <input type="submit" name="listok" value="OK">
             </form>
         </section>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <table>
                 <tr>
                     <th>#</th>

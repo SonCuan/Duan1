@@ -5,7 +5,8 @@
     }
     function loadall_sanpham(){
         $sql = "select sp.*, dm.tendm from sanpham as sp
-        inner join danhmuc as dm on dm.madm=sp.madm order by masp desc";
+        inner join danhmuc as dm on dm.madm=sp.madm";
+        $sql.=" order by masp desc";
         $tintuc = pdo_query($sql);
         return $tintuc;
     }
@@ -25,6 +26,7 @@
         $sql = "update sanpham set madm ='".$madm."', tensp ='".$tensp."',gia ='".$gia."',mota ='".$mota."',soluong ='".$soluong."' where masp=" .$masp;
         pdo_execute($sql);
     }
+   
     
    
 ?>
