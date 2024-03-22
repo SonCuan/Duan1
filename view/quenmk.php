@@ -4,16 +4,16 @@
             <nav aria-label="breadcrumb" class="breadcrumb-nav">
                 <div class="container">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="demo4.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="category.html">Shop</a></li>
+                        <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                        
                         <li class="breadcrumb-item active" aria-current="page">
-                            My Account
+                            Quên mật khẩu 
                         </li>
                     </ol>
                 </div>
             </nav>
 
-            <h1>My Account</h1>
+            <h1>Quên mật khẩu</h1>
         </div>
     </div>
 
