@@ -237,6 +237,17 @@ table tr td a i{
     cursor: pointer;
 
 }
+.from form .donhang{
+    padding: 5px 15px;
+    font-size: 15px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 10px 5px 0 5px;
+    cursor: pointer;
+
+}
+
 .from form input[type = "submit"]{
     padding: 5px 30px;
     border: none;

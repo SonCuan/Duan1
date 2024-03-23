@@ -55,14 +55,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'homesanpham':
             $listdanhmuc = loadall_danhmuc();
-            if(isset($_POST['listok'])&&($_POST['listok'])){
-                $kyw=$_POST['kyw'];
-                $madm=$_POST['madm'];
-            }else{
-                $kyw='';
-                $madm=0;
+            if (isset($_POST['listok']) && ($_POST['listok'])) {
+                $kyw = $_POST['kyw'];
+                $madm = $_POST['madm'];
+            } else {
+                $kyw = '';
+                $madm = 0;
             }
-              $listsanpham = loadall_sanphammoi($kyw,$madm);
+            $listsanpham = loadall_sanphammoi($kyw, $madm);
             include "sanpham/sanpham.php";
             break;
         case 'taosp':
@@ -128,6 +128,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'bienthe':
             include "bienthe/bienthe.php";
+            break;
+        case 'homedonhang':
+            include "donhang//donhang.php";
             break;
         case 'addbienthe':
             include "bienthe/add.php";
