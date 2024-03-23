@@ -1,8 +1,11 @@
 <?php
+session_start();
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/thongke.php";
+include "../model/taikhoan.php";
+
 
 
 
@@ -15,6 +18,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/danhmuc.php";
             break;
+            /* controller danh mục */
+
         case 'xoadm':
             if (isset($_GET['madm']) && ($_GET['madm'] > 0)) {
                 delete_danhmuc($_GET['madm']);
@@ -141,14 +146,61 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case 'bl':
             include "binhluan/binhluan.php";
             break;
-        case 'taikhoan':
+            /* controller tài khoản */
+
+        case 'hometaikhoan':
+            $kyw = "";
+            $vaitro = "";
+            if (isset($_POST['listok']) && ($_POST['listok'])) {
+                $kyw = $_POST['kyw'];
+                $vaitro = $_POST['vaitro'];
+            }
+            $listtaikhoan = loadall_taikhoantk($kyw, $vaitro);
             include "taikhoan/taikhoan.php";
             break;
         case 'taotaikhoan':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $hoten = $_POST['hoten'];
+                $email = $_POST['email'];
+                $sdt = $_POST['sdt'];
+                $diachi = $_POST['diachi'];
+                $matkhau = $_POST['matkhau'];
+                $vaitro = $_POST['vaitro'];
+                insert_taikhoan_admin($hoten, $email, $sdt, $matkhau, $diachi, $vaitro);
+                $thongbao = "Them thanh cong";
+            }
+            $listtaikhoan = loadall_taikhoan();
             include "taikhoan/taotaikhoan.php";
             break;
+        case 'xoatk':
+            if (isset($_GET['mand']) && ($_GET['mand'] > 0)) {
+                delete_taikhoan($_GET['mand']);
+            }
+            $listtaikhoan = loadall_taikhoan();
+            include "taikhoan/taikhoan.php";
+            break;
         case 'suatk':
-            include "taikhoan/suatk.php";
+            if (isset($_GET['mand']) && ($_GET['mand'] > 0)) {
+                $taikhoan = loadone_taikhoan($_GET['mand']);
+            }
+            $listtaikhoan = loadall_taikhoan();
+            include "taikhoan/update.php";
+            break;
+        case 'updatetk':
+            if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
+                $mand = $_POST['mand'];
+                $hoten = $_POST['hoten'];
+                $email = $_POST['email'];
+                $sdt = $_POST['sdt'];
+                $matkhau = $_POST['matkhau'];
+                $diachi = $_POST['diachi'];
+                $vaitro = $_POST['vaitro'];
+                // extract($taikhoan);
+                update_taikhoan($mand, $hoten, $email, $sdt, $matkhau, $diachi, $vaitro);
+                $thongbao = 'Cập nhật tài khoản thành công';
+            }
+            $listtaikhoan = loadall_taikhoan();
+            include "taikhoan/taikhoan.php";
             break;
         case "bieudothongke":
             $listthongke = thongke();

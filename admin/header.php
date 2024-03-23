@@ -17,7 +17,7 @@
                 <li><a href="index.php"><i class="fa-solid fa-house"></i>Trang chủ </a></li>
                 <li><a href="index.php?act=homedanhmuc"><i class="fa-solid fa-list"></i>Danh mục </a></li>
                 <li><a href="index.php?act=homesanpham"><i class="fa-solid fa-list"></i>Sản phẩm</a></li>
-                <li><a href="index.php?act=taikhoan"><i class="fa-solid fa-user"></i>Tài khoản</a></li>
+                <li><a href="index.php?act=hometaikhoan"><i class="fa-solid fa-user"></i>Tài khoản</a></li>
                 <li><a href="index.php?act=bl"><i class="fa-solid fa-comment"></i>Bình luận</a></li>
                 <li><a href="index.php?act=homedonhang"><i class="fa-solid fa-chart-simple"></i>Đơn hàng</a></li>
                 <li><a href="index.php?act=bieudothongke"><i class="fa-solid fa-chart-pie"></i>Biểu đồ</a></li>

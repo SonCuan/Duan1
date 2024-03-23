@@ -11,12 +11,13 @@
         return $tintuc;
     }
     function loadall_sanphammoi($kyw="",$madm=0){
-        $sql = "select * from sanpham where masp "; 
+        $sql = "select sp.*, dm.tendm from sanpham as sp
+        inner join danhmuc as dm on dm.madm=sp.madm";
         if($kyw!=""){
-            $sql.=" and tensp like '%".$kyw."%'";
+            $sql.=" and sp.tensp like '%".$kyw."%'";
         }
         if($madm > 0){
-            $sql.=" and madm = '".$madm."'";
+            $sql.=" and dm.madm = '".$madm."'";
         }
         $sql.=" order by masp desc";
         $listsanpham = pdo_query($sql);

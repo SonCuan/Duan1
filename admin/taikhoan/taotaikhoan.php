@@ -31,36 +31,40 @@
         <section class="danhmuc">
             <section class="them"> Thêm mới tài khoản</section>
             <section class="taotk">
-                <form action="#" method="post">
+                <form action="?act=taotaikhoan" method="post">
                 <div class="dm">
                    <p>Tên đăng nhập</p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập tên đăng nhập" style="background: white;">
+                    <input type="text" name="hoten"  required placeholder="Nhập tên đăng nhập" style="background: white;">
                 </div>
                 <div class="dm">
                     <p>Email </p>  <br>
-                    <input type="email" name="" id="" required placeholder="Nhập Email">
+                    <input type="email" name="email"  required placeholder="Nhập Email">
                 </div>
                 <div class="dm">
                     <p>Số điện thoại </p>  <br>
-                    <input type="tel" name="" id="" required placeholder="Nhập số điện thoại">
+                    <input type="tel" name="sdt"  required placeholder="Nhập số điện thoại">
                 </div>
                 <div class="dm">
                     <p>Mật khẩu </p>  <br>
-                    <input type="password" name="" id="" required placeholder="Nhập mật khẩu">
+                    <input type="password" name="matkhau"  required placeholder="Nhập mật khẩu">
                 </div>
                 <div class="dm">
                     <p>Địa chỉ </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập địa chỉ">
+                    <input type="text" name="diachi"  required placeholder="Nhập địa chỉ">
                 </div>
                 <div class="dm cach">
                     <p>Vai trò </p>  <br>
-                    <input type="radio" value="Admin" name="vaitro"> Admin <br><br>
-                    <input type="radio" value="Người dùng" name="vaitro"> Người dùng
+                    <input type="radio" value="1" name="vaitro"> Admin <br><br>
+                    <input type="radio" value="0" name="vaitro"> Người dùng
                 </div>
                 <div class="nut">
-                    <input type="submit" name="" id="" value="Thêm mới">
-                    <a href="index.php?act=taikhoan"><input type="button" value="Danh Sách" name="" id=""></a>
+                    <input type="submit" name="themmoi"  value="Thêm mới">
+                    <a href="index.php?act=hometaikhoan"><input type="button" value="Danh Sách" name="" ></a>
                 </div>
+                <?php 
+                   if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+                ?>
                 </form>
+
             </section><br>
         </section>

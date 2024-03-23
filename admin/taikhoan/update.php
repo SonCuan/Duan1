@@ -1,5 +1,11 @@
+<?php
+        if (is_array($taikhoan)) {
+            extract($taikhoan);
+        }
+    
+?>
 <section class="tieude">
-            <h4><a href="?act=taikhoan"  style="text-decoration: none; color: #000;">Danh sách tài khoản</a> / Cập nhập tài khoản</h4>
+            <h4><a href="index.php?act=hometaikhoan"  style="text-decoration: none; color: #000;">Danh sách tài khoản</a> / Cập nhập tài khoản</h4>
             <div class="lich">
                 <div id="days"></div>
                 <div id="dates"></div>
@@ -31,36 +37,40 @@
         <section class="danhmuc">
             <section class="them"> Cập nhập tài khoản</section>
             <section class="taotk">
-                <form action="#" method="post">
+                <form action="index.php?act=updatetk" method="post">
                 <div class="dm">
                    <p>Tên đăng nhập</p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập tên đăng nhập" style="background: white;">
+                    <input type="text" name="hoten" value="<?= $hoten?>"   style="background: white;">
                 </div>
                 <div class="dm">
                     <p>Email </p>  <br>
-                    <input type="email" name="" id="" required placeholder="Nhập Email">
+                    <input type="email" name="email" value="<?= $email?>">
                 </div>
                 <div class="dm">
                     <p>Số điện thoại </p>  <br>
-                    <input type="tel" name="" id="" required placeholder="Nhập số điện thoại">
+                    <input type="tel" name="sdt" value="<?= $sdt?>" >
                 </div>
                 <div class="dm">
                     <p>Mật khẩu </p>  <br>
-                    <input type="password" name="" id="" required placeholder="Nhập mật khẩu">
+                    <input type="text" name="matkhau" value="<?= $matkhau?>" >
                 </div>
                 <div class="dm">
                     <p>Địa chỉ </p>  <br>
-                    <input type="text" name="" id="" required placeholder="Nhập địa chỉ">
+                    <input type="text" name="diachi"  value="<?= $diachi?>">
                 </div>
                 <div class="dm cach">
                     <p>Vai trò </p>  <br>
-                    <input type="radio" value="Admin" name="vaitro"> Admin <br><br>
-                    <input type="radio" value="Người dùng" name="vaitro"> Người dùng
+                    <input type="radio" value="1" name="vaitro"  <?=$vaitro==1?"checked":""?>> Admin <br><br>
+                    <input type="radio" value="0" name="vaitro"  <?=$vaitro==0?"checked":""?>> Người dùng
                 </div>
                 <div class="nut">
-                    <input type="submit" name="" id="" value="Cập nhập">
-                    <a href="index.php?act=taikhoan"><input type="button" value="Danh Sách" name="" id=""></a>
+                    <input type="hidden" name="mand" value="<?= $mand ?>" >
+                    <input type="submit" name="capnhap"  value="Cập nhập">
+                    <a href="index.php?act=hometaikhoan"><input type="button" value="Danh Sách" name="" ></a>
                 </div>
+                <?php
+                    if(isset($thongbao)&&($thongbao!="")) echo $thongbao;
+                ?>
                 </form>
             </section><br>
         </section>
