@@ -2,6 +2,8 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/thongke.php";
+
 
 
 include "header.php";
@@ -31,7 +33,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'suadm':
             if (isset($_GET['madm']) && ($_GET['madm'] > 0)) {
-                $sql = "select * from danhmuc where madm=".$_GET['madm'];
+                $sql = "select * from danhmuc where madm=" . $_GET['madm'];
                 $dm = pdo_query_one($sql);
             }
             include "danhmuc/update.php";
@@ -87,14 +89,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "sanpham/suasp.php";
             break;
         case 'suasp':
-            if(isset($_GET['masp'])&& ($_GET['masp']>0)){              
-                $sanpham= loadone_sanpham($_GET['masp']);
-                }
-                $listdanhmuc = loadall_danhmuc();
-                include "sanpham/update.php";
-                break;
+            if (isset($_GET['masp']) && ($_GET['masp'] > 0)) {
+                $sanpham = loadone_sanpham($_GET['masp']);
+            }
+            $listdanhmuc = loadall_danhmuc();
+            include "sanpham/update.php";
+            break;
         case 'updatesp':
-            if(isset($_POST['capnhap'])&&($_POST['capnhap'])){
+            if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
                 $madm = $_POST['madm'];
                 $masp = $_POST['masp'];
                 $tensp = $_POST['tensp'];
@@ -106,24 +108,25 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
                 if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
                     // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-                  } else {
+                } else {
                     // echo "Sorry, there was an error uploading your file.";
-                  }
-                  update_sanpham($masp,$tensp,$hinh,$soluong,$gia,$mota,$madm);
+                }
+                update_sanpham($masp, $tensp, $hinh, $soluong, $gia, $mota, $madm);
                 $thongbao = "cap nhat thanh cong";
             }
             $listdanhmuc = loadall_danhmuc();
             $listsanpham = loadall_sanpham();
             include "sanpham/sanpham.php";
             break;
-            
+
         case 'bienthe':
             include "bienthe/bienthe.php";
             break;
         case 'addbienthe':
             include "bienthe/add.php";
-        default:
-            # code...
+            break;
+        case 'suabt':
+            include "bienthe/add.php";
             break;
         case 'bl':
             include "binhluan/binhluan.php";
@@ -136,6 +139,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case 'suatk':
             include "taikhoan/suatk.php";
+            break;
+        case "bieudothongke":
+            $listthongke = thongke();
+            // $rows = doanhthutheothang();
+            include "thongke/bieudothongke.php";
+            break;
+        default:
+            # code...
             break;
     }
 } else {

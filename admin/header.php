@@ -20,7 +20,7 @@
                 <li><a href="index.php?act=taikhoan"><i class="fa-solid fa-user"></i>Tài khoản</a></li>
                 <li><a href="index.php?act=bl"><i class="fa-solid fa-comment"></i>Bình luận</a></li>
                 <li><a href="index.php"><i class="fa-solid fa-chart-simple"></i>Đơn hàng</a></li>
-                <li><a href="index.php"><i class="fa-solid fa-chart-pie"></i>Biểu đồ</a></li>
+                <li><a href="index.php?act=bieudothongke"><i class="fa-solid fa-chart-pie"></i>Biểu đồ</a></li>
                 <li><a href="../index.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
             </ul>
         </nav>
