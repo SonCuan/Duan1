@@ -11,8 +11,7 @@
         return $tintuc;
     }
     function loadall_sanphammoi($kyw="",$madm=0){
-        $sql = "select sp.*, dm.tendm from sanpham as sp
-        inner join danhmuc as dm on dm.madm=sp.madm "; 
+        $sql = "select * from sanpham where masp "; 
         if($kyw!=""){
             $sql.=" and tensp like '%".$kyw."%'";
         }

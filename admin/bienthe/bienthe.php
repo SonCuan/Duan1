@@ -29,6 +29,7 @@
         }
     </script>
 </section>
+<section class="danhmuc">
 <section class="themmoi"><a href="?act=addbienthe"><i class="fa-solid fa-plus"></i> thêm biến thể sản phẩm</a></section>
 <section class="danhsach">
     <form action="" method="post">
@@ -87,5 +88,5 @@
             <a href="?act=homesanpham"><input style="margin: 10px 20px;" type="button" value="Danh Sách sản phẩm" name="" id=""></a>
         </div>
     </form>
-</section><br>
+</section><br></section>
 </section>
