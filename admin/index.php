@@ -55,7 +55,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
         case 'homesanpham':
             $listdanhmuc = loadall_danhmuc();
-            $listsanpham = loadall_sanpham($kyw = "", $madm = 0);
+            if(isset($_POST['listok'])&&($_POST['listok'])){
+                $kyw=$_POST['kyw'];
+                $madm=$_POST['madm'];
+            }else{
+                $kyw='';
+                $madm=0;
+            }
+              $listsanpham = loadall_sanphammoi($kyw,$madm);
             include "sanpham/sanpham.php";
             break;
         case 'taosp':
