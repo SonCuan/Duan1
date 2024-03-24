@@ -44,7 +44,7 @@
 
                     <div class="product-nav">
                         <div class="product-prev">
-                            <a href="#">
+                            <!-- <a href="#">
                                 <span class="product-link"></span>
 
                                 <span class="product-popup">
@@ -54,11 +54,11 @@
                                         <span>Smart Watches</span>
                                     </span>
                                 </span>
-                            </a>
+                            </a> -->
                         </div>
 
                         <div class="product-next">
-                            <a href="#">
+                            <!-- <a href="#">
                                 <span class="product-link"></span>
 
                                 <span class="product-popup">
@@ -68,7 +68,7 @@
                                         <span>Baby Sport Shoes</span>
                                     </span>
                                 </span>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
 
@@ -165,7 +165,7 @@
     <!-- End .product-single-tabs -->
 
     <div class="products-section pt-0">
-        <h2 class="section-title m-b-4">Related products</h2>
+        <h2 class="section-title m-b-4" style="margin-left: 10px;">NHỮNG SẢM PHẨM TƯƠNG TỰ</h2>
 
         <div class="products-slider 5col owl-carousel owl-theme dots-top dots-small" data-owl-options="{
                             'dots': true
