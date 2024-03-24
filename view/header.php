@@ -51,7 +51,7 @@
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
 
-        <header class="header">
+        <header class="header" >
             <div class="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                 <div class="container-fluid">
                     <div class="header-left d-none d-lg-flex">
@@ -87,13 +87,25 @@
                     </div>
 
                     <div class="header-right">
-                        <a href="?act=login" class="header-icon d-lg-block d-none">
+                        <a href="?act=dangnhap" class="header-icon d-lg-block d-none">
                             <div class="header-user">
                                 <i class="icon-user-2"></i>
+                                <?php
+                                    if(isset($_SESSION['taikhoan'])){
+                                        extract($_SESSION['taikhoan']);
+                                ?>
                                 <div class="header-userinfo">
                                     <span class="d-inline-block font2 line-height-1">Xin chào !</span>
-                                    <h4 class="mb-0">My Account</h4>
+                                    <h4 class="mb-0"><?= $hoten; ?> </h4>
                                 </div>
+                                
+                            
+                                <?php ;}else{  ?>
+                                    <div class="header-userinfo">
+                                    <span class="d-inline-block font2 line-height-1">Xin chào !</span>
+                                    <h4 class="mb-0"> My account</h4>
+                                </div>
+                              <?php  } ?>
                             </div>
                         </a>
 
@@ -125,7 +137,7 @@
                     <div class="header-left d-flex">
                         <nav class="main-nav">
                             <ul class="menu">
-                                <li><a href="#">Thoát</a></li>
+                                <li><a href="index.php?act=thoat">Thoát</a></li>
                                 <li><a href="?act=shop">Mua hàng</a></li>
                             </ul>
                         </nav>

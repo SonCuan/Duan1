@@ -96,16 +96,56 @@
 					font-size: 18px;
 					text-decoration: underline;
 				}
+				li{
+					list-style: none;
+				}
+				li a:hover{
+						text-decoration: underline;
+						color: #000;
+				}
 			</style>
 			<h2>Đăng nhập</h2>
-			<form action="" method="POST">
+			<?php
+                  if (isset($_SESSION['taikhoan'])) {
+                    extract(($_SESSION['taikhoan']));
+                  ?>
+                    <li>
+						<a href="#">Đơn hàng của bạn</a>
+					</li>
+                    <li> 
+						<a href="#">Cập nhật tài khoản</a>
+					</li>
+                   
+					<?php if($vaitro ==1){ ?>
+						<li><a href="admin/index.php">Vào Trang Admin</a></li>
+                    <?php }?>
+					<li>
+						<a href="#">Quên mật khẩu</a>
+					</li>
+                    <li>
+						<a href="index.php?act=thoat">Thoát</a>
+					</li>
+                    
+                  <?php
+                  } else {
+                  ?>
+			<?php
+			if (isset($thongbao) && ($thongbao != "")) {
+				echo '<div class="alert alert-danger">';
+				echo $thongbao;
+				echo '</div>';
+			}
+			?>
+			<form action="index.php?act=dangnhap" method="POST">
 				<div class="textbox">
-					<input type="text" name="username" placeholder="Tên đăng nhập" required>
+					<span style="color:red"><?php echo !empty($error['hoten']) ? ($error['hoten']) : false ?></span>
+					<input type="text" name="hoten" placeholder="Tên đăng nhập" >
 				</div>
 				<div class="textbox">
-					<input type="password" name="password" placeholder="Mật khẩu" required>
+					<span style="color: red;"><?php echo !empty($error['matkhau']) ? ($error['matkhau']) : false ?></span>
+					<input type="password" name="matkhau" placeholder="Mật khẩu" >
 				</div>
-				<button type="submit" class="btn">Đăng nhập</button>
+				<button type="submit" class="btn" name="dangnhap" value="1">Đăng nhập</button>
 			</form>
 			<div class="bottom-text">
 				Bạn chưa có tài khoản? <a href="?act=dangky">Đăng ký tại đây</a>
@@ -113,6 +153,8 @@
 			<div class="bottom-text">
 				<a href="?act=quenmk">Quên mật khẩu</a>
 			</div>
+			<?php  }
+                  ?>
 		</div>
 	</div>
 

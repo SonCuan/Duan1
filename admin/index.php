@@ -1,6 +1,7 @@
 <?php
 session_start();
-include "../model/pdo.php";
+if(isset($_SESSION['taikhoan'])&&($_SESSION['taikhoan']['vaitro']==1)){
+    include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/thongke.php";
@@ -215,3 +216,13 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     include "home.php";
 }
 include "footer.php";
+}else{
+    echo '<div style="margin:120px 30%">
+          <img src="da4242" alt="">
+          <h1 style="font-size:170px;padding 0;margin:0;">504</h1>
+          <h2>Bạn không có quyền truy cập trang web này</h2>
+          <a href="../index.php">Quay lại tại đây</a>
+      </div>';
+  }
+
+  

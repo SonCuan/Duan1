@@ -47,5 +47,17 @@ function checkemail_dangky($email){
     $checkmail_dangky = pdo_query($sql);
     return $checkmail_dangky;    
 }
+function edit_taikhoan($id, $hoten, $email, $sdt, $matkhau, $diachi)
+{
+    $sql = "UPDATE taikhoan SET hoten='$hoten' ,email='$email',
+     sdt='$sdt', matkhau='$matkhau',diachi= '$diachi' WHERE id=$id";
+    pdo_execute($sql);
+}
+function check_user($hoten ,$matkhau)
+{
+    $sql = "SELECT * FROM taikhoan WHERE hoten='".$hoten."' AND matkhau='".$matkhau."'";
+    $user = pdo_query_one($sql);
+    return $user;
+}
 
 ?>

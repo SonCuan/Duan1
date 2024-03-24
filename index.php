@@ -6,7 +6,10 @@ include "model/sanpham.php";
 include "model/taikhoan.php";
 
 
-
+if(isset($taikhoan['mand'])) {
+    $id_user = $taikhoan['mand'];
+}
+$listtaikhoan = loadall_taikhoan(); 
 $list_danhmuc = loadall_danhmuc();
 $listsanpham = loadall_sanpham();
 include_once "view/header.php";
@@ -64,9 +67,36 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             }
             include "view/dangky.php";
             break;
-        case "login":
-            include_once "view/login.php";
-            break;
+            case 'dangnhap':
+                if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                    $hoten = $_POST['hoten'];
+                    $matkhau = $_POST['matkhau'];
+                    $check_user = check_user($hoten, $matkhau);
+                    if(is_array($check_user)) {
+                        $_SESSION['taikhoan'] = $check_user;
+                    } else {
+                        $thongbao = "Tài khoản không tồn tại vui lòng đăng nhập lại hoặc đăng ký";
+                    }
+    
+                    $error = [];
+                    if(empty($hoten)) {
+                        $error['hoten'] = "Họ tên không được để trống";
+                    } else if($hoten !== $check_user) {
+                        $error['hoten'] = "Tên người dùng không tồn tại vui lòng nhập lại ";
+                    }
+                    if(empty($matkhau)) {
+                        $error['matkhau'] = "Mật khẩu không được để trống";
+                    } else if($matkhau !== $check_user) {
+                        $error['matkhau'] = "Mật khẩu không trùng khớp";
+                    }
+                }
+               
+                include "view/login.php";
+                break;
+                case 'thoat':
+                    session_unset();
+                    include "view/login.php";
+                    break;
         case "gioithieu":
             include_once "view/gioithieu.php";
             break;
