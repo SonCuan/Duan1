@@ -1,10 +1,13 @@
 <?php
+session_start();
 include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
+include "model/taikhoan.php";
 
 
-$list_danhmuc=loadall_danhmuc();
+
+$list_danhmuc = loadall_danhmuc();
 $listsanpham = loadall_sanpham();
 include_once "view/header.php";
 if (isset($_GET['act']) && $_GET['act'] != "") {
@@ -24,12 +27,50 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case "blog":
             include_once "view/blog.php";
             break;
+        case 'dangky':
+            if (isset($_POST['dangky']) && ($_POST['dangky'])) {
+                $hoten = $_POST['hoten'];
+                $email = $_POST['email'];
+                $matkhau = $_POST['matkhau'];
+                $xacnhan_matkhau = $_POST['xacnhan_matkhau'];
+                $checkemail = checkemail_dangky($email);
+                // var_dump($typeEmail);
+                $error = [];
+                // validate email: bat buoc nhap, email dung dinh dang, email ton tai
+                if(empty($email)) {
+                    $error['email'] = 'Email không được để trống';
+                } else {
+                    if(!empty($checkemail)) {
+                        $error['email'] = 'Email này đã tồn tại vui lòng nhập email khác';
+                    }
+                }
+                // validate hoten
+                if (empty($hoten)) {
+                    $error['hoten'] = 'Họ và tên không được để trống';
+                }
+
+                if (empty(trim($matkhau))) {
+                    $error['matkhau'] = 'Mật khẩu không được để trống';
+                }
+
+                if ($matkhau !== $xacnhan_matkhau) {
+                    $error['xacnhan_matkhau'] = 'Xác nhận mật khẩu không trùng khớp';
+                }
+
+                if (empty($error)) {
+                    insert_taikhoan($hoten, $email, $matkhau);
+                    $thongbao="Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng!";
+                }
+            }
+            include "view/dangky.php";
+            break;
         case "login":
             include_once "view/login.php";
             break;
         case "gioithieu":
             include_once "view/gioithieu.php";
             break;
+
         case "category-list":
             include_once "view/category-list.php";
             break;

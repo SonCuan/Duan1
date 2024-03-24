@@ -94,27 +94,40 @@
                     text-decoration: none;
                     color: #007bff;
                 }
-                .bottom-text a:hover{
-                    font-size:18px;
+
+                .bottom-text a:hover {
+                    font-size: 18px;
                     text-decoration: underline;
                     color: red;
                 }
             </style>
             <h2>Đăng ký</h2>
-            <form action="/register" method="POST">
+            <form action="index.php?act=dangky" method="post">
                 <div class="textbox">
-                    <input type="text" name="username" placeholder="Tên đăng nhập" required>
+                    <span style="color: red"><?php echo !empty($error['hoten']) ? $error['hoten'] : false ?></span>
+                    <input type="text" name="hoten" placeholder="Tên đăng nhập" >
                 </div>
                 <div class="textbox">
-                    <input type="text" name="password" placeholder="Email" required>
+                    <span style="color: red"><?php echo !empty($error['email']) ? $error['email'] : false ?></span>
+                    <input type="text" name="email" placeholder="Email" >
                 </div>
                 <div class="textbox">
-                    <input type="password" name="password" placeholder="Mật khẩu" required>
+                    <span style="color: red"><?php echo !empty($error['matkhau']) ? $error['matkhau'] : false ?></span>
+                    <input type="password" name="matkhau" placeholder="Mật khẩu" >
                 </div>
                 <div class="textbox">
-                    <input type="password" name="password" placeholder="Xác nhận mật khẩu" required>
+                    <span style="color: red"><?php echo !empty($error['xacnhan_matkhau']) ? $error['xacnhan_matkhau'] : false ?></span>
+                    <input type="password" name="xacnhan_matkhau" placeholder="Xác nhận mật khẩu" >
                 </div>
-                <button type="submit" class="btn">Đăng ký</button>
+                <button type="submit" class="btn" name="dangky" value="1">Đăng ký</button>
+                <h5 class="thongbao" style="margin: 10px 0 ; color: red;">
+                        <?php
+                        
+                            if(isset($thongbao)&&($thongbao!="")){
+                                echo $thongbao;
+                            }
+                        ?>
+                        </h5>
             </form>
             <div class="bottom-text">
                 Bạn đã có sẵn tài khoản? <a href="?act=login">Bấm vào đây để đăng nhập</a>

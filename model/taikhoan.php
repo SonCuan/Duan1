@@ -37,4 +37,15 @@ function update_taikhoan($mand, $hoten, $email, $sdt, $matkhau, $diachi, $vaitro
 
     pdo_execute($sql);
 }
+function insert_taikhoan($hoten, $email, $matkhau)
+{
+    $sql = "INSERT INTO taikhoan(hoten,email,matkhau) values('$hoten','$email','$matkhau')";
+    pdo_execute($sql);
+}
+function checkemail_dangky($email){
+    $sql = "SELECT * FROM taikhoan WHERE email = '$email'";
+    $checkmail_dangky = pdo_query($sql);
+    return $checkmail_dangky;    
+}
+
 ?>
