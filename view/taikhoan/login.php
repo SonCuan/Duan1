@@ -1,3 +1,4 @@
+
 <main class="main">
 	<div class="page-header">
 		<div class="container d-flex flex-column align-items-center">
@@ -113,14 +114,14 @@
 						<a href="#">Đơn hàng của bạn</a>
 					</li>
                     <li> 
-						<a href="#">Cập nhật tài khoản</a>
+						<a href="?act=capnhaptk">Cập nhật tài khoản</a>
 					</li>
                    
 					<?php if($vaitro ==1){ ?>
 						<li><a href="admin/index.php">Vào Trang Admin</a></li>
                     <?php }?>
 					<li>
-						<a href="#">Quên mật khẩu</a>
+						<a href="index.php?act=quenmk">Quên mật khẩu</a>
 					</li>
                     <li>
 						<a href="index.php?act=thoat">Thoát</a>

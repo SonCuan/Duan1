@@ -130,7 +130,7 @@
                         </h5>
             </form>
             <div class="bottom-text">
-                Bạn đã có sẵn tài khoản? <a href="?act=login">Bấm vào đây để đăng nhập</a>
+                Bạn đã có sẵn tài khoản? <a href="?act=dangnhap">Bấm vào đây để đăng nhập</a>
             </div>
         </div>
     </div>

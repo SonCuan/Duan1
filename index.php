@@ -6,10 +6,10 @@ include "model/sanpham.php";
 include "model/taikhoan.php";
 
 
-if(isset($taikhoan['mand'])) {
+if (isset($taikhoan['mand'])) {
     $id_user = $taikhoan['mand'];
 }
-$listtaikhoan = loadall_taikhoan(); 
+$listtaikhoan = loadall_taikhoan();
 $list_danhmuc = loadall_danhmuc();
 $listsanpham = loadall_sanpham();
 include_once "view/header.php";
@@ -18,18 +18,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'home':
             include_once "view/home.php";
             break;
-        case "productDentail":
-            //code
-            break;
-        case "shop":
-            include_once "view/shop.php";
-            break;
-        case "cart":
-            include_once "view/cart.php";
-            break;
-        case "blog":
-            include_once "view/blog.php";
-            break;
+        /**
+         * ***** Đăng nhập đăng ký
+         */
         case 'dangky':
             if (isset($_POST['dangky']) && ($_POST['dangky'])) {
                 $hoten = $_POST['hoten'];
@@ -40,10 +31,10 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 // var_dump($typeEmail);
                 $error = [];
                 // validate email: bat buoc nhap, email dung dinh dang, email ton tai
-                if(empty($email)) {
+                if (empty($email)) {
                     $error['email'] = 'Email không được để trống';
                 } else {
-                    if(!empty($checkemail)) {
+                    if (!empty($checkemail)) {
                         $error['email'] = 'Email này đã tồn tại vui lòng nhập email khác';
                     }
                 }
@@ -62,41 +53,78 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
                 if (empty($error)) {
                     insert_taikhoan($hoten, $email, $matkhau);
-                    $thongbao="Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng!";
+                    $thongbao = "Đã đăng ký thành công. Vui lòng đăng nhập để thực hiện chức năng bình luận hoặc đặt hàng!";
                 }
             }
-            include "view/dangky.php";
+            include "view/taikhoan/dangky.php";
             break;
-            case 'dangnhap':
-                if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
-                    $hoten = $_POST['hoten'];
-                    $matkhau = $_POST['matkhau'];
-                    $check_user = check_user($hoten, $matkhau);
-                    if(is_array($check_user)) {
-                        $_SESSION['taikhoan'] = $check_user;
-                    } else {
-                        $thongbao = "Tài khoản không tồn tại vui lòng đăng nhập lại hoặc đăng ký";
-                    }
-    
-                    $error = [];
-                    if(empty($hoten)) {
-                        $error['hoten'] = "Họ tên không được để trống";
-                    } else if($hoten !== $check_user) {
-                        $error['hoten'] = "Tên người dùng không tồn tại vui lòng nhập lại ";
-                    }
-                    if(empty($matkhau)) {
-                        $error['matkhau'] = "Mật khẩu không được để trống";
-                    } else if($matkhau !== $check_user) {
-                        $error['matkhau'] = "Mật khẩu không trùng khớp";
-                    }
+        case 'dangnhap':
+            if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                $hoten = $_POST['hoten'];
+                $matkhau = $_POST['matkhau'];
+                $check_user = check_user($hoten, $matkhau);
+                if (is_array($check_user)) {
+                    $_SESSION['taikhoan'] = $check_user;
+                } else {
+                    $thongbao = "Tài khoản không tồn tại vui lòng đăng nhập lại hoặc đăng ký";
                 }
-               
-                include "view/login.php";
-                break;
-                case 'thoat':
-                    session_unset();
-                    include "view/login.php";
-                    break;
+
+                $error = [];
+                if (empty($hoten)) {
+                    $error['hoten'] = "Họ tên không được để trống";
+                } else if ($hoten !== $check_user) {
+                    $error['hoten'] = "Tên người dùng không tồn tại vui lòng nhập lại ";
+                }
+                if (empty($matkhau)) {
+                    $error['matkhau'] = "Mật khẩu không được để trống";
+                } else if ($matkhau !== $check_user) {
+                    $error['matkhau'] = "Mật khẩu không trùng khớp";
+                }
+            }
+            include 'view/taikhoan/login.php';
+            break;
+        case 'quenmk':
+            if (isset($_POST['guiemail']) && ($_POST['guiemail'])) {
+                $email = $_POST['email'];
+
+                $checkemail = checkemail($email);
+                if (is_array($checkemail)) {
+                    $thongbao = "Mật khẩu của bạn là " . $checkemail['matkhau'];
+                } else {
+                    $thongbao = "Email này không tồn tại!";
+                }
+            }
+            include "view/taikhoan/quenmk.php";
+            break;
+        case 'capnhaptk':
+            if(isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $hoten = $_POST['hoten'];
+                $email = $_POST['email'];
+                $sdt = $_POST['sdt'];
+                $matkhau = $_POST['matkhau'];
+                $diachi = $_POST['diachi'];
+                $mand = $_POST['mand'];
+                edit_taikhoan($mand, $hoten, $email, $sdt, $matkhau, $diachi);
+                $_SESSION['taikhoan'] = check_user($hoten, $matkhau);
+            }
+            include 'view/taikhoan/capnhap.php';
+            break;
+        case 'thoat':
+            session_unset();
+            include "view/taikhoan/login.php";
+            break;
+        case "productDentail":
+            //code
+            break;
+        case "shop":
+            include_once "view/shop.php";
+            break;
+        case "cart":
+            include_once "view/cart.php";
+            break;
+        case "blog":
+            include_once "view/blog.php";
+            break;
         case "gioithieu":
             include_once "view/gioithieu.php";
             break;
@@ -107,18 +135,14 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case "product":
             include_once "view/product.php";
             break;
-        case "quenmk":
-            include_once "view/quenmk.php";
-            break;
+
         case "checkout":
             include_once "view/checkout.php";
             break;
         case "donhangcuaban":
             include_once "view/donhangcuaban.php";
             break;
-        case "dangky":
-            include_once "view/dangky.php";
-            break;
+
         default:
             ///
             echo "<h1>Fooder not file 404</h1>";

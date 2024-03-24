@@ -100,7 +100,7 @@
                                 </div>
                                 
                             
-                                <?php ;}else{  ?>
+                                <?php }else{  ?>
                                     <div class="header-userinfo">
                                     <span class="d-inline-block font2 line-height-1">Xin chào !</span>
                                     <h4 class="mb-0"> My account</h4>
