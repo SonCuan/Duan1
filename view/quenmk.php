@@ -20,7 +20,7 @@
     <div class="container reset-password-container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <div class="feature-box border-top-primary">
+                <div class="feature-box border-top-primary" style="margin: 10px 0;">
                     <div class="feature-box-content">
                         <form class="mb-0" action="#">
                             <p>
