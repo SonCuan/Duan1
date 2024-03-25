@@ -137,8 +137,8 @@
                     <div class="header-left d-flex">
                         <nav class="main-nav">
                             <ul class="menu">
-                                <li><a href="index.php?act=thoat">Thoát</a></li>
-                                <li><a href="?act=shop">Mua hàng</a></li>
+                                <li><a href="index.php?act=thoat" title="Thoát">Thoát</a></li>
+                                <li><a href="?act=shop" title="Mua hàng">Mua hàng</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -146,7 +146,7 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li class="active">
-                                    <a href="index.php">Trang chủ</a>
+                                    <a href="index.php" title="Trang chủ">Trang chủ</a>
                                 </li>
                                 <li>
                                     <a href="?act=shop">Sản phẩm</a>
@@ -164,11 +164,11 @@
 
                                 </li>
                                 <li class="d-none d-xl-block">
-                                    <a href="?act=gioithieu">Giới thiệu</a>
+                                    <a href="?act=gioithieu" title="Giới thiệu">Giới thiệu</a>
 
                                 </li>
 
-                                <li><a href="?act=blog">Liên hệ</a></li>
+                                <li><a href="?act=blog" title="Liên hệ">Liên hệ</a></li>
 
                             </ul>
                         </nav>

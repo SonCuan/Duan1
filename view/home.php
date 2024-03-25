@@ -1,4 +1,3 @@
-
 <main class="main">
     <section class="intro-section mb-3">
         <div class="home-slider slide-animate owl-carousel owl-theme" data-owl-options="{
@@ -35,26 +34,6 @@
                     </div>
                 </div>
             </div>
-            <div class="home-slide home-slide-2 banner" style="display:inline; width:1536px; height:360px; ">
-                <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.jpg" alt="slider image" width="1900" height="575">
-
-                <div class="banner-layer banner-layer-middle banner-layer-left">
-                    <div class="container-fluid">
-                        <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
-                            <h2 class="font-weight-light ls-10 text-primary">Thời thượng, sang trọng, thanh lịch, phá cách</h2><br>
-                            <a href="?act=shop" class="btn btn-link"><i>XEM TẠI ĐÂY <br>
-                                </i><i class="icon-right-open-big"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="banner-layer banner-layer-middle banner-layer-right w-100">
-                    <div class="container-fluid">
-                        <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <?php
@@ -81,8 +60,9 @@
                                 <div class="btn-icon-group">
                                     <a href="index.php?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
                                 </div>
-                                <div class="btn-quickview" title="Quick View">
-                                <a href="index.php?act=product" ><i class="icon-magnifier"></i> Chi tiết</a></div>
+                                <div class="btn-quickview" title="Chi tiết">
+                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
+                                </div>
                             </figure>
                             <div class="product-details">
 
@@ -113,8 +93,9 @@
                                 <div class="btn-icon-group">
                                     <a href="?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                                    View</a>
+                                <div class="btn-quickview" title="Chi tiết">
+                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
+                                </div>
                             </figure>
                             <div class="product-details">
 
@@ -128,7 +109,7 @@
                                     </div><!-- End .product-ratings -->
                                 </div><!-- End .product-container -->
                                 <div class="price-box">
-                                    <span class="product-price">$599.00</span>
+                                    <span class="product-price">$101.00 &ndash; $111.00</span>
                                 </div><!-- End .price-box -->
                             </div><!-- End .product-details -->
                         </div>
@@ -145,8 +126,9 @@
                                 <div class="btn-icon-group">
                                     <a href="?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                                    View</a>
+                                <div class="btn-quickview" title="Chi tiết">
+                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
+                                </div>
                             </figure>
                             <div class="product-details">
 
@@ -160,7 +142,7 @@
                                     </div><!-- End .product-ratings -->
                                 </div><!-- End .product-container -->
                                 <div class="price-box">
-                                    <span class="product-price">$39.00</span>
+                                    <span class="product-price">$101.00 &ndash; $111.00</span>
                                 </div><!-- End .price-box -->
                             </div><!-- End .product-details -->
                         </div>
@@ -173,13 +155,13 @@
                                 </a>
                                 <div class="label-group">
                                     <div class="product-label label-hot">HOT</div>
-                                    <div class="product-label label-sale">-13%</div>
                                 </div>
                                 <div class="btn-icon-group">
                                     <a href="#" title="Add To Cart" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Quick
-                                    View</a>
+                                <div class="btn-quickview" title="Chi tiết">
+                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
+                                </div>
                             </figure>
                             <div class="product-details">
 
@@ -193,8 +175,7 @@
                                     </div><!-- End .product-ratings -->
                                 </div><!-- End .product-container -->
                                 <div class="price-box">
-                                    <span class="old-price">$299.00</span>
-                                    <span class="product-price">$259.00</span>
+                                    <span class="product-price">$101.00 &ndash; $111.00</span>
                                 </div><!-- End .price-box -->
                             </div><!-- End .product-details -->
                         </div>

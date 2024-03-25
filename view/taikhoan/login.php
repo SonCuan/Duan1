@@ -111,7 +111,7 @@
                     extract(($_SESSION['taikhoan']));
                   ?>
                     <li>
-						<a href="#">Đơn hàng của bạn</a>
+						<a href="?act=donhangcuaban">Đơn hàng của bạn</a>
 					</li>
                     <li> 
 						<a href="?act=capnhaptk">Cập nhật tài khoản</a>
