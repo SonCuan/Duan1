@@ -47,15 +47,6 @@ if (is_file($hinhpath)) {
                    <p>Tên Sản Phẩm</p>  <br>
                     <input type="text" name="tensp" value="<?= $tensp ?>"    style="background: white;">
                 </div>
-                
-                <div class="dm">
-                    <p>Số Lượng </p>  <br>
-                    <input type="text" name="soluong" value="<?= $soluong ?>" >
-                </div>
-                <div class="dm">
-                    <p>Giá Tiền </p>  <br>
-                    <input type="text" name="gia" value="<?= $gia ?>" >
-                </div>
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
                     <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="madm" >

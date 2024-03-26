@@ -42,6 +42,7 @@
                         echo '<option value=' . $madm . '>' . $tendm . '</option>';
                     }
                     ?>
+                    
                 </select>
                 <input type="submit" name="listok" value="OK">
             </form>
@@ -58,34 +59,50 @@
                     <th>Danh Mục</th>
                     <th>Chức Năng</th>
                 </tr>
-                <?php
-                foreach ($listsanpham as $sanpham) {
-                    extract($sanpham);
-                    $suasp = "index.php?act=suasp&masp=" . $masp;
-                    $xoasp = "index.php?act=xoasp&masp=" . $masp;
-                    $thongbaoxoa= "'"."Bạn có muốn xóa: ".$tensp."'";
-                    $hinhpath = "../upload/" . $hinh;
-                    if (is_file($hinhpath)) {
-                        $hinh = "<img src='" . $hinhpath . "' height = '80'>";
-                    } else {
-                        $hinh = "no photo";
-                    }
-                    echo ' <tr>
-                    <td>'.$masp.'</td>
-                    <td>'.$tensp.'</td>
-                    <td>'.$hinh.'</td>
-                    <td>'.$soluong.'</td>
-                    <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                        Còn hàng
-                    </div>
-                    </td>
-                    <td>'.$gia.' đ</td>
-                    <td>'.$tendm.'</td>
-                    <td><a href="'.$suasp.'"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href="'.$xoasp.'" onclick = "return confirm('.$thongbaoxoa.')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+               
+               <?php 
+               foreach($listsanpham as $sanpham): 
+                   extract($sanpham);
+                   $suasp ="index.php?act=suasp&masp=$masp";
+                   $xoasp ="index.php?act=xoasp&masp=$masp";
+                   $danhsachbienthe ="index.php?act=danhsachbienthe&masp=$masp";
+                   $themmoibienthe ="index.php?act=themmoibienthe&masp=$masp";
+                   $thongbao='';
+                   if(check_thetich_in_sanpham($masp)==3){
+                       $themmoibienthe="";
+                       $thongbao = "alert('Sản phẩm đã đủ biến thể, không thể thêm!')";
+                   }
+           ?>
+           <tr>
+               <td><?=$masp?></td>
+               <td><?=$tensp?></td>
+               <?php 
+                   $adress_hinh = "../upload/". $hinh;
+                   if ( is_file($adress_hinh)){
+                       $hinh = '<img src="'.$adress_hinh.'" width=58" />';
+                   }else{
+                       $hinh = "No image!";
+                   }
+               ?>
+               <td><?=$hinh?></td>
+               <td><?=$tongsoluong?></td>
+               <td>
+                   <span class="badge <?=$tongsoluong==''?"bg-info":($tongsoluong==0?"bg-danger":"bg-success");?>">
+                   <?=$tongsoluong==''?"Chưa nhập biến thể":($tongsoluong==0?"Hết Hàng":"Còn Hàng");?>
+                   </span>
+               </td>
+               <?php 
+                   if($giamin==$giamax){
+                       $gia = number_format($giamin,0,",",".")."<u>đ</u>";
+                   }else{
+                       $gia = number_format($giamin,0,",",".")." - ".number_format($giamax,0,",",".")."<u>đ</u>";
+                   }
+               ?>
+               <td><?=$gia?></td>
+               <td><?=$tendm?></td>
+                    <td><a href="'<?= $suasp?>'"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a><a href="'<?= $xoasp?>'" onclick = "return confirm('Bạn có muốn xóa: <?= $tensp?>')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
                 </tr>';
-                }
-                ?>
+                <?php endforeach;?>
                 <!-- <tr>
                     <td>1</td>
                     <td>Dior nữ</td>

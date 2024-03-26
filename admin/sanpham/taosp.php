@@ -37,14 +37,7 @@
                     <input type="text" name="tensp"  required placeholder="Nhập tên sản phẩm" style="background: white;">
                 </div>
                 
-                <div class="dm">
-                    <p>Số Lượng </p>  <br>
-                    <input type="text" name="soluong"  required placeholder="Nhập số lượng">
-                </div>
-                <div class="dm">
-                    <p>Giá Tiền </p>  <br>
-                    <input type="text" name="gia"  required placeholder="Nhập giá tiền">
-                </div>
+                
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
                     <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="madm" >
