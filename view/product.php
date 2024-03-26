@@ -85,7 +85,39 @@
                     <!-- End .ratings-container -->
 
                     <hr class="short-divider">
+                    <style>
+                        .thetich{
+                            height: 60px;
+                            display: grid;
+                            grid-template-columns: 90px 90px 90px 90px;
+                            margin-bottom:10px ;
+                            gap: 15px;
+                            color: #000;
 
+                        }
+                        .thetich .con{
+                            border: 1px solid #ccc;
+                            text-align: center;
+                        }
+                        .con .tt{
+                            margin: 10px 0;                            
+                        }
+                        .tt p{
+                            font-weight:bold;
+                        }
+                        
+
+                    </style>
+                    <section class="thetich">
+                            <div class="con">
+                                <div class="tt">10<span> ml</span>
+                                <p>5000 đ</p></div>
+                            </div>
+                            <div class="con">
+                            <div class="tt">10<span> ml</span>
+                                <p>5000 đ</p></div>
+                            </div>
+                    </section>
                     <div class="price-box">
                         <span class="old-price">$596.00</span>
                         <span class="product-price">$68.00</span>
