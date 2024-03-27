@@ -90,23 +90,23 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 include "sanpham/taosp.php";
                 break;
             case 'xoasp':
-                if (isset($_GET['masp']) && ($_GET['masp'] > 0)) {
-                    delete_sanpham($_GET['masp']);
+                if (isset($_GET['id_sanpham']) && ($_GET['id_sanpham'] > 0)) {
+                    delete_sanpham($_GET['id_sanpham']);
                 }
                 $listsanpham = loadall_sanpham("","");
                 include "sanpham/sanpham.php";
                 break;
             case 'suasp':
-                if (isset($_GET['masp']) && ($_GET['masp'] > 0)) {
-                    $sanpham = loadone_sanpham($_GET['masp']);
+                if (isset($_GET['id_sanpham']) && ($_GET['id_sanpham'] > 0)) {
+                    $sanpham = loadone_sanpham($_GET['id_sanpham']);
                 }
                 $listdanhmuc = loadall_danhmuc();
                 include "sanpham/update.php";
                 break;
             case 'updatesp':
                 if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
-                    $madm = $_POST['madm'];
-                    $masp = $_POST['masp'];
+                    $id_danhmuc = $_POST['id_danhmuc'];
+                    $id = $_POST['id'];
                     $tensp = $_POST['tensp'];
                     $mota = $_POST['mota'];
                     $hinh = $_FILES['hinh']['name'];
@@ -117,7 +117,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                     } else {
                         // echo "Sorry, there was an error uploading your file.";
                     }
-                    update_sanpham($masp, $tensp, $hinh, $mota, $madm);
+                    update_sanpham($id,$tensp,$hinh,$mota,$id_danhmuc);
                     $thongbao = "cap nhat thanh cong";
                 }
                 $listdanhmuc = loadall_danhmuc();
@@ -125,7 +125,12 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 include "sanpham/sanpham.php";
                 break;
 
-            case 'bienthe':
+            case 'homebienthe':
+                if (isset($_GET['id_sanpham']) && ($_GET['id_sanpham'] > 0)) {
+                    $sanpham = loadone_sanpham($_GET['id_sanpham']);
+                }
+            // $listsanpham_thetich = loadall_sanpham_thetich($id_sanpham);
+
                 include "bienthe/bienthe.php";
                 break;
             case 'homedonhang':

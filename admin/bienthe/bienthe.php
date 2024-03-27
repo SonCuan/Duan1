@@ -30,63 +30,89 @@
     </script>
 </section>
 <section class="danhmuc">
-<section class="themmoi"><a href="?act=addbienthe"><i class="fa-solid fa-plus"></i> thêm biến thể sản phẩm</a></section>
-<section class="danhsach">
-    <form action="" method="post">
-        <table>
-            <tr>
-                <th>#</th>
-                <th>Thể Tích</th>
-                <th>số Lượng</th>
-                <th>Tình trạng</th>
-                <th>Giá tiền</th>
-                <th>Trạng thái</th>
-                <th>Chức Năng</th>
+        <style>
+            .bienthe{
+                padding: 10px 0 0 20px;
+                margin: 10px;
+            }
+            ul li{list-style: none;}
+            .bienthe img{
+                margin: 10px;
+            }
+            h3{margin-bottom: 10px;}
+            h4{margin-bottom: 10px;}
+        </style>
+<?php
+if (is_array($sanpham)) {
+    extract($sanpham);
+}
+?>      
+        <div class="bienthe">
+        <h3>Tên sản phẩm: <?= $sanpham['tensp'] ?? '' ?></h3>
+        <ul class="list">
+            <h4>Mô tả:<?= $sanpham['mota'] ?? "" ?></h4>
+            <li><h4>Hình ảnh:</h4></li>
+        </ul>
+        <img src="../upload/<?= $sanpham['hinh'] ?? "" ?>" alt="" width="260px" height="260px"> 
+      </div>
+    <section class="themmoi"><a href="?act=addbienthe"><i class="fa-solid fa-plus"></i> thêm biến thể sản phẩm</a></section>
+    <section class="danhsach">
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Thể Tích</th>
+                    <th>số Lượng</th>
+                    <th>Tình trạng</th>
+                    <th>Giá tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Chức Năng</th>
 
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>50ml</td>
-                <td>56</td>
-                <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                        Còn hàng
-                    </div>
-                </td>
-                <td>5000</td>
-                <td>hiển thị</td>
-                <td><a href=""><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>50ml</td>
-                <td>56</td>
-                <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                        Còn hàng
-                    </div>
-                </td>
-                <td>5000</td>
-                <td>hiển thị</td>
-                <td><a href=""><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>50ml</td>
-                <td>56</td>
-                <td>
-                    <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                        Còn hàng
-                    </div>
-                </td>
-                <td>5000</td>
-                <td>hiển thị</td>
-                <td><a href=""><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a></td>
-            </tr>
-        </table>
-        <div class="nut">
-            <a href="?act=homesanpham"><input style="margin: 10px 20px;" type="button" value="Danh Sách sản phẩm" name="" id=""></a>
-        </div>
-    </form>
-</section><br></section>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>50ml</td>
+                    <td>56</td>
+                    <td>
+                        <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
+                            Còn hàng
+                        </div>
+                    </td>
+                    <td>5000</td>
+                    <td>hiển thị</td>
+                    <td><a href=""><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>50ml</td>
+                    <td>56</td>
+                    <td>
+                        <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
+                            Còn hàng
+                        </div>
+                    </td>
+                    <td>5000</td>
+                    <td>hiển thị</td>
+                    <td><a href=""><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>50ml</td>
+                    <td>56</td>
+                    <td>
+                        <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
+                            Còn hàng
+                        </div>
+                    </td>
+                    <td>5000</td>
+                    <td>hiển thị</td>
+                    <td><a href=""><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a><a href=""><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a></td>
+                </tr>
+            </table>
+            <div class="nut">
+                <a href="?act=homesanpham"><input style="margin: 10px 20px;" type="button" value="Danh Sách sản phẩm" name="" id=""></a>
+            </div>
+        </form>
+    </section><br>
+</section>
 </section>

@@ -182,7 +182,8 @@ table tr td a i{
     font-weight: 600;
 }
 .dm input{
-    padding: 15px 180px 15px 2px;
+width: 350px;
+    padding: 15px 2px;
     border-radius: 5px;
     border: none;
 }
@@ -220,7 +221,8 @@ table tr td a i{
     margin: 15px auto;
 }
 .from form input[type = "text"]{
-    padding: 5px 300px 5px 0;
+    width: 600px;
+    padding: 5px 15px;
     border: none;
     border: 1px solid #ccc;
     margin-left: 10px;

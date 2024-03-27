@@ -49,10 +49,10 @@ if (is_file($hinhpath)) {
                 </div>
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
-                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="id" >
+                    <select style="width: 60%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="id_danhmuc" >
                         <?php 
                         foreach($listdanhmuc as $danhmuc){
-                            if ($id == $danhmuc['id']) $s="selected"; else $s="";
+                            if ($id_danhmuc == $danhmuc['id']) $s="selected"; else $s="";
                             echo '<option value="'.$danhmuc['id'].'" '.$s.'>'.$danhmuc['tendm'].'</option>';
                         }
                         ?>
@@ -68,7 +68,7 @@ if (is_file($hinhpath)) {
                     <input type="text"  name="mota" value="<?= $mota ?>"   >
                 </div>
                 <div class="nut">
-                    <input type="hidden" name="masp" value="<?= $masp ?>">
+                    <input type="hidden" name="id" value="<?= $id ?>">
                     <input type="submit" name="capnhap"  value="Cập nhập">
                     <a href="?act=homesanpham"><input type="button" value="Danh Sách" name="" ></a>
                 </div>

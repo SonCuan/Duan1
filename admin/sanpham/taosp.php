@@ -40,8 +40,9 @@
                 
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
-                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="id_danhmuc" >
-                        <?php
+                    <select style="width: 60%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="id_danhmuc" >
+                       <option >Tất cả</option>
+                       <?php
                             foreach ($listdanhmuc as $danhmuc) {
                                 extract($danhmuc);
                                 echo '<option value='.$id.'>'.$tendm.'</option>';
