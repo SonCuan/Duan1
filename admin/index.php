@@ -62,17 +62,17 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
             case 'homesanpham':
                 $listdanhmuc = loadall_danhmuc();
                 $kyw = "";
-                $id = 0;
+                $iddm = 0;
                 if (isset($_POST['listok']) && ($_POST['listok'])) {
                     $kyw = $_POST['kyw'];
-                    $id = $_POST['id'];
+                    $iddm = $_POST['iddm'];
                 }
-                $listsanpham = loadall_sanpham($kyw, $id);
+                $listsanpham = loadall_sanpham($kyw, $iddm);
                 include "sanpham/sanpham.php";
                 break;
             case 'taosp':
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                    $id = $_POST['id'];
+                    $id_danhmuc = $_POST['id_danhmuc'];
                     $tensp = $_POST['tensp'];
                     $mota = $_POST['mota'];
                     $hinh = $_FILES['hinh']['name'];
@@ -83,7 +83,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                     } else {
                         // echo "Sorry, there was an error uploading your file.";
                     }
-                    insert_sanpham($tensp,$hinh,$mota,$id);
+                    insert_sanpham($tensp,$hinh,$mota,$id_danhmuc);
                     $thongbao = "Them thanh cong";
                 }
                 $listdanhmuc = loadall_danhmuc();

@@ -34,7 +34,7 @@
         <section class="from">
             <form action="index.php?act=homesanpham" method="post" enctype="multipart/form-data">
                 <input type="text" name="kyw" placeholder="Tìm Kiếm Tên Sản Phẩm ...">
-                <select name="madm">
+                <select name="iddm">
                     <option value="0" selected>Tất cả</option>
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {

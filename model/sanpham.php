@@ -1,6 +1,6 @@
 <?php
-    function insert_sanpham($tensp,$hinh,$mota,$madm){
-        $sql="insert into sanpham(tensp,hinh,mota,madm) values('$tensp','$hinh','$mota','$madm')";
+    function insert_sanpham($tensp,$hinh,$mota,$id_danhmuc){
+        $sql="insert into sanpham(tensp,hinh,mota,id_danhmuc) values('$tensp','$hinh','$mota','$id_danhmuc')";
         pdo_execute($sql);
     }
     // function loadall_sanpham(){
@@ -10,18 +10,18 @@
     //     $tintuc = pdo_query($sql);
     //     return $tintuc;
     // }
-    function loadall_sanpham($kyw="",$madm =0){
-        $sql = "SELECT sanpham.masp,sanpham_thetich.mabt as id_bienthe ,sanpham.tensp as tensp ,danhmuc.tendm as tendm,hinh,soluong ,gia,mota,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
-        left join sanpham_thetich on sanpham.masp = sanpham_thetich.masp    
-        left join thetich on thetich.matt = sanpham_thetich.matt
-        join danhmuc on sanpham.madm = danhmuc.madm ";
-        if($madm>0){
-            $sql .=" where sanpham.madm=$madm";
+    function loadall_sanpham($kyw,$iddm =0){
+        $sql = "SELECT sanpham.id,sanpham_thetich.id as id_bienthe ,sanpham.tensp as tensp ,danhmuc.tendm as tendm,hinh,mota,soluong ,gia,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
+        left join sanpham_thetich on sanpham.id = sanpham_thetich.id_sanpham  
+        left join thetich on thetich.id = sanpham_thetich.id_thetich
+        join danhmuc on sanpham.id_danhmuc = danhmuc.id ";
+        if($iddm>0){
+            $sql .=" where id_danhmuc=$iddm";
         }
         if($kyw!=""){
            $sql .= " where sanpham.tensp like '%$kyw%'";
         }
-        $sql .= " group by sanpham.masp order by sanpham.masp asc ";
+        $sql .= " group by sanpham.id order by sanpham.id asc ";
         $listsanpham = pdo_query($sql);
         return $listsanpham;
     }
@@ -47,16 +47,16 @@
         $sp=pdo_query_one($sql);
         return $sp;
     }
-    function update_sanpham($masp,$tensp,$hinh,$mota,$madm){
+    function update_sanpham($id,$tensp,$hinh,$mota,$id_danhmuc	){
         if($hinh!="")
-        $sql = "update sanpham set madm ='".$madm."', tensp ='".$tensp."',mota ='".$mota."',hinh ='".$hinh."' where masp=" .$masp;
+        $sql = "update sanpham set id_danhmuc	 ='".$id_danhmuc	."', tensp ='".$tensp."',mota ='".$mota."',hinh ='".$hinh."' where id=" .$id;
         else 
-        $sql = "update sanpham set madm ='".$madm."', tensp ='".$tensp."',mota ='".$mota."' where masp=" .$masp;
+        $sql = "update sanpham set id_danhmuc	 ='".$id_danhmuc	."', tensp ='".$tensp."',mota ='".$mota."' wherewhere id=" .$id;
         pdo_execute($sql);
     }
-    function check_thetich_in_sanpham($masp){
+    function check_thetich_in_sanpham($id){
         $sql = "select count(*) tongthetich from sanpham_thetich
-        where masp =$masp";
+        where id =$id";
         $sp = pdo_query_one($sql);
         return $sp['tongthetich'];
     }
