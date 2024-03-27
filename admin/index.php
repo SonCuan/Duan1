@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
+// if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
@@ -22,8 +22,8 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 /* controller danh mục */
 
             case 'xoadm':
-                if (isset($_GET['madm']) && ($_GET['madm'] > 0)) {
-                    delete_danhmuc($_GET['madm']);
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_danhmuc($_GET['id']);
                 }
                 $listdanhmuc = loadall_danhmuc();
                 include "danhmuc/danhmuc.php";
@@ -38,8 +38,8 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 include "danhmuc/taodm.php";
                 break;
             case 'suadm':
-                if (isset($_GET['madm']) && ($_GET['madm'] > 0)) {
-                    $sql = "select * from danhmuc where madm=" . $_GET['madm'];
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $sql = "select * from danhmuc where id=" . $_GET['id'];
                     $dm = pdo_query_one($sql);
                 }
                 include "danhmuc/update.php";
@@ -48,11 +48,11 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
                     $tendm = $_POST['tendm'];
                     $noidungdm = $_POST['noidungdm'];
-                    $madm = $_POST['madm'];
-                    update_danhmuc($madm, $tendm, $noidungdm);
+                    $id = $_POST['id'];
+                    update_danhmuc($id, $tendm, $noidungdm);
                     $thongbao = "cap nhat thanh cong";
                 }
-                $sql = "select * from danhmuc order by madm desc";
+                $sql = "select * from danhmuc order by id desc";
                 $listdanhmuc = loadall_danhmuc();
                 include "danhmuc/danhmuc.php";
                 break;
@@ -62,17 +62,17 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
             case 'homesanpham':
                 $listdanhmuc = loadall_danhmuc();
                 $kyw = "";
-                $madm = 0;
+                $id = 0;
                 if (isset($_POST['listok']) && ($_POST['listok'])) {
                     $kyw = $_POST['kyw'];
-                    $madm = $_POST['madm'];
+                    $id = $_POST['id'];
                 }
-                $listsanpham = loadall_sanpham($kyw, $madm);
+                $listsanpham = loadall_sanpham($kyw, $id);
                 include "sanpham/sanpham.php";
                 break;
             case 'taosp':
                 if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                    $madm = $_POST['madm'];
+                    $id = $_POST['id'];
                     $tensp = $_POST['tensp'];
                     $mota = $_POST['mota'];
                     $hinh = $_FILES['hinh']['name'];
@@ -83,7 +83,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                     } else {
                         // echo "Sorry, there was an error uploading your file.";
                     }
-                    insert_sanpham($tensp,$hinh,$mota,$madm);
+                    insert_sanpham($tensp,$hinh,$mota,$id);
                     $thongbao = "Them thanh cong";
                 }
                 $listdanhmuc = loadall_danhmuc();
@@ -209,11 +209,11 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
         include "home.php";
     }
     include "footer.php";
-} else {
-    echo '<div style="margin:120px 30%">
-          <img src="da4242" alt="">
-          <h1 style="font-size:170px;padding 0;margin:0;">504</h1>
-          <h2>Bạn không có quyền truy cập trang web này</h2>
-          <a href="../index.php">Quay lại tại đây</a>
-      </div>';
-}
+// } else {
+//     echo '<div style="margin:120px 30%">
+//           <img src="da4242" alt="">
+//           <h1 style="font-size:170px;padding 0;margin:0;">504</h1>
+//           <h2>Bạn không có quyền truy cập trang web này</h2>
+//           <a href="../index.php">Quay lại tại đây</a>
+//       </div>';
+// }

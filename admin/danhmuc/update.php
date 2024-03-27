@@ -46,7 +46,7 @@
                     <input type="text" name="noidungdm"  value="<?php  if(isset($noidungdm) && ($noidungdm !="")) echo $noidungdm; ?>">
                 </div>
                 <div class="nut">
-                <input type="hidden" name="madm" value="<?php  if(isset($madm) && ($madm>0)) echo $madm; ?>">
+                <input type="hidden" name="id" value="<?php  if(isset($id) && ($id>0)) echo $id; ?>">
                     <input type="submit" name="capnhap"  value="Cập nhập">
                     <a href="index.php?act=homedanhmuc"><input type="button" value="Danh Sách" name="" id=""></a>
                 </div>

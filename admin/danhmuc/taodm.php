@@ -34,7 +34,7 @@
                 <form action="index.php?act=taodm" method="post">
                 <div class="dm">
                    <p>Mã danh mục</p>  <br>
-                    <input type="text" name="madm"  disabled placeholder="Tăng dần !" style="background: white;">
+                    <input type="text" name="id"  disabled placeholder="Tăng dần !" style="background: white;">
                 </div>
                 <div class="dm">
                     <p>Tên danh mục </p>  <br>

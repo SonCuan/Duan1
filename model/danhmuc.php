@@ -3,17 +3,17 @@
         $sql="insert into danhmuc(tendm,noidungdm) values('$tendm','$noidungdm')";
         pdo_execute($sql);
     }
-    function delete_danhmuc($madm){
-        $sql="delete from danhmuc where madm=".$madm;
+    function delete_danhmuc($id){
+        $sql="delete from danhmuc where id=".$id;
         pdo_execute($sql);
     }   
     function loadall_danhmuc(){
-        $sql = "select * from danhmuc order by madm desc";
+        $sql = "select * from danhmuc order by id desc";
         $listdanhmuc = pdo_query($sql);
         return $listdanhmuc;
     }
-    function update_danhmuc($madm,$tendm,$noidungdm){
-        $sql = "update danhmuc set tendm ='".$tendm."',noidungdm='".$noidungdm."' where madm=" .$madm;
+    function update_danhmuc($id,$tendm,$noidungdm){
+        $sql = "update danhmuc set tendm ='".$tendm."',noidungdm='".$noidungdm."' where id=" .$id;
         pdo_execute($sql);
     }
 ?>
