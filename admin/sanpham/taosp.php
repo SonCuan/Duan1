@@ -44,7 +44,7 @@
                         <?php
                             foreach ($listdanhmuc as $danhmuc) {
                                 extract($danhmuc);
-                                echo '<option value='.$madm.'>'.$tendm.'</option>';
+                                echo '<option value='.$id.'>'.$tendm.'</option>';
                             }
                         ?>
                     </select>

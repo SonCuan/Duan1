@@ -39,7 +39,7 @@
                     <?php
                     foreach ($listdanhmuc as $danhmuc) {
                         extract($danhmuc);
-                        echo '<option value=' . $madm . '>' . $tendm . '</option>';
+                        echo '<option value=' . $id . '>' . $tendm . '</option>';
                     }
                     ?>
                     
@@ -63,18 +63,18 @@
                <?php 
                foreach($listsanpham as $sanpham): 
                    extract($sanpham);
-                   $suasp ="index.php?act=suasp&masp=$masp";
-                   $xoasp ="index.php?act=xoasp&masp=$masp";
-                   $danhsachbienthe ="index.php?act=danhsachbienthe&masp=$masp";
-                   $themmoibienthe ="index.php?act=themmoibienthe&masp=$masp";
+                   $suasp ="index.php?act=suasp&id=$id";
+                   $xoasp ="index.php?act=xoasp&id=$id";
+                   $danhsachbienthe ="index.php?act=danhsachbienthe&id=$id";
+                   $themmoibienthe ="index.php?act=themmoibienthe&id=$id";
                    $thongbao='';
-                   if(check_thetich_in_sanpham($masp)==3){
+                   if(check_thetich_in_sanpham($id)==3){
                        $themmoibienthe="";
                        $thongbao = "alert('Sản phẩm đã đủ biến thể, không thể thêm!')";
                    }
            ?>
            <tr>
-               <td><?=$masp?></td>
+               <td><?=$id?></td>
                <td><?=$tensp?></td>
                <?php 
                    $adress_hinh = "../upload/". $hinh;

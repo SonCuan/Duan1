@@ -64,7 +64,7 @@
                     <input type="radio" value="0" name="vaitro"  <?=$vaitro==0?"checked":""?>> Người dùng
                 </div>
                 <div class="nut">
-                    <input type="hidden" name="mand" value="<?= $mand ?>" >
+                    <input type="hidden" name="id" value="<?= $id ?>" >
                     <input type="submit" name="capnhap"  value="Cập nhập">
                     <a href="index.php?act=hometaikhoan"><input type="button" value="Danh Sách" name="" ></a>
                 </div>

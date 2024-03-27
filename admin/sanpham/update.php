@@ -49,11 +49,11 @@ if (is_file($hinhpath)) {
                 </div>
                 <div class="dm">
                     <p>Danh Mục </p>  <br>
-                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="madm" >
+                    <select style="width: 32%; height: 40px;font-size: 20px;line-height: 40px;text-align: center;border-radius: 3px;border:none;" name="id" >
                         <?php 
                         foreach($listdanhmuc as $danhmuc){
-                            if ($madm == $danhmuc['madm']) $s="selected"; else $s="";
-                            echo '<option value="'.$danhmuc['madm'].'" '.$s.'>'.$danhmuc['tendm'].'</option>';
+                            if ($id == $danhmuc['id']) $s="selected"; else $s="";
+                            echo '<option value="'.$danhmuc['id'].'" '.$s.'>'.$danhmuc['tendm'].'</option>';
                         }
                         ?>
                     </select>

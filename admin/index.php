@@ -1,6 +1,6 @@
 <?php
 session_start();
-// if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
+if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
     include "../model/pdo.php";
     include "../model/danhmuc.php";
     include "../model/sanpham.php";
@@ -167,22 +167,22 @@ session_start();
                 include "taikhoan/taotaikhoan.php";
                 break;
             case 'xoatk':
-                if (isset($_GET['mand']) && ($_GET['mand'] > 0)) {
-                    delete_taikhoan($_GET['mand']);
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_taikhoan($_GET['id']);
                 }
                 $listtaikhoan = loadall_taikhoan();
                 include "taikhoan/taikhoan.php";
                 break;
             case 'suatk':
-                if (isset($_GET['mand']) && ($_GET['mand'] > 0)) {
-                    $taikhoan = loadone_taikhoan($_GET['mand']);
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $taikhoan = loadone_taikhoan($_GET['id']);
                 }
                 $listtaikhoan = loadall_taikhoan();
                 include "taikhoan/update.php";
                 break;
             case 'updatetk':
                 if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
-                    $mand = $_POST['mand'];
+                    $id = $_POST['id'];
                     $hoten = $_POST['hoten'];
                     $email = $_POST['email'];
                     $sdt = $_POST['sdt'];
@@ -190,7 +190,7 @@ session_start();
                     $diachi = $_POST['diachi'];
                     $vaitro = $_POST['vaitro'];
                     // extract($taikhoan);
-                    update_taikhoan($mand, $hoten, $email, $sdt, $matkhau, $diachi, $vaitro);
+                    update_taikhoan($id, $hoten, $email, $sdt, $matkhau, $diachi, $vaitro);
                     $thongbao = 'Cập nhật tài khoản thành công';
                 }
                 $listtaikhoan = loadall_taikhoan();
@@ -209,11 +209,11 @@ session_start();
         include "home.php";
     }
     include "footer.php";
-// } else {
-//     echo '<div style="margin:120px 30%">
-//           <img src="da4242" alt="">
-//           <h1 style="font-size:170px;padding 0;margin:0;">504</h1>
-//           <h2>Bạn không có quyền truy cập trang web này</h2>
-//           <a href="../index.php">Quay lại tại đây</a>
-//       </div>';
-// }
+} else {
+    echo '<div style="margin:120px 30%">
+          <img src="da4242" alt="">
+          <h1 style="font-size:170px;padding 0;margin:0;">504</h1>
+          <h2>Bạn không có quyền truy cập trang web này</h2>
+          <a href="../index.php">Quay lại tại đây</a>
+      </div>';
+}

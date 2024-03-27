@@ -58,8 +58,8 @@
                             foreach ($listtaikhoan as $tk) {
                                 
                                 extract($tk);
-                                $suatk = "index.php?act=suatk&mand=" . $mand;
-                                $xoatk = "index.php?act=xoatk&mand=" . $mand;
+                                $suatk = "index.php?act=suatk&id=" . $id;
+                                $xoatk = "index.php?act=xoatk&id=" . $id;
                                 $thongbao = "'"."Bạn có muốn xóa tài khoản:".$hoten."'";
                                 if($vaitro==1){
                                     $vaitro="Admin";
@@ -68,7 +68,7 @@
                                 }
                                 echo 
                                 '<tr>
-                                <td>'. $mand.'</td>
+                                <td>'. $id.'</td>
                                 <td>'.$hoten.' </td>
                                 <td>'.$email.'</td>
                                 <td>'. $matkhau .'</td>
