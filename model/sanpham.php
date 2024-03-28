@@ -65,13 +65,37 @@
         return $sp['tongthetich'];
     }
     function loadall_sanpham_thetich($id_sanpham){
-        $sql = "SELECT sanpham_thetich.id, sanpham.id as idsp ,sanpham_thetich.id_thetich,sanpham.ten ,hinh ,mota,xuatxu,phongcach,thetich,soluong ,gia,trangthai ,danhmuc.ten as tendm from sanpham_thetich
+        $sql = "SELECT sanpham_thetich.id, sanpham.id as idsp ,sanpham_thetich.id_thetich,sanpham.tensp ,hinh ,mota,thetich,soluong ,gia,trangthai ,danhmuc.tendm as tendm from sanpham_thetich
                 join thetich on thetich.id = sanpham_thetich.id_thetich
                 join sanpham on sanpham.id = sanpham_thetich.id_sanpham
-                join danhmuc on danhmuc.id = sanpham.iddm
+                join danhmuc on danhmuc.id = sanpham.id_danhmuc
                 where sanpham_thetich.id_sanpham = $id_sanpham ";
                 $listchitiet = pdo_query($sql);
                 return $listchitiet;
+    }
+    function insert_sanpham_thetich($id_sanpham, $id_thetich, $gia , $soluong){
+        $sql= "INSERT INTO sanpham_thetich(id_sanpham, id_thetich, gia, soluong) VALUES ($id_sanpham, $id_thetich, $gia , $soluong)";
+        pdo_execute($sql); 
+    }
+    function update_sanpham_thetich($id,$id_sanpham, $id_thetich, $gia , $soluong){
+        $sql ="update sanpham_thetich set id_sanpham = $id_sanpham , id_thetich= $id_thetich , gia = $gia , soluong = $soluong where id = $id";
+        pdo_execute($sql);
+    }
+    function delete_sanpham_thetich($id){
+        $sql ="update sanpham_thetich set trangthai = 2 where id = $id";
+        pdo_execute($sql);
+    }
+    function restore_sanpham_thetich($id){
+        $sql ="update sanpham_thetich set trangthai = 1 where id = $id";
+        pdo_execute($sql);
+    }
+    function loadone_sanpham_thetich($id){
+        $sql = "select *,sanpham_thetich.id as id_sp_tt,tensp,thetich,gia,soluong from sanpham_thetich 
+        join thetich on thetich.id = sanpham_thetich.id_thetich
+        join sanpham on sanpham.id =sanpham_thetich.id_sanpham
+        where sanpham_thetich.id = $id ";
+        $sp_tt = pdo_query_one($sql);
+        return $sp_tt;
     }
     
    

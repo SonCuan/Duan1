@@ -6,6 +6,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
     include "../model/sanpham.php";
     include "../model/thongke.php";
     include "../model/taikhoan.php";
+    include "../model/thetich.php";
 
 
 
@@ -83,7 +84,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                     } else {
                         // echo "Sorry, there was an error uploading your file.";
                     }
-                    insert_sanpham($tensp,$hinh,$mota,$id_danhmuc);
+                    insert_sanpham($tensp, $hinh, $mota, $id_danhmuc);
                     $thongbao = "Them thanh cong";
                 }
                 $listdanhmuc = loadall_danhmuc();
@@ -93,7 +94,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 if (isset($_GET['id_sanpham']) && ($_GET['id_sanpham'] > 0)) {
                     delete_sanpham($_GET['id_sanpham']);
                 }
-                $listsanpham = loadall_sanpham("","");
+                $listsanpham = loadall_sanpham("", "");
                 include "sanpham/sanpham.php";
                 break;
             case 'suasp':
@@ -117,31 +118,95 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                     } else {
                         // echo "Sorry, there was an error uploading your file.";
                     }
-                    update_sanpham($id,$tensp,$hinh,$mota,$id_danhmuc);
+                    update_sanpham($id, $tensp, $hinh, $mota, $id_danhmuc);
                     $thongbao = "cap nhat thanh cong";
                 }
                 $listdanhmuc = loadall_danhmuc();
-                $listsanpham = loadall_sanpham("","");
+                $listsanpham = loadall_sanpham("", "");
                 include "sanpham/sanpham.php";
                 break;
-
-            case 'homebienthe':
-                if (isset($_GET['id_sanpham']) && ($_GET['id_sanpham'] > 0)) {
-                    $sanpham = loadone_sanpham($_GET['id_sanpham']);
-                }
-            // $listsanpham_thetich = loadall_sanpham_thetich($id_sanpham);
-
-                include "bienthe/bienthe.php";
-                break;
+                /**
+                 * 
+                 * /////// Biến thể
+                 * 
+                 */
             case 'homedonhang':
                 include "donhang//donhang.php";
                 break;
+            case 'homebienthe':
+                $id_sanpham = $_GET['id_sanpham'];
+                $sanpham = loadone_sanpham($id_sanpham);
+                $listsanpham_thetich = loadall_sanpham_thetich($id_sanpham);
+
+                include "bienthe/bienthe.php";
+                break;
+
             case 'addbienthe':
+                if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                    $id_sanpham = $_GET['id_sanpham'];
+                } else {
+                    $id_sanpham = $_POST['id_sanpham'];
+                }
+                if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                    $id_sanpham = $_POST['id_sanpham'];
+                    $gia = $_POST['gia'];
+                    $soluong = $_POST['soluong'];
+                    if(isset($_POST['id_thetich'])){
+                        $id_thetich = $_POST['id_thetich'];
+                    }
+                    
+                    // validate
+                    $error = [];
+                    if (empty(trim($gia))) {
+                        $error['gia'] = "Giá không được để trống";
+                    }
+                    if (empty(trim($soluong))) {
+                        $error['soluong'] = "Số lượng không được để trống";
+                    }
+
+                    if (empty($id_thetich)) {
+                        $error['id_thetich'] = 'Vui lòng chọn thể tích';
+                    }
+                    if (empty($error)) {
+                        echo 'cmm';
+                        insert_sanpham_thetich($id_sanpham, $id_thetich, $gia, $soluong);
+                        header("location:index.php?act=homebienthe&id_sanpham=$id_sanpham");
+                    }
+                }
+                $sanpham = loadone_sanpham($id_sanpham);
+                $check_thetich = check_thetich($id_sanpham);
+                $listthetich = loadall_thetich();
                 include "bienthe/add.php";
+                break;
+            case "xoabt":
+                if (isset($_GET['id_bienthe']) && ($_GET['id_bienthe'] > 0)) {
+                    delete_sanpham_thetich($_GET['id_bienthe']);
+                }
+                $id_sanpham = $_GET['id_sanpham'];
+                header("location:index.php?act=homebienthe&id_sanpham=$id_sanpham");
+                break;
+            case "khoiphucbt":
+                if (isset($_GET['id_bienthe']) && ($_GET['id_bienthe'] > 0)) {
+                    restore_sanpham_thetich($_GET['id_bienthe']);
+                }
+                $id_sanpham = $_GET['id_sanpham'];
+                header("location:index.php?act=homebienthe&id_sanpham=$id_sanpham");
                 break;
             case 'suabt':
-                include "bienthe/add.php";
+                if (isset($_GET['id_bienthe']) && $_GET['id_bienthe'] > 0) {
+                    $sanpham_thetich = loadone_sanpham_thetich($_GET['id_bienthe']);
+                    extract($sanpham_thetich);
+                }
+                include "bienthe/updatebt.php";
                 break;
+            case 'capnhapbt':
+                if (isset($_POST['capnhap']) && ($_POST['capnhap'])) {
+                    extract($_POST);
+                    update_sanpham_thetich($id, $id_sanpham, $id_thetich, $gia, $soluong);
+                    header("location:index.php?act=homebienthe&id_sanpham=$id_sanpham");
+                }
+                break;
+
             case 'bl':
                 include "binhluan/binhluan.php";
                 break;
