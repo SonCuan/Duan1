@@ -4,6 +4,8 @@ include "model/pdo.php";
 include "model/danhmuc.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
+include "model/thetich.php";
+
 
 
 if (isset($taikhoan['mand'])) {
@@ -117,6 +119,22 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             //code
             break;
         case "shop":
+            // gán trước nếu không có đỡ lỗi dòng 30
+            // $iddm = 0;
+            // $loc = "";
+            // if(isset($_GET['iddm']) && $_GET['iddm'] > 0) {
+            //     $iddm = $_GET['iddm'];
+            //     $namedm = " In ".check_name_danhmuc($iddm);
+            // }
+            // // chức năng xắp xếp
+            // if(isset($_GET['loc']) && $_GET['loc'] != "") {
+            //     $loc = $_GET['loc'];
+            // }
+            // $kyw = "";
+            // if(isset($_POST['kyw'])) {
+            //     $kyw = $_POST['kyw'];
+            // }
+            // $listsp = loadall_sanpham_thetich_chitiet($iddm, $loc, $kyw);
             include_once "view/shop.php";
             break;
         case "cart":

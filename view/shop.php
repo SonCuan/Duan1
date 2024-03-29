@@ -81,7 +81,6 @@
 
                                 <div class="toolbox-item toolbox-sort">
                                     <label>Sắp xếp theo:</label>
-
                                     <div class="select-custom">
                                         <select name="orderby" class="form-control">
                                             <option value="menu_order" selected="selected">Mức độ liên quan</option>

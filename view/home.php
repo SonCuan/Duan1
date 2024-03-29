@@ -45,148 +45,67 @@
                 <h2 class="section-title text-center text-uppercase appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="200"><?= $dm['tendm'] ?>
                 </h2>
                 <p class="section-description text-center mb-3 appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400"><?= $dm['noidungdm'] ?>
-                </p>
-                <!-- Phần img  -->
-                <div class="row appear-animate" data-animation-name="fadeInUpShorter" data-animation-delay="400">
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="index.php?act=product">
-                                    <img src="assets/images/demoes/demo23/products/nuochoacl1.jpg" width="217" height="217" alt="product">
-                                </a>
-                                <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
-                                </div>
-                                <div class="btn-icon-group">
-                                    <a href="index.php?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                                <div class="btn-quickview" title="Chi tiết">
-                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
-                                </div>
-                            </figure>
-                            <div class="product-details">
+                </p><?php
+                    $listspnew = top4_sanphamnew_in_danhmuc($dm['id']);
+                    foreach ($listspnew as $spnew) :
+                    ?> `
+                    <!-- Phần img  -->
 
-                                <h3 class="product-title">
-                                    <a href="index.php?act=product">Nước hoa </a>
-                                </h3>
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div><!-- End .product-ratings -->
-                                </div><!-- End .product-container -->
-                                <div class="price-box">
-                                    <span class="product-price">$101.00 &ndash; $111.00</span>
-                                </div><!-- End .price-box -->
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="?act=product">
-                                    <img src="assets/images/demoes/demo23/products/nuochoacl3.jpg" width="217" height="217" alt="product">
-                                </a>
-                                <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
-                                </div>
-                                <div class="btn-icon-group">
-                                    <a href="?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                                <div class="btn-quickview" title="Chi tiết">
-                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
-                                </div>
-                            </figure>
-                            <div class="product-details">
+                    <div class="row appear-animate"  data-animation-name="fadeInUpShorter" data-animation-delay="400">
 
-                                <h3 class="product-title">
-                                    <a href="?act=product">Porto Extended Camera</a>
-                                </h3>
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:0%"></span><!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div><!-- End .product-ratings -->
-                                </div><!-- End .product-container -->
-                                <div class="price-box">
-                                    <span class="product-price">$101.00 &ndash; $111.00</span>
-                                </div><!-- End .price-box -->
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="?act=product">
-                                    <img src="assets/images/demoes/demo23/products/nuochoacl4.jpg" width="217" height="217" alt="product">
-                                </a>
-                                <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
-                                </div>
-                                <div class="btn-icon-group">
-                                    <a href="?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
-                                </div>
-                                <div class="btn-quickview" title="Chi tiết">
-                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
-                                </div>
-                            </figure>
-                            <div class="product-details">
+                        <div class="col-6 col-md-4 col-xl-3"  >
+                            <div class="product-default inner-quickview inner-icon">
 
-                                <h3 class="product-title">
-                                    <a href="?act=product">Blue Child Overshoes</a>
-                                </h3>
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:80%"></span><!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div><!-- End .product-ratings -->
-                                </div><!-- End .product-container -->
-                                <div class="price-box">
-                                    <span class="product-price">$101.00 &ndash; $111.00</span>
-                                </div><!-- End .price-box -->
-                            </div><!-- End .product-details -->
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                        <div class="product-default inner-quickview inner-icon">
-                            <figure>
-                                <a href="?act=product">
-                                    <img src="assets/images/demoes/demo23/products/nuochoacl6.jpg" width="217" height="217" alt="product">
-                                </a>
-                                <div class="label-group">
-                                    <div class="product-label label-hot">HOT</div>
-                                </div>
-                                <div class="btn-icon-group">
-                                    <a href="#" title="Add To Cart" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
-                                </div>
-                                <div class="btn-quickview" title="Chi tiết">
-                                    <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
-                                </div>
-                            </figure>
-                            <div class="product-details">
+                                <figure>
+                                    <a href="index.php?act=product" style="width: 300px; height: 300px;">
+                                        <img src="upload/<?= $spnew['hinh'] ?>" width="100%" alt="product">
+                                    </a>
+                                    <div class="label-group">
+                                        <div class="product-label label-hot">HOT</div>
+                                    </div>
+                                    <div class="btn-icon-group">
+                                        <a href="index.php?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                    <div class="btn-quickview" title="Chi tiết">
+                                        <a href="index.php?act=product"><i class="icon-magnifier"></i> Chi tiết</a>
+                                    </div>
+                                </figure>
+                                <div class="product-details">
 
-                                <h3 class="product-title">
-                                    <a href="?act=product">Baby Summer Underclothes</a>
-                                </h3>
-                                <div class="ratings-container">
-                                    <div class="product-ratings">
-                                        <span class="ratings" style="width:0%"></span><!-- End .ratings -->
-                                        <span class="tooltiptext tooltip-top"></span>
-                                    </div><!-- End .product-ratings -->
-                                </div><!-- End .product-container -->
-                                <div class="price-box">
-                                    <span class="product-price">$101.00 &ndash; $111.00</span>
-                                </div><!-- End .price-box -->
-                            </div><!-- End .product-details -->
+                                    <h3 class="product-title">
+                                        <a href="index.php?act=product"><?= $spnew['tensp'] ?></a>
+                                    </h3>
+                                    <div class="ratings-container">
+                                        <div class="product-ratings">
+                                            <span class="ratings" style="width:80%"></span><!-- End .ratings -->
+                                            <span class="tooltiptext tooltip-top"></span>
+                                        </div><!-- End .product-ratings -->
+                                    </div><!-- End .product-container -->
+                                    <div class="price-box">
+                                        <?php
+                                        $gia = number_format($spnew['giamin'], 0, ",", ".") . " - " . number_format($spnew['giamax'], 0, ",", ".");
+                                        if ($spnew['giamin'] == $spnew['giamax']) {
+                                            $gia = number_format($spnew['giamin'], 0, ",", ".");
+                                        }
+                                        $gia .= " <u>đ</u>";
+                                        ?>
+                                        <span class="product-price"><?= $gia ?></span>
+                                    </div><!-- End .price-box -->
+                                </div><!-- End .product-details -->
+
+                            </div>
                         </div>
+                        
                     </div>
-                </div>
+
+                <?php endforeach; ?>
+
                 <!-- End phần ing  -->
+        </section>
 
-
-            <?php } ?>
-
-            <!-- Phần thêm vào chữ  -->
+    <?php } ?>
+    </div>
+    <!-- Phần thêm vào chữ  -->
 
 
 </main><!-- End .main -->

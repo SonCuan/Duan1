@@ -1,6 +1,6 @@
 <?php
 function thongke(){
-    $sql = "SELECT danhmuc.tendm as tendm,count(sanpham.madm) as count_sp FROM sanpham INNER JOIN danhmuc ON sanpham.madm=danhmuc.madm GROUP BY sanpham.madm";
+    $sql = "SELECT danhmuc.tendm as tendm,count(sanpham.id_danhmuc) as count_sp FROM sanpham INNER JOIN danhmuc ON sanpham.id_danhmuc=danhmuc.id GROUP BY sanpham.id_danhmuc";
     return pdo_query($sql);
 }
 

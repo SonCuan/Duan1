@@ -16,4 +16,9 @@
         $sql = "update danhmuc set tendm ='".$tendm."',noidungdm='".$noidungdm."' where id=" .$id;
         pdo_execute($sql);
     }
+    function check_name_danhmuc($iddm){
+        $sql = "SELECT ten FROM  danhmuc where id = $iddm";
+        $tdm = pdo_query_one($sql);
+        return $tdm['ten'];
+    }
 ?>

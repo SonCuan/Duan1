@@ -97,6 +97,51 @@
         $sp_tt = pdo_query_one($sql);
         return $sp_tt;
     }
-    
+    function top4_sanphamnew_in_danhmuc($id_danhmuc){
+        $sql = "SELECT noidungdm,sanpham.id ,sanpham.tensp as tensp ,danhmuc.tendm as tendm,hinh,soluong ,gia,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
+        left join sanpham_thetich on sanpham.id = sanpham_thetich.id_sanpham  
+        left join thetich on thetich.id = sanpham_thetich.id_thetich
+        join danhmuc on sanpham.id_danhmuc = danhmuc.id
+        where id_danhmuc = $id_danhmuc and trangthai = 1
+        group by sanpham.id
+        order by sanpham.id asc 
+        limit 4 ";
+        $spnew = pdo_query($sql);
+        return $spnew;
+    }
+    function loadall_sanpham_thetich_chitiet($iddm=0,$loc=0,$kyw){
+        $sql = "SELECT noidungdm,sanpham.id ,sanpham.ten as tensp ,danhmuc.tendm as tendm,hinh,mota,soluong ,gia,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
+        left join sanpham_thetich on sanpham.id = sanpham_thetich.id_sanpham  
+        left join thetich on thetich.id = sanpham_thetich.id_thetich
+        join danhmuc on sanpham.id_danhmuc = danhmuc.id
+        where trangthai = 1 ";
+        if($iddm>0){
+            $sql .=" and id_danhmuc =$iddm";
+        }
+        if($kyw!=""){
+            $sql .=" and sanpham.tensp like '%$kyw%'";
+        }
+        $sql .=" group by sanpham.id";
+        switch ($loc) {
+            case 'sap-xep-tang':
+                $sql .=" order by sanpham.ten asc ";
+                break;
+            case 'sap-xep-giam':
+                $sql .=" order by sanpham.ten desc ";
+                break;
+            case 'gia-tang-dan':
+                $sql .=" order by giamin asc ";
+                break;
+            case 'gia-giam-dan':
+                $sql .=" order by giamin desc ";
+                break;
+            case 0: 
+                $sql .=" order by sanpham.id asc ";
+        }
+        
+        
+        $spnew = pdo_query($sql);
+        return $spnew;
+    }
    
 ?>
