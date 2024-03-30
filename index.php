@@ -120,21 +120,22 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
         case "shop":
             // gán trước nếu không có đỡ lỗi dòng 30
-            // $iddm = 0;
-            // $loc = "";
-            // if(isset($_GET['iddm']) && $_GET['iddm'] > 0) {
-            //     $iddm = $_GET['iddm'];
-            //     $namedm = " In ".check_name_danhmuc($iddm);
-            // }
-            // // chức năng xắp xếp
-            // if(isset($_GET['loc']) && $_GET['loc'] != "") {
-            //     $loc = $_GET['loc'];
-            // }
-            // $kyw = "";
-            // if(isset($_POST['kyw'])) {
-            //     $kyw = $_POST['kyw'];
-            // }
-            // $listsp = loadall_sanpham_thetich_chitiet($iddm, $loc, $kyw);
+            $iddm = 0;
+            $loc = "";
+            if(isset($_GET['iddm']) && $_GET['iddm'] > 0) {
+                $iddm = $_GET['iddm'];
+                $namedm = " In ".check_name_danhmuc($iddm);
+            }
+            // chức năng xắp xếp
+            if(isset($_GET['loc']) && $_GET['loc'] != "") {
+                $loc = $_GET['loc'];
+            }
+            $kyw = "";
+            if(isset($_POST['kyw'])) {
+                $kyw = $_POST['kyw'];
+            }
+            $listsp = loadall_sanpham_thetich_chitiet($iddm, $loc, $kyw);
+            
             include_once "view/shop.php";
             break;
         case "cart":
@@ -148,6 +149,8 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
 
         case "category-list":
+                        $listsp = loadall_sanpham_thetich_chitiet("","","");
+
             include_once "view/category-list.php";
             break;
         case "product":

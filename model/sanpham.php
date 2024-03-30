@@ -110,7 +110,7 @@
         return $spnew;
     }
     function loadall_sanpham_thetich_chitiet($iddm=0,$loc=0,$kyw){
-        $sql = "SELECT noidungdm,sanpham.id ,sanpham.ten as tensp ,danhmuc.tendm as tendm,hinh,mota,soluong ,gia,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
+        $sql = "SELECT noidungdm,sanpham.id ,sanpham.tensp as tensp ,danhmuc.tendm as tendm,hinh,mota,soluong ,gia,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
         left join sanpham_thetich on sanpham.id = sanpham_thetich.id_sanpham  
         left join thetich on thetich.id = sanpham_thetich.id_thetich
         join danhmuc on sanpham.id_danhmuc = danhmuc.id
@@ -124,10 +124,10 @@
         $sql .=" group by sanpham.id";
         switch ($loc) {
             case 'sap-xep-tang':
-                $sql .=" order by sanpham.ten asc ";
+                $sql .=" order by sanpham.tensp asc ";
                 break;
             case 'sap-xep-giam':
-                $sql .=" order by sanpham.ten desc ";
+                $sql .=" order by sanpham.tensp desc ";
                 break;
             case 'gia-tang-dan':
                 $sql .=" order by giamin asc ";
