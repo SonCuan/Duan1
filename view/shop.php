@@ -84,7 +84,7 @@
                                     <div class="select-custom">
                                         <select name="orderby" class="form-control">
                                             <option value="menu_order" selected="selected">Mức độ liên quan</option>
-                                            <option value="popularity">Tên từ A đến Z</option>
+                                            <a href="?act=shop"><option value="popularity">Tên từ A đến Z</option></a>
                                             <option value="rating">Tên từ Z đến A</option>
                                             <option value="date">Gía tăng dần</option>
                                             <option value="price">Gía giảm dần</option>
