@@ -1,6 +1,6 @@
 <!-- Phần slide -->
 <main class="main">
-    <section class="intro-section mb-3">
+    <section class="intro-section mb-3" style="background: #ccc;">
         <div class="home-slider slide-animate owl-carousel owl-theme" data-owl-options="{
                         'nav': false,
                         'responsive': {
@@ -10,25 +10,25 @@
                         }
                     }">
             <div class="home-slide home-slide-1 banner">
-                <img class="slide-bg" src="assets/images/demoes/demo23/slider/bannerdior.jpg" alt="slider image" width="1000" height="600">
+                <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.png" alt="slider image" style="width: 1500px;height: 650px;" >
 
                 <div class="banner-layer banner-layer-middle banner-layer-left">
                     <div class="container-fluid">
                         <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
                             <h2 class="font-weight-light ls-10 text-primary" >Bộ sưu tập thời trang!</h2>
-                            <a href="index.php" class="btn btn-link"style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                            <a href="index.php" class="btn btn-link"style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big">></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="home-slide home-slide-2 banner">
-                <img class="slide-bg" src="assets/images/demoes/demo23/slider/moime.jpg" alt="slider image" width="1200" height="575">
+                <img class="slide-bg" src="assets/images/demoes/demo23/slider/bannerdior.jpg" alt="slider image" style="width: 1500px;height: 650px;">
 
                 <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                     <div class="container-fluid">
                         <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
                             <h2 class="font-weight-light ls-10 text-primary">Bộ sưu tập!</h2>
-                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big" ></i></a>
                         </div>
                     </div>
                 </div>
