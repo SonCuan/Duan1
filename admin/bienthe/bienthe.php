@@ -108,7 +108,7 @@
                             <?php if ($trangthai == 1) {  ?>
                                 <a href="<?= $xoabienthe ?>"><i  class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a>
                             <?php } else { ?>
-                                <a href="<?= $restorebienthe ?>"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;" ></i></a>
+                                <a href="<?= $restorebienthe ?>"><i class="fa-regular fa-trash-can" style="background: rgb(195, 233, 100); color: rgb(125, 4, 4); font-weight: 700;" ></i></a>
                             <?php } ?>
                         </td>
                     </tr>

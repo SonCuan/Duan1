@@ -79,11 +79,7 @@ nav li a i{
     display: flex;
     font-weight: 700;
 }
-.gach{
-    margin: 0 3px;    
-    font-weight: 700;
-    font-size: 15px;
-}
+
 .danhmuc{
     width: 1450px;
     margin: 10px auto;
@@ -145,7 +141,7 @@ table th:nth-child(4){
     width: 10%;
 }
 table th:nth-child(5){
-    width: 10%;
+    width: 15%;
 }
 table th:nth-child(6){
     width: 10%;
@@ -177,6 +173,10 @@ table tr td a i{
 .dm{
     margin-bottom: 10px;
     margin-right: 10px;
+}
+.gach{
+    font-weight: 700;
+    font-size: 15px;
 }
 .dm p{
     font-size: 20px;

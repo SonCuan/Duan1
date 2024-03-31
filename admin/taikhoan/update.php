@@ -58,7 +58,7 @@
                     <p>Địa chỉ </p>  <br>
                     <input type="text" name="diachi"  value="<?= $diachi?>">
                 </div>
-                <div class="dm cach">
+                <div class="dmmoi gach">
                     <p>Vai trò </p>  <br>
                     <input type="radio" value="1" name="vaitro"  <?=$vaitro==1?"checked":""?>> Admin <br><br>
                     <input type="radio" value="0" name="vaitro"  <?=$vaitro==0?"checked":""?>> Người dùng

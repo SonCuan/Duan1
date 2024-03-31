@@ -104,7 +104,7 @@
         join danhmuc on sanpham.id_danhmuc = danhmuc.id
         where id_danhmuc = $id_danhmuc and trangthai = 1
         group by sanpham.id
-        order by sanpham.id asc 
+        order by sanpham.id desc     
         limit 4 ";
         $spnew = pdo_query($sql);
         return $spnew;

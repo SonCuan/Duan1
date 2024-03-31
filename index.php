@@ -5,6 +5,8 @@ include "model/danhmuc.php";
 include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/thetich.php";
+// include "model/binhluan.php";
+
 
 
 

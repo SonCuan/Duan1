@@ -10,29 +10,25 @@
                         }
                     }">
             <div class="home-slide home-slide-1 banner">
-                <img class="slide-bg" src="assets/images/demoes/demo23/slider/slide-1.jpg" alt="slider image" width="1200" height="575">
+                <img class="slide-bg" src="assets/images/demoes/demo23/slider/bannerdior.jpg" alt="slider image" width="1000" height="600">
 
                 <div class="banner-layer banner-layer-middle banner-layer-left">
                     <div class="container-fluid">
                         <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
-                            <h2 class="font-weight-light ls-10 text-primary">Discover our Arrivals!</h2>
-                            <a href="?act=product" class="btn btn-link"><i>View
-                                    our
-                                    Dresses</i><i class="icon-right-open-big"></i></a>
+                            <h2 class="font-weight-light ls-10 text-primary" >Bộ sưu tập thời trang!</h2>
+                            <a href="index.php" class="btn btn-link"style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="home-slide home-slide-2 banner">
-                <img class="slide-bg" src="assets/images/demoes/demo23/slider/slide-2.jpg" alt="slider image" width="1200" height="575">
+                <img class="slide-bg" src="assets/images/demoes/demo23/slider/moime.jpg" alt="slider image" width="1200" height="575">
 
                 <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                     <div class="container-fluid">
                         <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
-                            <h2 class="font-weight-light ls-10 text-primary">Trendy Collections!</h2>
-                            <a href="?act=product" class="btn btn-link"><i>View
-                                    our
-                                    Specials</i><i class="icon-right-open-big"></i></a>
+                            <h2 class="font-weight-light ls-10 text-primary">Bộ sưu tập!</h2>
+                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big"></i></a>
                         </div>
                     </div>
                 </div>
@@ -64,8 +60,8 @@
                     ?>
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
-                                <figure>
-                                    <a href="">
+                                <figure>    
+                                    <a href="?act=product">
 
                                         <img src="upload/<?= $spnew['hinh'] ?>" style="height:275px;object-fit: cover; " alt="product">
 
@@ -76,7 +72,7 @@
                                     <div class="btn-icon-group">
                                         <a href="?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
                                     </div>
-                                    <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">Chi tiết</a>
+                                    <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-magnifier"  style="font-weight: 700;"></i> Chi tiết</a>
                                 </figure>
                                 <div class="product-details">
 

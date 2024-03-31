@@ -8411,6 +8411,9 @@ img.slide-bg {
   object-fit: cover;
   object-position: center top;
 }
+img{
+  width: 100%;
+}
 
 .owl-carousel.dot-inside .owl-dots {
   position: absolute;

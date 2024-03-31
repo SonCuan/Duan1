@@ -52,7 +52,7 @@
                     <p>Địa chỉ </p>  <br>
                     <input type="text" name="diachi"  required placeholder="Nhập địa chỉ">
                 </div>
-                <div class="dm cach">
+                <div class="dmmoi gach">
                     <p>Vai trò </p>  <br>
                     <input type="radio" value="1" name="vaitro"> Admin <br><br>
                     <input type="radio" value="0" name="vaitro"> Người dùng

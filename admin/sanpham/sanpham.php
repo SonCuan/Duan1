@@ -87,7 +87,7 @@
                <td><?=$hinh?></td>
                <td><?=$tongsoluong?></td>
                <td>
-                   <span class="badge <?=$tongsoluong==''?"bg-info":($tongsoluong==0?"bg-danger":"bg-success");?>">
+                   <span class="badge <?=$tongsoluong==''?"bg-info":($tongsoluong==0?"bg-danger":"bg-success");?>" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
                    <?=$tongsoluong==''?"Chưa nhập biến thể":($tongsoluong==0?"Hết Hàng":"Còn Hàng");?>
                    </span>
                </td>
