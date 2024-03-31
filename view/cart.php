@@ -2,7 +2,7 @@
 			<div class="container">
 				<ul class="checkout-progress-bar d-flex justify-content-center flex-wrap">
 				<ol class="breadcrumb bg-transparent m-0 p-0 align-items-center justify-content-center">
-          <li class="breadcrumb-item"><a href="index.php">Giỏ hàng</a></li>
+          <li class="breadcrumb-item"><a href="#">Giỏ hàng</a></li>
           <li class="breadcrumb-item active" aria-current="page">
             Thủ tục
 			<li class="breadcrumb-item active" aria-current="page">
@@ -134,6 +134,7 @@
 													<label class="custom-control-label">Thanh toán bằng ví VNPAY</label>
 												</div><!-- End .custom-checkbox -->
 											</div><!-- End .form-group -->
+											<br>
 
 											<form action="#">
 											<div class="form-group form-group-sm">

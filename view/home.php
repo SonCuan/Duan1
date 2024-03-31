@@ -15,7 +15,7 @@
                 <div class="banner-layer banner-layer-middle banner-layer-left">
                     <div class="container-fluid">
                         <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
-                            <h2 class="font-weight-light ls-10 text-primary" >Bộ sưu tập thời trang!</h2>
+                            <h2 class="font-weight-light ls-10 text-primary" >Bộ sưu tập nước hoa!</h2>
                             <a href="index.php" class="btn btn-link"style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big"></i></a>
                         </div>
                     </div>
