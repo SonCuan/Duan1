@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="footer-middle">
+    <div class="footer-middle" style="background: #f5f6f8;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-xl-4">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-2">
                     <div class="widget">
-                        <h4 class="widget-title">Tài khoản</h4>
+                        <a href="?act=dangnhap"><h4 class="widget-title">Tài khoản</h4></a>
                         <div class="row link-lg link-parts">
                             <div class="col-6 link-part">
                                 <ul class="links mb-0">

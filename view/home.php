@@ -1,6 +1,6 @@
 <!-- Phần slide -->
 <main class="main">
-    <section class="intro-section mb-3" style="background: #ccc;">
+    <section class="intro-section mb-3" style="background: #f5f6f8;">
         <div class="home-slider slide-animate owl-carousel owl-theme" data-owl-options="{
                         'nav': false,
                         'responsive': {

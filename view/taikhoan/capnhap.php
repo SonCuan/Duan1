@@ -179,7 +179,7 @@
 
                     <input type="text" name="diachi" value="<?= $diachi ?>" placeholder="Nhập địa chỉ">
                 </div>
-                <input type="hidden" name="mand" value="<?= $mand ?>">
+                <input type="hidden" name="id" value="<?= $id ?>">
                 <button type="submit" class="btn" name="capnhat" value="1">Cập nhập</button><br><br>
                 <button type="reset" class="btn" value="1">Nhập lại</button>
             </form>

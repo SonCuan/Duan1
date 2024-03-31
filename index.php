@@ -107,8 +107,8 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $sdt = $_POST['sdt'];
                 $matkhau = $_POST['matkhau'];
                 $diachi = $_POST['diachi'];
-                $mand = $_POST['mand'];
-                edit_taikhoan($mand, $hoten, $email, $sdt, $matkhau, $diachi);
+                $id = $_POST['id'];
+                edit_taikhoan($id, $hoten, $email, $sdt, $matkhau, $diachi);
                 $_SESSION['taikhoan'] = check_user($hoten, $matkhau);
             }
             include 'view/taikhoan/capnhap.php';

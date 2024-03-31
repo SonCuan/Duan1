@@ -175,7 +175,7 @@
                             <a href="#" class="search-toggle" role="button"><i class="icon-magnifier mr-2"></i><span>Tìm kiếm</span></a>
                             <form action="#" method="get">
                                 <div class="header-search-wrapper">
-                                    <input type="search" class="form-control" name="q" id="q1" placeholder="Tìm kiếm đơn hàng" required>
+                                    <input type="search" class="form-control" name="q" id="q1" placeholder="Tìm kiếm sản phẩm..." required>
 
                                     <button class="btn icon-magnifier p-0" title="search" type="submit"></button>
                                 </div><!-- End .header-search-wrapper -->
