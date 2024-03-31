@@ -35,7 +35,7 @@
                     <span class="prod-full-screen">
                         <i class="icon-plus"></i>
                     </span><br>
-                   
+
                 </div>
                 <!-- End .product-single-gallery -->
 
@@ -86,37 +86,47 @@
 
                     <hr class="short-divider">
                     <style>
-                        .thetich{
-                            height: 60px;
-                            display: grid;
-                            grid-template-columns: 90px 90px 90px 90px;
-                            margin-bottom:10px ;
-                            gap: 15px;
+                        .thetich {
+                            display: flex;
+                           
+                            margin-bottom: 10px;
+                            gap: 10px;
                             color: #000;
-
                         }
-                        .thetich .con{
+
+                        .thetich .con {
+                            padding: 5px 30px;
                             border: 1px solid #ccc;
-                            text-align: center;
+                            text-align: center; 
+                            border-radius: 5px;
+                            transition: .5s;
                         }
-                        .con .tt{
-                            margin: 10px 0;                            
+                        .thetich .con:hover{
+                            background: orange;
                         }
-                        .tt p{
-                            font-weight:bold;
-                        }
-                        
 
+                        .con .tt span{
+                                margin-top: 10px;
+                        }
+
+                        .tt p {
+                            font-weight: bold;
+                            font-size: 20px;
+                        }
                     </style>
                     <section class="thetich">
-                            <div class="con">
-                                <div class="tt">10<span> ml</span>
-                                <p>5000 đ</p></div>
+                        <div class="con">
+                            <div class="tt">
+                                <span>10 ml</span>
+                                <p>5000 đ</p>
                             </div>
-                            <div class="con">
-                            <div class="tt">10<span> ml</span>
-                                <p>5000 đ</p></div>
+                        </div>
+                        <div class="con">
+                            <div class="tt">
+                               <span> 50 ml</span>
+                                <p>5000 đ</p>
                             </div>
+                        </div>
                     </section>
                     <div class="price-box">
                         <span class="old-price">$596.00</span>
@@ -135,7 +145,7 @@
                     <ul class="single-info-list">
 
                         <li>
-                            SKU: <strong>654613612-1-1-1</strong>
+                            Còn Lại: <strong>654613612-1-1-1</strong>
                         </li>
                     </ul>
 
@@ -181,7 +191,7 @@
             <div class="cart-discount">
                 <form action="#">
                     <div class="input-group"">
-                        <input style="border-radius:5px 0 0 5px ; " type="text" class="form-control form-control-sm" placeholder="Gửi bình luận" required>
+                        <input style=" border-radius:5px 0 0 5px ; " type=" text" class="form-control form-control-sm" placeholder="Gửi bình luận" required>
                         <div class="input-group-append">
                             <button style="border-radius:0 5px 5px 0; width: 100px;" class="btn btn-sm" type="submit">Gửi
                             </button>

@@ -14,7 +14,7 @@ if (isset($taikhoan['mand'])) {
     $id_user = $taikhoan['mand'];
 }
 $listtaikhoan = loadall_taikhoan();
-$list_danhmuc = loadall_danhmuc();
+$listdm = loadall_danhmuc();
 $listsanpham = loadall_sanpham("","");
 include_once "view/header.php";
 if (isset($_GET['act']) && $_GET['act'] != "") {

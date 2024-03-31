@@ -104,12 +104,12 @@
                     </div><!-- End .layout-modes -->
             </div><!-- End .toolbox-right -->
             </nav>
-
-            <div class="row">
-                <?php
-                foreach ($listsp as $sp) :
-                    extract($sp);
-                ?>
+           
+                <div class="row">
+            <?php
+            foreach ($listsp as $sp) :
+                extract($sp);
+            ?>
                     <div class="col-6 col-sm-4 col-lg-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
@@ -120,12 +120,12 @@
                                 <div class="btn-icon-group">
                                     <a href="#" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-magnifier"  style="font-weight: 700;"></i> Chi tiết</a>
+                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-magnifier" style="font-weight: 700;"></i> Chi tiết</a>
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
                                     <div class="category-list">
-                                        <a href="?act=product" class="product-category">Loại</a>
+                                        <a href="#" class="product-category">Loại</a>
                                     </div>
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
@@ -152,11 +152,12 @@
                             </div><!-- End .product-details -->
                         </div>
                     </div><!-- End .col-lg-3 -->
-                <?php
-                endforeach;
-                ?>
-            </div><!-- End .row -->
-
+ <?php
+ 
+            endforeach;
+            ?>
+                </div><!-- End .row -->
+           
             <nav class="toolbox toolbox-pagination">
 
 

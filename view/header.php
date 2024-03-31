@@ -150,16 +150,13 @@
                                 </li>
                                 <li>
                                     <a href="?act=shop">Sản phẩm</a>
-                                    <div class="megamenu megamenu-fixed-width megamenu-3cols">
-                                        <?php
-                                        foreach ($list_danhmuc as $dm) {
-                                            extract($dm);
-                                            echo '<option value=' . $id . '>' . $tendm . '</option>';
-                                            
-                                        }
-
-                                        ?>
-                                    </div>
+                                    <ul class="megamenu megamenu-fixed-width megamenu-3cols">
+                                    <?php foreach($listdm as $dm): ?>
+                    <li><a href="index.php?act=shop&iddm=<?= $dm['id'] ?>">
+                        <?= $dm['tendm'] ?>
+                      </a></li>
+                  <?php endforeach; ?>
+                                    </ul>
 
 
                                 </li>
