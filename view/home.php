@@ -61,7 +61,7 @@
                     <div class="col-6 col-md-4 col-xl-3">
                         <div class="product-default inner-quickview inner-icon">
                                 <figure>    
-                                    <a href="?act=product">
+                                    <a href="?act=product&id_sanpham=<?= $spnew['id'] ?>">
 
                                         <img src="upload/<?= $spnew['hinh'] ?>" style="height:275px;object-fit: cover; " alt="product">
 
@@ -70,18 +70,23 @@
                                         <div class="product-label label-hot">HOT</div>
                                     </div>
                                     <div class="btn-icon-group">
-                                        <a href="?act=product" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
+                                        <a href="?act=product&id_sanpham=<?= $spnew['id'] ?>" class="btn-icon btn-add-cart"><i class="fa fa-arrow-right"></i></a>
                                     </div>
-                                    <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-magnifier"  style="font-weight: 700;"></i> Chi tiết</a>
+                                    <!-- <a href="?act=product&id_sanpham=<?= $spnew['id'] ?>" class="btn-quickview" title="Chi tiết"><i class="icon-magnifier"  ></i> Chi tiết</a> -->
                                 </figure>
                                 <div class="product-details">
-
+                                <div class="category-wrap">
+                                    <div class="category-list">
+                                        <a href="#" class="product-category">Loại</a>
+                                    </div>
+                                    <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
+                                </div>
                                     <h3 class="product-title">
-                                        <a href="?act=product"><?= $spnew['tensp'] ?></a>
+                                        <a href="?act=product&id_sanpham=<?= $spnew['id'] ?>"><?= $spnew['tensp'] ?></a>
                                     </h3>
                                     <div class="ratings-container">
                                         <div class="product-ratings">
-                                            <span class="ratings" style="width:80%"></span><!-- End .ratings -->
+                                            <span class="ratings" style="width:90%"></span><!-- End .ratings -->
                                             <span class="tooltiptext tooltip-top"></span>
 
 

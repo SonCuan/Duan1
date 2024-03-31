@@ -17,8 +17,15 @@
         pdo_execute($sql);
     }
     function check_name_danhmuc($iddm){
-        $sql = "SELECT ten FROM  danhmuc where id = $iddm";
+        $sql = "SELECT tendm FROM  danhmuc where id = $iddm";
         $tdm = pdo_query_one($sql);
-        return $tdm['ten'];
+        return $tdm['tendm'];
+    }
+    function check_danhmuc($id_sanpham){
+        $sql = "SELECT danhmuc.id ,danhmuc.tendm FROM  sanpham 
+        join danhmuc on sanpham.id_danhmuc =danhmuc.id
+        WHERE sanpham.id = $id_sanpham";
+        $dm = pdo_query_one($sql);
+        return $dm;
     }
 ?>

@@ -7,6 +7,8 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
     include "../model/thongke.php";
     include "../model/taikhoan.php";
     include "../model/thetich.php";
+    include "../model/binhluan.php";
+
 
 
 
@@ -151,10 +153,10 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                     $id_sanpham = $_POST['id_sanpham'];
                     $gia = $_POST['gia'];
                     $soluong = $_POST['soluong'];
-                    if(isset($_POST['id_thetich'])){
+                    if (isset($_POST['id_thetich'])) {
                         $id_thetich = $_POST['id_thetich'];
                     }
-                    
+
                     // validate
                     $error = [];
                     if (empty(trim($gia))) {
@@ -207,9 +209,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 }
                 break;
 
-            case 'bl':
-                include "binhluan/binhluan.php";
-                break;
+
                 /* controller tài khoản */
 
             case 'hometaikhoan':
@@ -271,6 +271,21 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 // $rows = doanhthutheothang();
                 include "thongke/bieudothongke.php";
                 break;
+                /** Bình luận */
+            case 'homebinhluan':
+                $listbinhluan = loadall_binhluan(0);
+                include "binhluan/binhluan.php";
+                break;
+                case "xoabl":
+                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+          
+                      delete_binhluan($_GET['id']);
+                      
+                    }
+                    $listbinhluan = loadall_binhluan(0);
+                    include "binhluan/binhluan.php";
+                    break;
+                  
             default:
                 # code...
                 break;

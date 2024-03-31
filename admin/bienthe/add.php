@@ -52,7 +52,7 @@
                 <?= $thetich['thetich'] ?>
               </option>
             <?php endforeach ?>
-          </select>
+          </select><br>
           <?= $error['id_thetich'] ?? "" ?>
 
         </div>

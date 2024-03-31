@@ -41,14 +41,22 @@
                         <th>Ngày Bình Luận</th>
                         <th>Chức Năng</th>
                     </tr>
+                    <?php
+                                    foreach ($listbinhluan as $binhluan):
+                                        extract($binhluan);
+                                        $xoabl = "index.php?act=xoabl&id=" . $id;
+                                    
+                                ?>
                     <tr>
-                        <td>1</td>
-                        <td>Dior hãng cao cấp</td>
-                        <td>Sản Phẩm rất thơm</td>
-                        <td>Quân thích ăn rau rền</td>
-                        <td>18/3/2024</td>
-                        <td><a href="" onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                        <td><?= $id ?></td>
+                        <td><?= $tensp ?></td>
+                        <td><?= $noidung ?></td>
+                        <td><?= $hoten ?></td>
+                        <td><?= $ngaybinhluan ?></td>
+                        <td><a href="<?= $xoabl ?>" onclick="return confirm('Bạn Có muốn Xóa không ?')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
                     </tr>
+                    <?php endforeach;?>
+
                 </table></form>
             </section><br>
         </section>

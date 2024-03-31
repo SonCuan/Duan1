@@ -120,7 +120,7 @@
                                 <div class="btn-icon-group">
                                     <a href="#" class="btn-icon btn-add-cart product-type-simple"><i class="icon-shopping-cart"></i></a>
                                 </div>
-                                <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-magnifier" style="font-weight: 700;"></i> Chi tiết</a>
+                                <!-- <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View"><i class="icon-magnifier" style="font-weight: 700;"></i> Chi tiết</a> -->
                             </figure>
                             <div class="product-details">
                                 <div class="category-wrap">
@@ -134,7 +134,7 @@
                                 </h3>
                                 <div class="ratings-container">
                                     <div class="product-ratings">
-                                        <span class="ratings" style="width:0%"></span>
+                                        <span class="ratings" style="width:80%"></span>
                                         <!-- End .ratings -->
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div><!-- End .product-ratings -->
