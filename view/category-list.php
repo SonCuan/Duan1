@@ -74,74 +74,61 @@
                         </div>
                         <!-- End .toolbox-right -->
                     </nav>
-                        <style>
-                            .moi{
-                                width: 1000px;
-                                margin: 5px;
-                                padding: 5px;
-                                border-radius: 5px;
-                                box-shadow: 1px 1px 1px 1px #ccc;
-                            }
-                        </style>
+
                     <div class="row pb-4">
                         <!-- foreach  -->
                         <?php
                         foreach ($listsp as $sp) :
                             extract($sp);
                         ?>
-                        <div class="moi">
-                            <div class="col-sm-12 col-6 product-default left-details product-list mb-2" >
-                                <figure>
-                                    <a href="?act=product">
-                                        <img src="upload/<?= $hinh ?>" style="height:275px;object-fit: cover;border-radius: 5px; " alt="product" />
-                                    </a>
-                                </figure>
-                                <div class="product-details">
-                                    <div class="category-list">
-                                        <a href="category.html" class="product-category">Loại</a>
-                                    </div>
-                                    <h3 class="product-title"> <a href="?act=product"> <?= $tensp ?>
+                            <div class="moi">
+                                <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
+                                    <figure>
+                                        <a href="?act=product&id_sanpham=<?= $sp['id'] ?>" style="background: #ccc;">
+                                            <img src="upload/<?= $hinh ?>" style="height:275px;object-fit: cover;border-radius: 5px; " alt="product" />
                                         </a>
-                                    </h3>
-                                    <div class="ratings-container">
-                                        <div class="product-ratings">
-                                            <span class="ratings" style="width:100%"></span>
-                                            <!-- End .ratings -->
-                                            <span class="tooltiptext tooltip-top"></span>
+                                    </figure>
+                                    <div class="product-details">
+                                        <div class="category-list">
+                                            <a href="#  " class="product-category">Loại</a>
                                         </div>
-                                        <!-- End .product-ratings -->
+                                        <h3 class="product-title"> <a href="?act=product&id_sanpham=<?= $sp['id'] ?>"> <?= $tensp ?>
+                                            </a>
+                                        </h3>
+                                        <div class="ratings-container">
+                                            <div class="product-ratings">
+                                                <span class="ratings" style="width:100%"></span>
+                                                <!-- End .ratings -->
+                                                <span class="tooltiptext tooltip-top"></span>
+                                            </div>
+                                            <!-- End .product-ratings -->
+                                        </div>
+                                        <!-- End .product-container -->
+                                        <p class="product-description"> <?= $mota ?>
+                                        </p>
+                                        <div class="price-box">
+                                            <?php
+                                            $gia = number_format($giamin, 0, ",", ".") . " - " . number_format($giamax, 0, ",", ".");
+                                            if ($giamin == $giamax) {
+                                                $gia = number_format($giamin, 0, ",", ".");
+                                            }
+                                            $gia .= "<u>đ</u>";
+                                            ?>
+                                            <span class="product-price"> <?= $gia ?>
+                                            </span>
+                                        </div>
+                                        <!-- End .price-box -->
+                                        <div class="product">
+                                            <a href="?act=product&id_sanpham=<?= $sp['id'] ?>" class=" btn-add-cart product-type-simple">
+                                                <i class="icon-shopping-cart"></i>
+                                                <span>Thêm vào giỏ hàng </span>
+                                            </a>
+                                        </div>
+                                       
                                     </div>
-                                    <!-- End .product-container -->
-                                    <p class="product-description"> <?= $mota ?>
-                                    </p>
-                                    <div class="price-box">
-                                        <?php
-                                        $gia = number_format($giamin, 0, ",", ".") . " - " . number_format($giamax, 0, ",", ".");
-                                        if ($giamin == $giamax) {
-                                            $gia = number_format($giamin, 0, ",", ".");
-                                        }
-                                        $gia .= "<u>đ</u>";
-                                        ?>
-                                        <span class="product-price"> <?= $gia ?>
-                                        </span>
-                                    </div>
-                                    <!-- End .price-box -->
-                                    <div class="product-action">
-                                        <a href="#" class="btn-icon btn-add-cart product-type-simple">
-                                            <i class="icon-shopping-cart"></i>
-                                            <span>Thêm vào giỏ hàng</span>
-                                        </a>
-                                        <a href="wishlist.html" class="btn-icon-wish" title="wishlist">
-                                            <i class="icon-heart"></i>
-                                        </a>
-                                        <a href="ajax/product-quick-view.html" class="btn-quickview" title="Quick View">
-                                            <i class="fas fa-external-link-alt"></i>
-                                        </a>
-                                    </div>
+                                    <!-- End .product-details -->
                                 </div>
-                                <!-- End .product-details -->
                             </div>
-                        </div>
                         <?php endforeach; ?>
 
                         <!-- end -->

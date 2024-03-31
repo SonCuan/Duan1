@@ -25,9 +25,9 @@
             transition: .5s;
         }
 
-        .allthetich .thetich:hover {
+        /* .allthetich .thetich:hover {
             background: orange;
-        }
+        } */
 
         .thetich .tt span {
             margin-top: 10px;
@@ -35,7 +35,11 @@
 
         .tt p {
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
+            
+        }
+        .tt p:hover{
+            color: #ccc;
         }
 
         .prd {
@@ -43,12 +47,13 @@
         }
     </style>
     <div class="container">
-        <!-- // start product-->
+        <!-- Bắt đầu thêm sản phẩm vào giỏ hàng-->
         <div class="product-single-container product-single-default">
             <div class="cart-message d-none">
-                <strong class="single-cart-notice">“Baby Sport Shoes”</strong>
-                <span>has been added to your cart.</span>
+                <strong class="single-cart-notice">“<?= $onesp['tensp'] ?>”</strong>
+                <span>Đã được thêm vào giỏ hàng của bạn.</span>
             </div>
+        <!-- End Js đã thêm sản phẩm vào giỏ hàng -->
 
             <div class="row">
                 <div class="col-lg-5 col-md-6 product-single-gallery">
@@ -267,7 +272,7 @@
                 <div class="product-details">
                   
                     <h3 class="product-title">
-                        <a href="?act=product"><?=$lq['tensp']?></a>
+                        <a href="?act=product&id_sanpham=<?=$lq['id']?>"><?=$lq['tensp']?></a>
                     </h3>
                     <div class="ratings-container">
                         <div class="product-ratings">

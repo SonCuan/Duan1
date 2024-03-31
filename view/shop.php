@@ -113,7 +113,7 @@
                     <div class="col-6 col-sm-4 col-lg-3">
                         <div class="product-default inner-quickview inner-icon">
                             <figure>
-                                <a href="?act=product">
+                                <a href="?act=product&id_sanpham=<?= $sp['id'] ?>">
                                     <img src="upload/<?= $hinh ?>" style="height:275px;object-fit: cover; " alt="product">
                                 </a>
 
@@ -130,7 +130,7 @@
                                     <a href="wishlist.html" title="Wishlist" class="btn-icon-wish"><i class="icon-heart"></i></a>
                                 </div>
                                 <h3 class="product-title">
-                                    <a href="?act=product"> <?= $tensp ?></a>
+                                    <a href="?act=product&id_sanpham=<?= $sp['id'] ?>"> <?= $tensp ?></a>
                                 </h3>
                                 <div class="ratings-container">
                                     <div class="product-ratings">

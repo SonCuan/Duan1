@@ -18,7 +18,7 @@
     <meta name="author" content="SW-THEMES">
 
     <!-- Favicon -->
-    
+
 
 
     <!-- <script>
@@ -51,7 +51,7 @@
             <button title="Close (Esc)" type="button" class="mfp-close">×</button>
         </div>
 
-        <header class="header" >
+        <header class="header">
             <div class="header-middle sticky-header" data-sticky-options="{'mobile': true}">
                 <div class="container-fluid">
                     <div class="header-left d-none d-lg-flex">
@@ -91,21 +91,21 @@
                             <div class="header-user">
                                 <i class="icon-user-2"></i>
                                 <?php
-                                    if(isset($_SESSION['taikhoan'])){
-                                        extract($_SESSION['taikhoan']);
+                                if (isset($_SESSION['taikhoan'])) {
+                                    extract($_SESSION['taikhoan']);
                                 ?>
-                                <div class="header-userinfo">
-                                    <span class="d-inline-block font2 line-height-1">Xin chào !</span>
-                                    <h4 class="mb-0"><?= $hoten; ?> </h4>
-                                </div>
-                                
-                            
-                                <?php }else{  ?>
                                     <div class="header-userinfo">
-                                    <span class="d-inline-block font2 line-height-1">Xin chào !</span>
-                                    <h4 class="mb-0"> My account</h4>
-                                </div>
-                              <?php  } ?>
+                                        <span class="d-inline-block font2 line-height-1">Xin chào !</span>
+                                        <h4 class="mb-0"><?= $hoten; ?> </h4>
+                                    </div>
+
+
+                                <?php } else {  ?>
+                                    <div class="header-userinfo">
+                                        <span class="d-inline-block font2 line-height-1">Xin chào !</span>
+                                        <h4 class="mb-0"> My account</h4>
+                                    </div>
+                                <?php  } ?>
                             </div>
                         </a>
 
@@ -150,12 +150,17 @@
                                 </li>
                                 <li>
                                     <a href="?act=shop">Sản phẩm</a>
-                                    <ul class="megamenu megamenu-fixed-width megamenu-3cols">
-                                    <?php foreach($listdm as $dm): ?>
-                    <li><a href="index.php?act=shop&iddm=<?= $dm['id'] ?>">
-                        <?= $dm['tendm'] ?>
-                      </a></li>
-                  <?php endforeach; ?>
+                                    <style>
+                                        .megamenu li a:hover{
+                                                background: #ccc;
+                                        }
+                                    </style>
+                                    <ul class="megamenu megamenu-fixed-width megamenu-3cols" style="width: 350px;">
+                                        <?php foreach ($listdm as $dm) : ?>
+                                            <li><a href="index.php?act=shop&iddm=<?= $dm['id'] ?>">
+                                                    <?= $dm['tendm'] ?>
+                                                </a></li>
+                                        <?php endforeach; ?>
                                     </ul>
 
 
