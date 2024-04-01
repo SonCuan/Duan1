@@ -254,14 +254,14 @@
     <!-- End .product-single-tabs -->
 
     <div class="products-section pt-0">
-        <h1 class="section-title m-b-4" style="margin-left: 10px;">NHỮNG SẢM PHẨM TƯƠNG TỰ</h1>
+        <h2 class="section-title m-b-4" style="margin-left: 10px;">NHỮNG SẢM PHẨM TƯƠNG TỰ</h2>
 
         <div class="products-slider 5col owl-carousel owl-theme dots-top dots-small" data-owl-options="{'dots': true}">
             <?php foreach($splq as $lq): ?>
             <div class="product-default inner-quickview inner-icon">
                 <figure  >
                     <a href="?act=product&id_sanpham=<?=$lq['id']?>" style=" text-align: center;">
-                        <img src="upload/<?=$lq['hinh']?>" style="width: 300px; height: 300px; "  alt="product">
+                        <img src="upload/<?=$lq['hinh']?>" style="width: 250px; height: 250px; "  alt="product">
                     </a>
                     <div class="label-group">
                         <div class="product-label label-sale">-10%</div>
