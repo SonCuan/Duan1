@@ -65,7 +65,7 @@ if (is_file($hinhpath)) {
                 </div>
                 <div class="anhmoi">
                     <p>Mô tả </p>  <br>
-                    <input type="text"  name="mota" value="<?= $mota ?>"   >
+                    <textarea class="form-control" name="mota" id="mota"><?=$mota?></textarea>
                 </div>
                 <div class="nut">
                     <input type="hidden" name="id" value="<?= $id ?>">

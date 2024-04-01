@@ -20,8 +20,8 @@
     <!-- Favicon -->
 
 
-
-    <!-- <script>
+<!-- 
+    <script>
         WebFontConfig = {
             google: { families: [ 'Open+Sans:300,400,600,700,800', 'Poppins:200,300,400,500,600,700,800', 'Oswald:300,400,500,600,700,800', 'Nanum+Brush+Script:400,700,800' ] }
         };

@@ -166,7 +166,11 @@
 										<div class="form-group form-group-sm">
 											<input type="text" class="form-control form-control-sm" placeholder="Địa chỉ">
 										</div><!-- End .form-group -->
+										<div class="form-group form-group-sm">
 
+											<input type="text" class="form-control form-control-sm" placeholder="nội dung">
+
+										</div>
 										<button type="submit" class="btn btn-shop btn-update-total">
 											Cập nhật thông tin
 										</button>

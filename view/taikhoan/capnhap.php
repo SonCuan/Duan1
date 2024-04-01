@@ -184,11 +184,9 @@
                 <button type="reset" class="btn" value="1">Nhập lại</button>
             </form>
             <div class="bottom-text">
-                Bạn chưa có tài khoản? <a href="?act=dangky">Đăng ký tại đây</a>
+                Về trang tài khoản <a href="?act=dangnhap">Đăng nhập</a>
             </div>
-            <div class="bottom-text">
-                <a href="?act=quenmk">Quên mật khẩu</a>
-            </div>
+            
 
         </div>
     </div>

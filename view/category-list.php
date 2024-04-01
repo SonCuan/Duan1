@@ -85,7 +85,7 @@
                                 <div class="col-sm-12 col-6 product-default left-details product-list mb-2">
                                     <figure>
                                         <a href="?act=product&id_sanpham=<?= $sp['id'] ?>" style="background: #ccc;">
-                                            <img src="upload/<?= $hinh ?>" style="height:275px;object-fit: cover;border-radius: 5px; " alt="product" />
+                                            <img src="upload/<?= $hinh ?>" style="width: 275px; height:275px;object-fit: cover;border-radius: 5px; " alt="product" />
                                         </a>
                                     </figure>
                                     <div class="product-details">
@@ -118,13 +118,24 @@
                                             </span>
                                         </div>
                                         <!-- End .price-box -->
-                                        <div class="product">
-                                            <a href="?act=product&id_sanpham=<?= $sp['id'] ?>" class=" btn-add-cart product-type-simple">
+                                        <div class="product" style="margin-top: 10px;">
+                                            <a href="?act=product&id_sanpham=<?= $sp['id'] ?>" style=" border-radius: 5px; background: black; color:white; padding:15px; font-weight: 700; " class=  "product-type-simple">
                                                 <i class="icon-shopping-cart"></i>
-                                                <span>Thêm vào giỏ hàng </span>
+                                                <span>Xem chi tiết sản phẩm </span>
                                             </a>
                                         </div>
-                                       
+
+                                        <!-- CSS cho phẩn xem chi tiết sản phảm -->
+                                       <style>
+                                        .product-type-simple span:hover{
+                                            
+                                            color:#ccc;
+                                        }
+                                        /* .product{
+                                            border-radius: 5px;
+                                        } */
+                                       </style>
+                                        <!-- End CSS cho phẩn xem chi tiết sản phảm -->
                                     </div>
                                     <!-- End .product-details -->
                                 </div>

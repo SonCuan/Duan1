@@ -1,7 +1,7 @@
 <!-- Phần slide -->
 <main class="main">
-    <section class="intro-section mb-3" style="background: #f5f6f8;">
-        <div class="home-slider slide-animate owl-carousel owl-theme" data-owl-options="{
+    <section class="intro-section mb-3" style="background: #f5f6f8;"style="width: 2000px;height: 650px;">
+        <div class="home-slider slide-animate owl-carousel owl-theme" style="color: #f5f6f8;" data-owl-options="{
                         'nav': false,
                         'responsive': {
                             '1440': {
@@ -9,26 +9,26 @@
                             }
                         }
                     }">
-            <div class="home-slide home-slide-1 banner">
+            <div class="home-slide home-slide-1 banner" style="width: 1500px;">
                 <img class="slide-bg" src="assets/images/demoes/demo23/slider/banner2.png" alt="slider image" style="width: 1500px;height: 650px;" >
 
                 <div class="banner-layer banner-layer-middle banner-layer-left">
                     <div class="container-fluid">
                         <div class="appear-animate" data-animation-name="fadeInLeftShorter" data-animation-delay="200">
                             <h2 class="font-weight-light ls-10 text-primary" >Bộ sưu tập nước hoa!</h2>
-                            <a href="index.php" class="btn btn-link"style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big"></i></a>
+                            <a href="index.php" class="btn btn-link"style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big" ></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="home-slide home-slide-2 banner">
-                <img class="slide-bg" src="assets/images/demoes/demo23/slider/bannerdior.jpg" alt="slider image" style="width: 1500px;height: 650px;">
+            <div class="home-slide home-slide-2 banner" style="width: 1500px;">
+                <img class="slide-bg" src="assets/images/demoes/demo23/slider/bannerdiii.jpg" alt="slider image" style="width: 1480px;height: 650px;">
 
                 <div class="banner-layer banner-layer-middle banner-layer-right w-100">
                     <div class="container-fluid">
-                        <div class="col-6 offset-6 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
+                        <div class=" appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200" style="margin-left: 1100px;" >
                             <h2 class="font-weight-light ls-10 text-primary">Bộ sưu tập!</h2>
-                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big" ></i></a>
+                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big" style="color:#f5f6f8;" ></i></a>
                         </div>
                     </div>
                 </div>

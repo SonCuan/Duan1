@@ -56,7 +56,7 @@
                 </div>
                 <div class="anhmoi">
                     <p>Mô tả </p>  <br>
-                    <input type="text"  name="mota"  required >
+                    <textarea type="text"  name="mota"  required ></textarea>
                 </div>
                 <div class="nut">
                     <input type="submit" name="themmoi"  value="Thêm mới">

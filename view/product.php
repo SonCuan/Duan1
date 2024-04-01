@@ -137,7 +137,7 @@
                                     <div class="thetich " onclick="showthetich('<?= $i ?>')" <?= $check ?>>
                                         <div class="tt">
                                             <span><?= $tt['thetich'] ?></span>
-                                            <p><?= $tt['gia'] ?></p>
+                                            <p><?= number_format($tt["gia"],0,",",".") ?>d</p>
                                         </div>
                                         <input type="hidden" name="id_sanpham_thetich" value='<?= $tt['id'] ?>'>
                                     </div>
@@ -145,8 +145,9 @@
 
                             </section>
                             <div class="price-box">
-                                <span class="old-price"><?= $sp['gia']*10/100 ?></span>
-                                <span class="product-price"><?= $sp['gia'] ?></span>
+                                <span class="old-price"><?=number_format(($sp['gia']*20/100 + $sp['gia']),0,",",".")   ?>đ</span>
+                                <span class="product-price"><?=  number_format($sp["gia"],0,",",".")  ?>đ</span>
+                                <span style="margin: 6px 0 0 10px;padding: 5px 10px; background: orange; color:white;border-radius: 5px; font-size: 12px;">Sale 20%</span>
                             </div>
                             <ul class="single-info-list">
                                 <li>
@@ -254,14 +255,14 @@
     <!-- End .product-single-tabs -->
 
     <div class="products-section pt-0">
-        <h2 class="section-title m-b-4" style="margin-left: 10px;">NHỮNG SẢM PHẨM TƯƠNG TỰ</h2>
+        <h1 class="section-title m-b-4" style="margin-left: 10px;">NHỮNG SẢM PHẨM TƯƠNG TỰ</h1>
 
         <div class="products-slider 5col owl-carousel owl-theme dots-top dots-small" data-owl-options="{'dots': true}">
             <?php foreach($splq as $lq): ?>
             <div class="product-default inner-quickview inner-icon">
                 <figure  >
                     <a href="?act=product&id_sanpham=<?=$lq['id']?>" style=" text-align: center;">
-                        <img src="upload/<?=$lq['hinh']?>" style="width: 250px; height: 250px; "  alt="product">
+                        <img src="upload/<?=$lq['hinh']?>" style="width: 300px; height: 300px; "  alt="product">
                     </a>
                     <div class="label-group">
                         <div class="product-label label-sale">-10%</div>
