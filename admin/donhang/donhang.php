@@ -45,7 +45,7 @@
                     <th>#</th>
                     <th>Người nhận</th>
                     <th>Phương thức thanh toán</th>
-                    <th>Trạng thái</th>
+                    <th style="width: 15%;">Trạng thái</th>
                     <th>Ngày đặt</th>
                     <th>Tổng Tiền</th>
                     <th>Chức Năng</th>

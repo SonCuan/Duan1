@@ -122,7 +122,7 @@ function top4_sanphamnew_in_danhmuc($id_danhmuc)
     $spnew = pdo_query($sql);
     return $spnew;
 }
-function loadall_sanpham_thetich_chitiet($iddm = 0, $loc = 0, $kyw)
+function loadall_sanpham_thetich_chitiet($iddm = 0)
 {
     $sql = "SELECT noidungdm,sanpham.id ,sanpham.tensp as tensp ,danhmuc.tendm as tendm,hinh,mota,soluong ,gia,sum(soluong) as tongsoluong ,max(gia) as giamax,min(gia) as giamin from sanpham
         left join sanpham_thetich on sanpham.id = sanpham_thetich.id_sanpham  
@@ -132,28 +132,7 @@ function loadall_sanpham_thetich_chitiet($iddm = 0, $loc = 0, $kyw)
     if ($iddm > 0) {
         $sql .= " and id_danhmuc =$iddm";
     }
-    if ($kyw != "") {
-        $sql .= " and sanpham.tensp like '%$kyw%'";
-    }
     $sql .= " group by sanpham.id";
-    switch ($loc) {
-        case 'sap-xep-tang':
-            $sql .= " order by sanpham.tensp asc ";
-            break;
-        case 'sap-xep-giam':
-            $sql .= " order by sanpham.tensp desc ";
-            break;
-        case 'gia-tang-dan':
-            $sql .= " order by giamin asc ";
-            break;
-        case 'gia-giam-dan':
-            $sql .= " order by giamin desc ";
-            break;
-        case 0:
-            $sql .= " order by sanpham.id asc ";
-    }
-
-
     $spnew = pdo_query($sql);
     return $spnew;
 }

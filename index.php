@@ -129,14 +129,14 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $namedm = " In " . check_name_danhmuc($iddm);
             }
             // chức năng xắp xếp
-            if (isset($_GET['loc']) && $_GET['loc'] != "") {
-                $loc = $_GET['loc'];
-            }
-            $kyw = "";
-            if (isset($_POST['kyw'])) {
-                $kyw = $_POST['kyw'];
-            }
-            $listsp = loadall_sanpham_thetich_chitiet($iddm, $loc, $kyw);
+            // if (isset($_GET['loc']) && $_GET['loc'] != "") {
+            //     $loc = $_GET['loc'];
+            // }
+            // $kyw = "";
+            // if (isset($_POST['kyw'])) {
+            //     $kyw = $_POST['kyw'];
+            // }
+            $listsp = loadall_sanpham_thetich_chitiet($iddm);
 
             include_once "view/shop.php";
             break;
