@@ -204,6 +204,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case "donhangcuaban":
             include_once "view/donhangcuaban.php";
             break;
+            case 'chitietdonhang':
+                include_once 'view/chitietdonhang.php';
+                break;
         case "blog":
             include_once "view/blog.php";
             break;
