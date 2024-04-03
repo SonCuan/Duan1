@@ -87,7 +87,34 @@
                <td><?=$hinh?></td>
                <td><?=$tongsoluong?></td>
                <td>
-                   <span class="badge <?=$tongsoluong==''?"bg-info":($tongsoluong==0?"bg-danger":"bg-success");?>" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
+                <style>
+                     .bg-danger {
+                                padding: 10px 15px;
+                                border-radius: 5px;
+                                background-color: rgb(229, 97, 97);
+                                color: rgb(111, 10, 10);
+                                ;
+                                font-weight: 600;
+                            }
+
+                            .bg-info {
+                                padding: 10px 15px;
+                                background: yellow;
+                                border-radius: 5px;
+                                color: rgb(82, 82, 13);
+                                ;
+                                font-weight: 600;
+                            }
+
+                            .bg-success{
+                                padding: 10px 15px;
+                                background: rgb(134, 244, 134);
+                                border-radius: 5px;
+                                color: rgb(13, 93, 13);
+                                font-weight: 600;
+                            }
+                </style>
+                   <span class="badge <?=$tongsoluong==''?"bg-info":($tongsoluong==0?"bg-danger":"bg-success");?>" >
                    <?=$tongsoluong==''?"Chưa nhập biến thể":($tongsoluong==0?"Hết Hàng":"Còn Hàng");?>
                    </span>
                </td>

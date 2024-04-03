@@ -95,10 +95,27 @@
                         <td><?= $id ?></td>
                         <td><?= $thetich ?></td>
                         <td><?= $soluong ?></td>
-                        <td>
-                            <div class="trangthai" <?= $soluong > 0 ? "bg-success" : "bg-danger"; ?> style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
+                        <td><style>
+                                .bg-success{
+                                padding: 10px 15px;
+                                background: rgb(134, 244, 134);
+                                border-radius: 5px;
+                                color: rgb(13, 93, 13);
+                                font-weight: 600;
+                            }
+                            .bg-danger {
+                                padding: 10px 15px;
+                                border-radius: 5px;
+                                background-color: rgb(229, 97, 97);
+                                color: rgb(111, 10, 10);
+                                
+                                font-weight: 600;
+                            }
+                            </style>
+                            <span class="trangthai <?= $soluong > 0 ? "bg-success" : "bg-danger"; ?>"  >
                                 <?= $soluong > 0 ? "Còn Hàng" : "Hết Hàng"; ?>
-                            </div>
+                            </span>
+                            
                         </td>
                         <td><?= number_format($gia, 0, ",", ".") . "<u>đ</u>" ?></td>
                         <td><?= $trangthai == 1 ? "Hiển Thị" : "Ẩn" ?></td>

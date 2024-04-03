@@ -8,6 +8,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
     include "../model/taikhoan.php";
     include "../model/thetich.php";
     include "../model/binhluan.php";
+    include "../model/donhang.php";
 
 
 
@@ -132,9 +133,7 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                  * /////// Biến thể
                  * 
                  */
-            case 'homedonhang':
-                include "donhang//donhang.php";
-                break;
+
             case 'homebienthe':
                 $id_sanpham = $_GET['id_sanpham'];
                 $sanpham = loadone_sanpham($id_sanpham);
@@ -266,6 +265,44 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 $listtaikhoan = loadall_taikhoan();
                 include "taikhoan/taikhoan.php";
                 break;
+
+                /**  Quản lý đơn hàng */
+
+            case 'homedonhang':
+                $id_trangthai = "";
+                if (isset($_POST['listok']) && $_POST['listok'] != "") {
+                    $id_trangthai = $_POST['id_trangthai'];
+                }
+                $list_dh = loadall_donhang_admin($id_trangthai);
+                include "donhang/donhang.php";
+                break;
+
+            case "chitietdonhang":
+                if (isset($_GET['id_donhang'])) {
+                    $id_donhang = $_GET['id_donhang'];
+                    $ttdonhang = loadone_donhang_admin($id_donhang);
+                    $list_dhct = loadall_donhangchitiet_admin($id_donhang);
+                }
+                include "donhang/xem.php";
+                break;
+            case 'suadonhang':
+                if(isset($_GET['id_donhang'])&&($_GET['id_donhang']>0)){
+                    $donhang = loadone_donhang_admin($_GET['id_donhang']);
+                    extract($donhang);
+                    $listtrangthai= loadall_trangthaidonhang();
+                  }            
+                include 'donhang/update.php';
+                break;
+                case "capnhapdonhang":
+                    if(isset($_POST['id_trangthai'])){
+                      $id_trangthai=$_POST['id_trangthai'];
+                      $id_donhang=$_POST['id_donhang'];
+                      update_donhang($id_trangthai,$id_donhang,0);
+                      header('location: http://localhost/duan1/admin/index.php?act=homedonhang');
+                    }       
+                   
+                    
+                    break;
             case "bieudothongke":
                 $listthongke = thongke();
                 // $rows = doanhthutheothang();
@@ -276,16 +313,15 @@ if (isset($_SESSION['taikhoan']) && ($_SESSION['taikhoan']['vaitro'] == 1)) {
                 $listbinhluan = loadall_binhluan(0);
                 include "binhluan/binhluan.php";
                 break;
-                case "xoabl":
-                    if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-          
-                      delete_binhluan($_GET['id']);
-                      
-                    }
-                    $listbinhluan = loadall_binhluan(0);
-                    include "binhluan/binhluan.php";
-                    break;
-                  
+            case "xoabl":
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+
+                    delete_binhluan($_GET['id']);
+                }
+                $listbinhluan = loadall_binhluan(0);
+                include "binhluan/binhluan.php";
+                break;
+
             default:
                 # code...
                 break;

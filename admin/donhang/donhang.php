@@ -32,11 +32,16 @@
     <br>
     <section class="danhsach">
         <section class="from">
-            <form action="index.php?act=homedonhang" method="post" enctype="multipart/form-data">
-                <select name="#" class="donhang">
-                    <option value="0" selected>Tất cả</option>
+            <form action="" method="post" enctype="multipart/form-data">
+                <select name="id_trangthai" class="listtrangthai">
+                    <option value="">Tất Cả</option>
+                    <option value="1">Chờ xử lý</option>
+                    <option value="2">Đã xác nhận</option>
+                    <option value="3">Đang vận chuyển</option>
+                    <option value="4">Đã hoàn thành</option>
+                    <option value="5">Hủy</option>
                 </select>
-                <input type="submit" name="" value="OK" class="donhang">
+                <input type="submit" name="listok" value="OK" class="donhang">
             </form>
         </section>
         <form action="" method="post" enctype="multipart/form-data">
@@ -50,47 +55,88 @@
                     <th>Tổng Tiền</th>
                     <th>Chức Năng</th>
                 </tr>
+                <?php
+                foreach ($list_dh as $dh) :
+                    extract($dh);
+                    $dhct = "index.php?act=chitietdonhang&id_donhang=$id";
+                    $thaydoi_ttdh = "index.php?act=suadonhang&id_donhang=$id";
+                    $huy = "";
+                ?>
+                    <tr>
+                        <style>
+                            .bg-xacnhan {
+                                padding: 10px 15px;
+                                background: rgb(134, 244, 134);
+                                border-radius: 5px;
+                                color: rgb(13, 93, 13);
+                                font-weight: 600;
+                            }
 
-                <tr>
-                    <td>1</td>
-                    <td>Hoan thịnh</td>
-                    <td>Chuyển tiền mặt</td>
-                    <td>
-                        <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                            Đã hoàn thành
-                        </div>
-                    </td>
-                    <td>12/2/2024</td>
-                    <td>12.500.000 đ</td>
-                    <td><a href="#"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Hoan thịnh</td>
-                    <td>Chuyển tiền mặt</td>
-                    <td>
-                        <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                            Đã hoàn thành
-                        </div>
-                    </td>
-                    <td>12/2/2024</td>
-                    <td>12.500.000 đ</td>
-                    <td><a href="#"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Hoan thịnh</td>
-                    <td>Chuyển tiền mặt</td>
-                    <td>
-                        <div class="trangthai" style="padding: 10px 15px; background: rgb(134, 244, 134); border-radius:5px;color:rgb(13, 93, 13);font-weight: 600; ">
-                            Đã hoàn thành
-                        </div>
-                    </td>
-                    <td>12/2/2024</td>
-                    <td>12.500.000 đ</td>
-                    <td><a href="#"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a></td>
-                </tr>
+                            .bg-info {
+                                padding: 10px 15px;
+                                background: yellow;
+                                border-radius: 5px;
+                                color: rgb(82, 82, 13);
+                                ;
+                                font-weight: 600;
+                            }
+
+                            .bg-warning {
+                                padding: 10px 15px;
+                                background: rgb(203, 155, 224);
+                                border-radius: 5px;
+                                color: rgb(112, 12, 154);
+                                font-weight: 600;
+                            }
+
+                            .bg-success {
+                                padding: 10px 15px;
+                                border-radius: 5px;
+                                background-color: rgba(255, 69, 0, 0.2);
+                                color: rgba(255, 69, 0, 0.7);
+                                ;
+                                font-weight: 600;
+                            }
+
+                            .bg-danger {
+                                padding: 10px 15px;
+                                border-radius: 5px;
+                                background-color: rgb(229, 97, 97);
+                                color: rgb(111, 10, 10);
+                                ;
+                                font-weight: 600;
+                            }
+                        </style>
+                        <td><?= $id ?></td>
+                        <td><?= $ten_nguoinhan ?></td>
+                        <td><?= $pttt ?></td>
+                        <?php
+                        $class_ttdh = "";
+                        switch ($trangthaidonhang) {
+                            case 'Chờ xử lý':
+                                $class_ttdh = "bg-info";
+                                break;
+                            case 'Đã xác nhận';
+                                $class_ttdh = "bg-xacnhan";
+                                break;
+                            case 'Đang vận chuyển':
+                                $class_ttdh = "bg-warning";
+                                break;
+                            case 'Đã hoàn thành':
+                                $class_ttdh = "bg-success";
+                                break;
+                            case 'Đã hủy':
+                                $class_ttdh = "bg-danger";
+                                break;
+                        } ?>
+                        <td><span class="badge <?= $class_ttdh ?>"><?= $trangthaidonhang ?></span></td>
+                        <td><?= date("d/m/Y", strtotime($ngaydat)) ?></td>
+                        <td><?= number_format($tongtien, 0, ",", ".") . "<u>đ</u>" ?></td>
+                        <td><a href="<?= $thaydoi_ttdh ?>"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="<?= $dhct ?>"><i class="fa-regular fa-eye"></i></a></td>
+                    </tr><?php endforeach; ?>
+
             </table>
+
         </form>
     </section><br>
 </section>
