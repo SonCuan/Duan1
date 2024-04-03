@@ -10,8 +10,8 @@ include "model/binhluan.php";
 
 
 
-if (isset($taikhoan['mand'])) {
-    $id_user = $taikhoan['mand'];
+if (isset($taikhoan['id'])) {
+    $id_user = $taikhoan['id'];
 }
 $listtaikhoan = loadall_taikhoan();
 $listdm = loadall_danhmuc();

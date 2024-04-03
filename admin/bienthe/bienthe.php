@@ -53,13 +53,13 @@
         }
     </style>
     <div class="bienthe">
+        <div style="display: flex;">
 
-
-        <h3>Tên sản phẩm: <?= $sanpham['tensp'] ?? '' ?></h3>
+        <h3>Tên sản phẩm: </h3> <p style="margin-left: 10px; font-size: 20px; font-weight: 600;"><?= $sanpham['tensp'] ?? '' ?></p></div>
         <ul class="list">
-            <h4>Mô tả:<?= $sanpham['mota'] ?? "" ?></h4>
+            <h3>Mô tả :</h3><p style="font-size: 15px;"><?= $sanpham['mota'] ?? "" ?></p><br>
             <li>
-                <h4>Hình ảnh:</h4>
+                <h3>Hình ảnh:</h3>
             </li>
         </ul>
         <img src="../upload/<?= $sanpham['hinh'] ?? "" ?>" alt="" width="260px" height="260px">

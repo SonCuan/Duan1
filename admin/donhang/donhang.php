@@ -62,7 +62,7 @@
                     </td>
                     <td>12/2/2024</td>
                     <td>12.500.000 đ</td>
-                    <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -75,7 +75,7 @@
                     </td>
                     <td>12/2/2024</td>
                     <td>12.500.000 đ</td>
-                    <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a></td>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -88,7 +88,7 @@
                     </td>
                     <td>12/2/2024</td>
                     <td>12.500.000 đ</td>
-                    <td><a href="?act=suasp"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="?act=bienthe"><i class="fa-regular fa-eye"></i></a></td>
+                    <td><a href="#"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href=""><i class="fa-regular fa-eye"></i></a></td>
                 </tr>
             </table>
         </form>
