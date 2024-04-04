@@ -110,7 +110,7 @@
                         </a>
 
 
-                        <a href="?act=cart" class="header-icon">
+                        <a href="?act=giohang" class="header-icon">
                             <i class="minicart-icon"></i>
                         </a>
 

@@ -6,6 +6,7 @@ include "model/sanpham.php";
 include "model/taikhoan.php";
 include "model/thetich.php";
 include "model/binhluan.php";
+include "model/giohang.php";
 
 
 
@@ -140,8 +141,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
             include_once "view/shop.php";
             break;
-        case "cart":
-            include_once "view/cart.php";
+        
             break;
         case "category-list":
             $listsp = loadall_sanpham_thetich_chitiet("", "", "");
@@ -167,29 +167,29 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $splq = cac_sp_lienquan($iddm, $id_sanpham);
             }
             //them vào giỏ hàng
-            // if(isset($_POST['themgiohang'])) {
-            //     extract($_POST);
-            //     //kiểm tra người dùng đăng nhập hay chưa nếu chưua thì yêu cầu đăng nhập 
-            //     if(isset($taikhoan['id'])) {
-            //         // check xem sản phẩm này đã có trong giỏ hàng chưa , nếu đã có thì + thêm số lượng
-            //         $check = check_giohang($id_sanpham_thetich, $taikhoan['id']);
-            //         $tongkho = check_tongkho($id_sanpham_thetich);
-            //         if(is_array($check)) {
-            //             $soluong += $check['soluong'];
-            //             if($soluong >= $tongkho) {
-            //                 $soluong = $tongkho;
-            //             }
-            //             update_giohang($soluong, $check['id']);
-            //         } else {
-            //             insert_giohang($id_sanpham_thetich, $soluong, $taikhoan['id']);
-            //         }
-            //         setcookie("thongbaotgh", "Bạn đã thêm vào giỏ hàng thành công", time() + 10);
-            //         header("Location:index.php?act=sanphamct&id_sanpham=$id_sanpham");
-            //     } else {
-            //         include "view/yeu-cau-dang-nhap.php";
-            //     }
-            // }
-            // lấy số lượng và id-sanpham-bienthe người dùng muốn đặt hàng ngay
+            if(isset($_POST['themgiohang'])) {
+                extract($_POST);
+                //kiểm tra người dùng đăng nhập hay chưa nếu chưua thì yêu cầu đăng nhập 
+                // if(isset($taikhoan['id'])) {
+                    // check xem sản phẩm này đã có trong giỏ hàng chưa , nếu đã có thì + thêm số lượng
+                    $check = check_giohang($id_sanpham_thetich, $taikhoan['id']);
+                    $tongkho = check_tongkho($id_sanpham_thetich);
+                    if(is_array($check)) {
+                        $soluong += $check['soluong'];
+                        if($soluong >= $tongkho) {
+                            $soluong = $tongkho;
+                        }
+                        update_giohang($soluong, $check['id']);
+                    } else {
+                        insert_giohang($id_sanpham_thetich, $soluong, $taikhoan['id']);
+                    }
+                    setcookie("thongbaotgh", "Bạn đã thêm vào giỏ hàng thành công", time() + 10);
+                    header("Location:index.php?act=product&id_sanpham=$id_sanpham");
+                // } else {
+                //     include "view/yeucaudangnhap.php";
+                // }
+            }
+            //lấy số lượng và id-sanpham-bienthe người dùng muốn đặt hàng ngay
             // if(isset($_POST['dathangngay'])) {
             //     $soluong = $_POST['soluong'];
             //     $id_sanpham_thetich = $_POST['id_sanpham_thetich'];
@@ -197,7 +197,15 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             // }
             include_once "view/product.php";
             break;
-
+            case "giohang":
+                if(isset($taikhoan['id'])) {
+                    $listgiohang = loadall_giohang($taikhoan['id']);
+                    include_once "view/giohang.php";
+                } else {
+                    include "view/yeucaudangnhap.php";
+                }
+                break;
+                
         case "checkout":
             include_once "view/checkout.php";
             break;

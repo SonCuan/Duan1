@@ -36,9 +36,10 @@
         .tt p {
             font-weight: bold;
             font-size: 15px;
-            
+
         }
-        .tt p:hover{
+
+        .tt p:hover {
             color: #ccc;
         }
 
@@ -53,7 +54,7 @@
                 <strong class="single-cart-notice">“<?= $onesp['tensp'] ?>”</strong>
                 <span>Đã được thêm vào giỏ hàng của bạn.</span>
             </div>
-        <!-- End Js đã thêm sản phẩm vào giỏ hàng -->
+            <!-- End Js đã thêm sản phẩm vào giỏ hàng -->
 
             <div class="row">
                 <div class="col-lg-5 col-md-6 product-single-gallery">
@@ -66,7 +67,7 @@
 
                         <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                             <div class="product-item">
-                                <img class="product-single-image" src="upload/<?= $onesp['hinh'] ?>" data-zoom-image="assets/images/demoes/demo23/products/zoom/product-1-big.jpg" width="468" height="468" alt="product" />
+                                <img class="product-single-image" src="upload/<?= $onesp['hinh'] ?>" data-zoom-image="assets/images/demoes/demo23/products/zoom/product-1-big.jpg" style="width: 468px; height: 500px;" alt="product" />
                             </div>
                         </div>
                     </div>
@@ -132,12 +133,12 @@
                                 $i = -1;
                                 foreach ($thetich_in_sanpham as $tt) :
                                     $i++;
-                                    $check = $sp['gia'] == $tt["gia"] ? "style='color:orangered;border-color: orangered;'" : "";
+                                    $check = $sp['gia'] == $tt["gia"] ? "style='color:red;border-color: red;'" : "";
                                 ?>
                                     <div class="thetich " onclick="showthetich('<?= $i ?>')" <?= $check ?>>
                                         <div class="tt">
                                             <span><?= $tt['thetich'] ?></span>
-                                            <p><?= number_format($tt["gia"],0,",",".") ?>d</p>
+                                            <p><?= number_format($tt["gia"], 0, ",", ".") ?>d</p>
                                         </div>
                                         <input type="hidden" name="id_sanpham_thetich" value='<?= $tt['id'] ?>'>
                                     </div>
@@ -145,8 +146,8 @@
 
                             </section>
                             <div class="price-box">
-                                <span class="old-price"><?=number_format(($sp['gia']*20/100 + $sp['gia']),0,",",".")   ?>đ</span>
-                                <span class="product-price"><?=  number_format($sp["gia"],0,",",".")  ?>đ</span>
+                                <span class="old-price"><?= number_format(($sp['gia'] * 20 / 100 + $sp['gia']), 0, ",", ".")   ?>đ</span>
+                                <span class="product-price"><?= number_format($sp["gia"], 0, ",", ".")  ?>đ</span>
                                 <span style="margin: 6px 0 0 10px;padding: 5px 10px; background: orange; color:white;border-radius: 5px; font-size: 12px;">Sale 20%</span>
                             </div>
                             <ul class="single-info-list">
@@ -166,19 +167,22 @@
                     </div>
                     <!-- End .product-desc -->
 
+                    <form action="index.php?act=product&id_sanpham=<?= $id_sanpham ?>" method="post">
 
-
-                    <div class="product-action">
-                        <div class="product-single-qty">
-                            <input class="horizontal-quantity form-control" type="text">
+                        <div class="product-action">
+                            <div class="product-single-qty">
+                                <input class="horizontal-quantity form-control"type="number" name="soluong" min="1" max="<?= $soluong ?>"  >
+                            </div>
+                            <!-- End .product-single-qty -->
+                            <button type="submit" name="themgiohang" style="background: black; color:white;padding: 10px 15px;border: none;">
+                                <span class="" title="Add to Cart">Thêm vào giỏ hàng
+                                </span></button>
+                            <button type="submit" name="dathangngay"style="background: black; color:white;padding: 10px 15px;border: none;">
+                                <span>Đặt Hàng</span></button>
+                            <!-- <input type="hidden" name="id_sanpham_thetich" value="<?= $id ?>">
+                            <input type="hidden" name="gia" value="<?= $gia ?>"> -->
                         </div>
-                        <!-- End .product-single-qty -->
-
-                        <a href="javascript:;" class="btn btn-dark add-cart mr-2" title="Add to Cart">Thêm vào giỏ hàng
-                        </a>
-
-                        <a href="?act=cart" class="btn btn-gray view-cart d-none">Xem giỏ hàng</a>
-                    </div>
+                    </form>
                     <!-- Mua hàng -->
 
                     <!-- End mua hàng -->
@@ -208,43 +212,43 @@
             </div>
             <h2 style="line-height: 10px; height: 40px; border-bottom:1px solid #ccc">Bình luận</h2>
             <?php foreach ($binhluan as $value) : ?>
-            <?php extract($value); ?>
-            <br>
-            <table>
-            <tr>
-              <th> <b><?=$hoten?></b> </th>
-            </tr>
-            <tr>
-            <th> <?= $noidung ?></th>
-            </tr>
-            <tr>
-            <th> <b></b><?php echo date("d/m/Y", strtotime($ngaybinhluan)) ?></th>
-            </tr>
+                <?php extract($value); ?>
+                <br>
+                <table>
+                    <tr>
+                        <th> <b><?= $hoten ?></b> </th>
+                    </tr>
+                    <tr>
+                        <th> <?= $noidung ?></th>
+                    </tr>
+                    <tr>
+                        <th> <b></b><?php echo date("d/m/Y", strtotime($ngaybinhluan)) ?></th>
+                    </tr>
+                </table>
+                <br>
+            <?php endforeach; ?>
             </table>
-            <br>
-          <?php endforeach; ?>
-        </table>
             <div class="cart-discount">
                 <form action="" method="post">
                     <div class="input-group">
-                    <input type="hidden" name="id_sanpham" value="<?php echo $_GET['id_sanpham'] ?>">
-                    <input type="hidden" name="id_taikhoan"  value="<?php echo isset($_SESSION['hoten']['id']) ? $_SESSION['hoten']['id'] : '' ?>">
-                    <?php
-                     if (!empty($_SESSION['taikhoan'])) : ?>
-                        <input style=" border-radius:5px 0 0 5px ; " type=" text" class="form-control form-control-sm" placeholder="Gửi bình luận" name="noidung" required>
-                        <div class="input-group-append">
-                            <button style="border-radius:0 5px 5px 0; width: 100px;" class="btn btn-sm" type="submit" name="guibinhluan">Gửi
-                            </button>
-                        </div>
+                        <input type="hidden" name="id_sanpham" value="<?php echo $_GET['id_sanpham'] ?>">
+                        <input type="hidden" name="id_taikhoan" value="<?php echo isset($_SESSION['hoten']['id']) ? $_SESSION['hoten']['id'] : '' ?>">
+                        <?php
+                        if (!empty($_SESSION['taikhoan'])) : ?>
+                            <input style=" border-radius:5px 0 0 5px ; " type=" text" class="form-control form-control-sm" placeholder="Gửi bình luận" name="noidung" required>
+                            <div class="input-group-append">
+                                <button style="border-radius:0 5px 5px 0; width: 100px;" class="btn btn-sm" type="submit" name="guibinhluan">Gửi
+                                </button>
+                            </div>
                         <?php
                         else :
-                        ?> 
-                      <input type="text" name="" id="" placeholder="Đăng nhập để thực hiện chức năng bình luận" disabled style="width:343px">
-                         <?php
-                         endif;
-                            ?>
+                        ?>
+                            <input type="text" name="" id="" placeholder="Đăng nhập để thực hiện chức năng bình luận" disabled style="width:343px">
+                        <?php
+                        endif;
+                        ?>
                     </div><!-- End .input-group -->
-                 
+
                 </form>
             </div>
         </div>
@@ -258,40 +262,40 @@
         <h1 class="section-title m-b-4" style="margin-left: 10px;">NHỮNG SẢM PHẨM TƯƠNG TỰ</h1>
 
         <div class="products-slider 5col owl-carousel owl-theme dots-top dots-small" data-owl-options="{'dots': true}">
-            <?php foreach($splq as $lq): ?>
-            <div class="product-default inner-quickview inner-icon">
-                <figure  >
-                    <a href="?act=product&id_sanpham=<?=$lq['id']?>" style=" text-align: center;">
-                        <img src="upload/<?=$lq['hinh']?>" style="width: 300px; height: 300px; "  alt="product">
-                    </a>
-                    <div class="label-group">
-                        <div class="product-label label-sale">-10%</div>
-                    </div>
-                   
-                   
-                </figure>
-                <div class="product-details">
-                  
-                    <h3 class="product-title">
-                        <a href="?act=product&id_sanpham=<?=$lq['id']?>"><?=$lq['tensp']?></a>
-                    </h3>
-                    <div class="ratings-container">
-                        <div class="product-ratings">
-                            <span class="ratings" style="width:90%"></span>
-                            <!-- End .ratings -->
-                            <span class="tooltiptext tooltip-top"></span>
+            <?php foreach ($splq as $lq) : ?>
+                <div class="product-default inner-quickview inner-icon">
+                    <figure>
+                        <a href="?act=product&id_sanpham=<?= $lq['id'] ?>" style=" text-align: center;">
+                            <img src="upload/<?= $lq['hinh'] ?>" style="width: 300px; height: 300px; " alt="product">
+                        </a>
+                        <div class="label-group">
+                            <div class="product-label label-sale">-10%</div>
                         </div>
-                        <!-- End .product-ratings -->
+
+
+                    </figure>
+                    <div class="product-details">
+
+                        <h3 class="product-title">
+                            <a href="?act=product&id_sanpham=<?= $lq['id'] ?>"><?= $lq['tensp'] ?></a>
+                        </h3>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:90%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+                        </div>
+                        <!-- End .product-container -->
+                        <div class="price-box">
+                            <span class="old-price"><?= $lq['giamin'] + $lq['giamin'] * 10 / 100 ?></span>
+                            <span class="product-price"><?= $lq['giamin'] ?></span>
+                        </div>
+                        <!-- End .price-box -->
                     </div>
-                    <!-- End .product-container -->
-                    <div class="price-box">
-                        <span class="old-price"><?=$lq['giamin']+$lq['giamin']*10/100 ?></span>
-                        <span class="product-price"><?=$lq['giamin'] ?></span>
-                    </div>
-                    <!-- End .price-box -->
+                    <!-- End .product-details -->
                 </div>
-                <!-- End .product-details -->
-            </div>
             <?php endforeach; ?>
         </div>
         <!-- End .products-slider -->

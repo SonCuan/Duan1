@@ -172,3 +172,28 @@ function cac_sp_lienquan($iddm,$id_sanpham){
     $splq = pdo_query($sql);
     return $splq;
 }
+ //tổng kho của 1 biến thể
+ function check_tongkho($id_sanpham_thetich){
+    $sql = "select soluong from sanpham_thetich";
+    $tongkho = pdo_query_one($sql);
+    return $tongkho['soluong'];  
+}function tongsanpham(){
+    $sql = "select sum(soluong) as tongsp from sanpham_thetich";
+    $tongsp = pdo_query_one($sql);
+    return $tongsp['tongsp'];
+}
+function sanphamsaphet(){
+    $sql = "select count(*) as tongspsaphet from sanpham_thetich
+    where soluong <=10 ";
+    $sp = pdo_query_one($sql);
+    return $sp['tongspsaphet'];
+}
+function check_gia_ten_thetich_in_sp_tt($id_sanpham_thetich){
+    $sql = "SELECT gia,tensp,thetich from sanpham_thetich
+    join sanpham on sanpham_thetich.id_sanpham = sanpham.id
+    join thetich on sanpham_thetich.id_thetich =thetich.id
+    where sanpham_thetich.id=$id_sanpham_thetich";
+    $sptt = pdo_query_one($sql);
+    return $sptt;
+}
+?>
