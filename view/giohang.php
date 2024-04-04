@@ -22,10 +22,7 @@
   <div class="row">
     <div class="col-12">
       <div class="table-responsive">
-      <?php 
-              foreach($listgiohang as $giohang):
-                extract($giohang);
-             ?>
+      <form action="index.php?act=thanhtoan" method="post">
         <table class="table">
           <thead class="thead-light">
             <tr>
@@ -41,12 +38,15 @@
               <th class="text-center" scope="col">Thanh toán</th>
             </tr>
           </thead>
-            <tbody>
+            <tbody id="order-cart"><?php 
+              foreach($listgiohang as $giohang):
+                extract($giohang);
+             ?>
                 <tr>
                     <td><input type="checkbox" name="id_giohang[]" class="checkbox" value="<?=$id?>" checked></td>
-                    <td><?=$ten?></td>
+                    <td><?=$tensp?></td>
                     <td>
-                    <img src="upload/<?=$hinh?>" alt="img" />
+                    <img src="upload/<?=$hinh?>" alt="img"  style="width: 200px; height: 200px;"/>
                     </td>
                     <td><?=$thetich?></td>
                     <td><?=$conlai?></td>
@@ -63,13 +63,53 @@
                     <td>
                     <a href="index.php?act=thanhtoan&id_giohang=<?=$id?>" class="btn btn-dark btn--lg">Đặt Hàng</a>
                     </td>
+                    <div style="color:red;font-size:17px"><?=$_COOKIE['thongbao']??""?></div>
 
-                </tr>
+
+                </tr><?php endforeach ?>
             </tbody>
         </table>
-        <?php endforeach ?>
-
-      </div>
+        <?php 
+       $link ="index.php?act=thanhtoan";
+      if(empty($listgiohang)){
+        $link="";
+        $thongbao ="alert('Bạn chưa có sản phẩm nào trong giỏ hàng')";
+      }
+    ?>
+    <div class="Place-order mt-25" style="text-align:right">
+      <input type="submit" onclick="<?=$thongbao??""?>" class="btn btn--lg btn-primary my-2 my-sm-0" name="dathangdachon" value="Đặt Hàng">
+    </div>
+        
+              
+      </div></form>
     </div>
   </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script >
+  function updateSoLuong(id,conlai){
+    let newSoLuong =$('#soluong_'+id).val();
+    if(newSoLuong<=0){
+      newSoLuong=1;
+    }
+    if(newSoLuong>=conlai){
+      newSoLuong=conlai;
+    }
+    $.ajax({
+      type:'POST',
+      url:'view/update-cart.php',
+      data:{
+        id:id,
+        soluong:newSoLuong
+      },
+      success: function(response){
+        $.post('view/cart-new.php',function(data){
+          $('#order-cart').html(data);
+        })
+      },
+      error: function (error) {
+        console.error('Error:', error);
+      }
+    });
+  }
+</script>

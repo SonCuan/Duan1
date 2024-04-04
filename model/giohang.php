@@ -23,4 +23,54 @@ function update_giohang($soluong,$id){
     $sql= "UPDATE giohang SET soluong =$soluong where id =$id";
     pdo_execute($sql); 
 }
+function delete_giohang($id){
+    if($id>0){
+        $sql = "delete from giohang where id=".$id;
+        pdo_execute($sql);
+    }
+}
+function mua1_giohang($id_taikhoan,$id_giohang){
+    $sql = "select id_sanpham_thetich ,giohang.id ,hinh,tensp,thetich,sanpham_thetich.soluong as conlai ,giohang.soluong,gia from giohang 
+    join sanpham_thetich on giohang.id_sanpham_thetich =  sanpham_thetich.id
+    join sanpham on sanpham.id = sanpham_thetich.id_sanpham
+    join thetich on thetich.id = sanpham_thetich.id_thetich
+    where id_taikhoan=$id_taikhoan and giohang.id=$id_giohang";
+    $giohang = pdo_query($sql);
+    return $giohang; 
+}
+function tong_gia_don_hang($id_taikhoan,$id_giohang){
+    $id_gh=$id_giohang;
+    if(is_array($id_giohang)){
+        $id_gh="";
+        foreach($id_giohang as $value){
+            $id_gh .= $value . ", ";
+        }
+    }
+    $id_gh = rtrim($id_gh, ", ");
+    $sql="SELECT sum(giohang.soluong*gia) as tonggia FROM giohang 
+    join sanpham_thetich on giohang.id_sanpham_thetich =  sanpham_thetich.id
+    where id_taikhoan =$id_taikhoan and giohang.id in ($id_gh)";
+    $check= pdo_query_one($sql);
+    return $check['tonggia'];
+}
+function load_giohang_duocchon($id_giohang,$id_taikhoan){
+    $id_gh="";
+    foreach($id_giohang as $value){
+        $id_gh .= $value . ", ";
+    }
+    $id_gh = rtrim($id_gh, ", ");
+    $sql = "SELECT id_sanpham_thetich, giohang.id ,hinh,tensp,thetich,sanpham_thetich.soluong as conlai ,giohang.soluong,gia from giohang 
+    join sanpham_thetich on giohang.id_sanpham_thetich =  sanpham_thetich.id
+    join sanpham on sanpham.id = sanpham_thetich.id_sanpham
+    join thetich on thetich.id = sanpham_thetich.id_thetich
+    where id_taikhoan=$id_taikhoan and giohang.id in ($id_gh)";
+    $listsp =pdo_query($sql);
+    return $listsp;
+}
+function insert_donhang($id_taikhoan, $ten_nguoinhan, $email_nguoinhan, $sdt_nguoinhan, $diachi_nguoinhan, $id_pttt, $tongtien, $ghichu , $tongtien_dathanhtoan){
+        $sql= "INSERT INTO donhang(id_taikhoan, ten_nguoinhan, email_nguoinhan, sdt_nguoinhan, diachi_nguoinhan, id_pttt, tongtien,  ghichu , id_trangthai, tongtien_dathanhtoan)
+         VALUES ($id_taikhoan, '$ten_nguoinhan', '$email_nguoinhan', '$sdt_nguoinhan', '$diachi_nguoinhan', $id_pttt, $tongtien,  '$ghichu',1 ,$tongtien_dathanhtoan )";
+        $donhangnew = pdo_execute($sql); 
+        return $donhangnew ;
+    }
 ?>

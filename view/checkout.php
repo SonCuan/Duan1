@@ -18,51 +18,81 @@
 	</div>
 </div>
 </nav>
+
 <div class="containers">
-	<form action="#" method="POST">
-		<!-- start thông ting người nhận -->
-		<h2>Thông tin người nhận</h2>
+	<?php
+	extract($taikhoan);
+	?>
 
-		<label for="name">Tên người nhận :</label>
-		<input type="text" id="name" name="name" required>
+	<form action="" method="POST">
+		<main>
+			<!-- start thông ting người nhận -->
+			<div class="form-checkout">
+				<h2>Thông tin người nhận</h2>
 
-		<label for="address">Địa chỉ giao hàng:</label>
-		<textarea id="address" name="address" rows="4" required>.</textarea>
+				<label for="name">Tên người nhận :</label>
+				<input type="text" value="<?= $hoten ?>" name="ten_nguoinhan" required>
 
-		<label for="name">Email : </label>
-		<input type="text" id="name" name="name" required>
+				<label for="address">Địa chỉ giao hàng:</label>
+				<input type="text" value="<?= $diachi ?>" name="diachi_nguoinhan" required></input>
 
-		<label for="name">Số điện thoại </label>
-		<input type="number" id="name" name="name" required>
+				<label for="name">Email : </label>
+				<input type="text" value="<?= $email ?>" name="email_nguoinhan" required>
 
-
-
-		<label class="lb">Phương thức thanh toán:</label>
-		<div class="nut_radio">
-			<input type="radio" class="ip" name="id_pttt" value="1" checked=""> Thanh toán khi giao hàng (COD) <br> <br>
-			<input type="radio" class="ip" name="id_pttt" value="2"> Thanh toán bằng VNPAY
-		</div>
+				<label for="name">Số điện thoại </label>
+				<input type="number" value="<?= $sdt ?>" name="sdt_nguoinhan" required>
 
 
-		<label for="address">Ghi chú :</label>
-		<textarea id="address" name="address" rows="4" required>.</textarea> <br> <br>
 
-		<button type="submit">Xác nhận đặt hàng</button>
+				<label class="lb">Phương thức thanh toán:</label>
+				<div class="nut_radio">
+					<input type="radio" class="ip" name="id_pttt" value="1" checked=""> Thanh toán khi giao hàng (COD) <br> <br>
+					<input type="radio" class="ip" name="id_pttt" value="2"> Thanh toán bằng VNPAY
+				</div>
 
-		<!-- End phần thông tin người nhận -->
+
+				<label for="address">Ghi chú :</label>
+				<textarea id="address" name="ghichu" rows="4" placeholder="Ghi chú về đơn hàng của bạn, ví dụ ghi chú bí mật khi giao hàng." required></textarea> <br> <br>
+
+				<button type="submit" name="hoantatdathang">Xác nhận đặt hàng</button>
+
+			</div>
+			<!-- End phần thông tin người nhận -->
+			<!-- Phần sản phẩm -->
+			<div class="product">
+				<h2>Đơn hàng của bạn</h2>
+				<hr>
+				<table class="table table-borderless">
+					<thead>
+						<tr>
+							<th>Tên sản phẩm</th>
+							<th></th>
+							<th> Giá</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						foreach ($listsanpham as $sp) :
+						?>
+							<tr>
+								<td><?= $sp['tensp'] . " - " . $sp['thetich'] ?></td>
+								<td><?= "x" . $sp['soluong'] . "   "; ?></td>
+								<td><?= number_format($sp['gia'] * $sp['soluong'], 0, ",", ".") . " <u>đ</u>" ?></td>
+							</tr>
+						<?php endforeach ?>
+					</tbody>
+				</table>
+				<hr>
+				<p><strong>Vận chuyển :</strong> Miễn phí vận chuyển</p>
+				<p><strong>Thành tiền :</strong> <?= number_format($tong_gia_don_hang, 0, ",", ".") . " <u>đ</u>" ?></p>
+				<input type="hidden" name="gia" value="<?= $sp['gia'] ?>">
+				<input type="text" name="tongtien" value="<?= $tong_gia_don_hang ?>">
+
+
+			</div>
+		</main>
 	</form>
 
-	<!-- Phần sản phẩm -->
-	<div class="product">
-		<h2>Đơn hàng của bạn</h2>
-		<hr>
-
-		<p><strong>Tên sản phẩm:</strong> Áo phông thể thao</p>
-		<p><strong>Giá:</strong> $20</p>
-		<p><strong>Mô tả:</strong> Áo phông thể thao chất liệu cotton thoáng mát.</p>
-		<p><strong>Vận chuyển :</strong> Miễn phí vận chuyển</p>
-		<p><strong>Thành tiền :</strong> Thành tiền</p>
-	</div>
 	<!-- End phẩn sản phẩm -->
 </div>
 
@@ -75,7 +105,11 @@
 
 	}
 
-	.containers {
+	p {
+		margin-bottom: 25px;
+	}
+
+	main {
 		max-width: 1400px;
 		margin: 20px auto;
 		background-color: #fff;
@@ -88,13 +122,14 @@
 	}
 
 	.product {
+		height: auto;
 		padding: 20px;
 		border: 1px solid #ccc;
 		border-radius: 5px;
 		background: #f6f6f6;
 	}
 
-	form {
+	.form-checkout {
 		padding: 20px;
 		border: 1px solid #ccc;
 		border-radius: 8px;

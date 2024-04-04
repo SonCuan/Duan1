@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include "model/pdo.php";
 include "model/danhmuc.php";
@@ -7,7 +8,8 @@ include "model/taikhoan.php";
 include "model/thetich.php";
 include "model/binhluan.php";
 include "model/giohang.php";
-
+include "model/donhang.php";
+include "global.php";
 
 
 
@@ -170,7 +172,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             if(isset($_POST['themgiohang'])) {
                 extract($_POST);
                 //kiểm tra người dùng đăng nhập hay chưa nếu chưua thì yêu cầu đăng nhập 
-                // if(isset($taikhoan['id'])) {
+                if(isset($taikhoan['id'])) {
                     // check xem sản phẩm này đã có trong giỏ hàng chưa , nếu đã có thì + thêm số lượng
                     $check = check_giohang($id_sanpham_thetich, $taikhoan['id']);
                     $tongkho = check_tongkho($id_sanpham_thetich);
@@ -184,17 +186,18 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                         insert_giohang($id_sanpham_thetich, $soluong, $taikhoan['id']);
                     }
                     setcookie("thongbaotgh", "Bạn đã thêm vào giỏ hàng thành công", time() + 10);
-                    header("Location:index.php?act=product&id_sanpham=$id_sanpham");
-                // } else {
-                //     include "view/yeucaudangnhap.php";
-                // }
+                    // header("Location:index.php?act=product&id_sanpham=$id_sanpham");
+                } else {
+                    include "view/yeucaudangnhap.php";
+                }
+               
             }
             //lấy số lượng và id-sanpham-bienthe người dùng muốn đặt hàng ngay
-            // if(isset($_POST['dathangngay'])) {
-            //     $soluong = $_POST['soluong'];
-            //     $id_sanpham_thetich = $_POST['id_sanpham_thetich'];
-            //     header("Location:index.php?act=thanhtoan&id_sanpham_thetich=$id_sanpham_thetich&soluong=$soluong");
-            // }
+            if(isset($_POST['dathangngay'])) {
+                $soluong = $_POST['soluong'];
+                $id_sanpham_thetich = $_POST['id_sanpham_thetich'];
+                header("Location:index.php?act=thanhtoan&id_sanpham_thetich=$id_sanpham_thetich&soluong=$soluong");
+            }
             include_once "view/product.php";
             break;
             case "giohang":
@@ -205,14 +208,169 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     include "view/yeucaudangnhap.php";
                 }
                 break;
-                
-        case "checkout":
-            include_once "view/checkout.php";
-            break;
+                case 'xoagiohang':
+                    if(isset($_GET['id_giohang']) && $_GET['id_giohang'] > 0) {
+                        $id_giohang = $_GET['id_giohang'];
+                        delete_giohang($id_giohang);
+                        header("location:index.php?act=giohang");
+                    }
+                    break;
+                    case 'thanhtoan':
+                        if(empty($taikhoan)) {
+                            include "view/yeucaudangnhap.php";
+                            die();
+                        }
+                        if(isset($_POST['dathangdachon'])) {
+                            if(empty($_POST['id_giohang'])) {
+                                header("location:index.php?act=giohang");
+                                setcookie('thongbao', "**Bạn chưa chọn sản phẩm nào", time());
+                                die;
+                            }
+                            $id_giohang = $_POST['id_giohang'];
+                            $_SESSION['listsanpham'] = $listsanpham = load_giohang_duocchon($id_giohang, $taikhoan['id']);
+                            $_SESSION['tongtiendonhang']=$tong_gia_don_hang = tong_gia_don_hang($taikhoan['id'], $id_giohang);
+                        }
+                        if(isset($_SESSION['listsanpham'])&&isset($_SESSION['tongtiendonhang'])) {
+                            $listsanpham = $_SESSION['listsanpham'];
+                            $tong_gia_don_hang=$_SESSION['tongtiendonhang'];
+                        }
+                        //mua tất cả sp trong giỏ hàng
+                        $id_giohang='';
+                        $listsanpham =loadall_giohang($taikhoan['id']);
+                        //mua 1 sản phẩm trong giỏ hàng
+                        if(isset($_GET['id_giohang']) && $_GET['id_giohang']) {
+                            $listsanpham = mua1_giohang($taikhoan['id'], $_GET['id_giohang']);
+                            $id_giohang = $_GET['id_giohang'];
+                            $tong_gia_don_hang = tong_gia_don_hang($taikhoan['id'], $id_giohang);
+                        }
+            
+                        //Đặt hàng ngay ở đơn hàng chi tiết
+                        if(isset($_GET['id_sanpham_thetich']) && isset($_GET['soluong'])) {
+                            $id_sanpham_thetich = $_GET['id_sanpham_thetich'];
+                            $sptt_muangay = check_gia_ten_thetich_in_sp_tt($id_sanpham_thetich);
+                            $gia = $sptt_muangay['gia']; //  Để lưu vào dtb bảng đơn hàng chi tiết
+                            $tensp = $sptt_muangay['tensp'];  //  Để hiển thị  ở trang checkout (thanh toán)
+                            $thetich = $sptt_muangay['thetich'];  //  Để hiển thị  ở trang checkout (thanh toán)
+                            $soluong = $_GET['soluong'];   //  Để lưu vào dtb bảng đơn hàng chi tiết
+                            $listsanpham = [[
+                                'id_sanpham_thetich' => $id_sanpham_thetich,
+                                'soluong' => $soluong,
+                                'gia' => $gia,
+                                'tensp' => $tensp,
+                                'thetich' => $thetich,
+                                'id' => '' // dòng 156 delete giỏ hàng , do mua ngay không thêm vào giỏ hàng nên đặt id là null
+                            ]];
+                            $tong_gia_don_hang = $gia * $soluong; //  Để lưu vào dtb bảng đơn hàng chi tiết
+                        }
+                        if(empty($listsanpham)) {
+                            header("location:index.php");
+                        }
+                        ///bấm nút đặt hàng
+                        if(isset($_POST['hoantatdathang'])) {
+                            
+                            print_r($_POST);
+                            print_r($listsanpham);
+                            extract($_POST);
+                            echo "$id_pttt <br> $tongtien <br> ". $taikhoan['id'];
+                            $checkid = insert_donhang($taikhoan['id'], $ten_nguoinhan, $email_nguoinhan, $sdt_nguoinhan, $diachi_nguoinhan, $id_pttt, $tongtien, $ghichu,0 );
+                            $id_donhang = $checkid;
+                            foreach($listsanpham as $sp) {
+                                extract($sp);
+                                insert_donhangchitiet($id_donhang, $id_sanpham_thetich, $soluong, $gia);
+                                ///sau khi đặt hàng thành công thì xóa giỏ hàng
+                                delete_giohang($id_giohang);
+                            }
+                            if(isset($_SESSION['listsanpham'])) {
+                                unset($_SESSION['listsanpham']);
+                            }
+                            // if($_POST['id_pttt'] == 2) {
+                            //     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+                            //     $vnp_Returnurl = "https://localhost/Duan1/vnpay_php/vnpay_return.php";
+                            //     $vnp_TmnCode = "UN0L5TCK"; //Mã website tại VNPAY 
+                            //     $vnp_HashSecret = "EXYVEJLRKGRAAWZXKOQMKMEOWVXLENMC"; //Chuỗi bí mật
+                            //     $vnp_TxnRef = $checkid; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+                            //     $vnp_OrderInfo = "Thông tin mua hàng";
+                            //     $vnp_OrderType = "billpayment";
+                            //     $vnp_Amount = $tong_gia_don_hang * 100;
+                            //     $vnp_Locale = "vn";
+                            //     $vnp_BankCode = "";
+                            //     $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
+                            //     //Add Params of 2.0.1 Version
+                            //     $inputData = array(
+                            //         "vnp_Version" => "2.1.0",
+                            //         "vnp_TmnCode" => $vnp_TmnCode,
+                            //         "vnp_Amount" => $vnp_Amount,
+                            //         "vnp_Command" => "pay",
+                            //         "vnp_CreateDate" => date('YmdHis'),
+                            //         "vnp_CurrCode" => "VND",
+                            //         "vnp_IpAddr" => $vnp_IpAddr,
+                            //         "vnp_Locale" => $vnp_Locale,
+                            //         "vnp_OrderInfo" => $vnp_OrderInfo,
+                            //         "vnp_OrderType" => $vnp_OrderType,
+                            //         "vnp_ReturnUrl" => $vnp_Returnurl,
+                            //         "vnp_TxnRef" => $vnp_TxnRef,
+                            //         //
+                            //         // "vnp_Bill_ten_nguoinhan" =>$ten_nguoinhan,
+                            //         // "vnp_Bill_email_nguoinhan"=>$email_nguoinhan,
+                            //         // "vnp_Bill_diachi_nguoinhan" =>$diachi_nguoinhan,
+                            //         // "vnp_Bill_pttt"=>$pttt,
+                            //         // "vnp_Bill_ghichu"=>$ghichu
+                            //     );
+            
+                            //     if(isset($vnp_BankCode) && $vnp_BankCode != "") {
+                            //         $inputData['vnp_BankCode'] = $vnp_BankCode;
+                            //     }
+                            //     if(isset($vnp_Bill_State) && $vnp_Bill_State != "") {
+                            //         $inputData['vnp_Bill_State'] = $vnp_Bill_State;
+                            //     }
+                            //     //var_dump($inputData);
+                            //     ksort($inputData);
+                            //     $query = "";
+                            //     $i = 0;
+                            //     $hashdata = "";
+                            //     foreach($inputData as $key => $value) {
+                            //         if($i == 1) {
+                            //             $hashdata .= '&'.urlencode($key)."=".urlencode($value);
+                            //         } else {
+                            //             $hashdata .= urlencode($key)."=".urlencode($value);
+                            //             $i = 1;
+                            //         }
+                            //         $query .= urlencode($key)."=".urlencode($value).'&';
+                            //     }
+            
+                            //     $vnp_Url = $vnp_Url."?".$query;
+                            //     if(isset($vnp_HashSecret)) {
+                            //         $vnpSecureHash = hash_hmac('sha512', $hashdata, $vnp_HashSecret); //  
+                            //         $vnp_Url .= 'vnp_SecureHash='.$vnpSecureHash;
+                            //     }
+                            //     $returnData = array('code' => '00'
+                            //         , 'message' => 'success'
+                            //         , 'data' => $vnp_Url);
+                            //     if(isset($_POST['id_pttt'])) {
+                            //         header('Location: '.$vnp_Url);
+                            //         die();
+                            //     } else {
+                            //         echo json_encode($returnData);
+                            //     }
+                            // }
+                            // require_once("PHPMailer/sendmail.php");
+                            // chuyển đến trang đơn hàng của bạn
+                            header("location: index.php?act=donhangcuaban");
+                        }
+            
+                        include "view/checkout.php";
+                        break;
         case "donhangcuaban":
+            $listdonhang = loadall_donhang($taikhoan['id']);
+        
             include_once "view/donhangcuaban.php";
             break;
             case 'chitietdonhang':
+                if(isset($_GET['id_donhang'])) {
+                    $id_donhang = $_GET['id_donhang'];
+                    $ttdonhang = loadone_donhang($taikhoan['id'], $id_donhang);
+                    $list_dhct = loadall_donhangchitiet($id_donhang, $taikhoan['id']);
+                }
                 include_once 'view/chitietdonhang.php';
                 break;
         case "blog":
@@ -230,3 +388,4 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
     include_once "view/home.php";
 }
 include_once "view/footer.php";
+exit();

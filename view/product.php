@@ -78,13 +78,13 @@
 
                 </div>
                 <!-- End .product-single-gallery -->
+                <?php foreach ($sp_tt as $sp) { ?>
+                    <div class="col-lg-7 col-md-6 product-single-details prd">
+                        <h1 class="product-title"><?= $onesp['tensp'] ?></h1>
 
-                <div class="col-lg-7 col-md-6 product-single-details">
-                    <h1 class="product-title"><?= $onesp['tensp'] ?></h1>
-
-                    <div class="product-nav">
-                        <div class="product-prev">
-                            <!-- <a href="#">
+                        <div class="product-nav">
+                            <div class="product-prev">
+                                <!-- <a href="#">
                                 <span class="product-link"></span>
 
                                 <span class="product-popup">
@@ -95,10 +95,10 @@
                                     </span>
                                 </span>
                             </a> -->
-                        </div>
+                            </div>
 
-                        <div class="product-next">
-                            <!-- <a href="#">
+                            <div class="product-next">
+                                <!-- <a href="#">
                                 <span class="product-link"></span>
 
                                 <span class="product-popup">
@@ -109,31 +109,30 @@
                                     </span>
                                 </span>
                             </a> -->
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="ratings-container">
-                        <div class="product-ratings">
-                            <span class="ratings" style="width:60%"></span>
-                            <!-- End .ratings -->
-                            <span class="tooltiptext tooltip-top"></span>
+                        <div class="ratings-container">
+                            <div class="product-ratings">
+                                <span class="ratings" style="width:60%"></span>
+                                <!-- End .ratings -->
+                                <span class="tooltiptext tooltip-top"></span>
+                            </div>
+                            <!-- End .product-ratings -->
+
+                            <a href="#" class="rating-link">( 6 Reviews )</a>
                         </div>
-                        <!-- End .product-ratings -->
+                        <!-- End .ratings-container -->
 
-                        <a href="#" class="rating-link">( 6 Reviews )</a>
-                    </div>
-                    <!-- End .ratings-container -->
+                        <hr class="short-divider">
 
-                    <hr class="short-divider">
-
-                    <?php foreach ($sp_tt as $sp) { ?>
-                        <div class="prd">
+                        <div class="prdddd">
                             <section class="allthetich ">
                                 <?php
                                 $i = -1;
                                 foreach ($thetich_in_sanpham as $tt) :
                                     $i++;
-                                    $check = $sp['gia'] == $tt["gia"] ? "style='color:red;border-color: red;'" : "";
+                                    $check = $sp['gia'] == $tt["gia"] ? "style='color:orangered;border-color: orangered;'" : "";
                                 ?>
                                     <div class="thetich " onclick="showthetich('<?= $i ?>')" <?= $check ?>>
                                         <div class="tt">
@@ -157,57 +156,58 @@
                             </ul>
                         </div>
 
-                    <?php } ?>
-                    <!-- End .price-box -->
 
-                    <div class="product-desc">
-                        <p>
-                            <?= $onesp['mota'] ?>
-                        </p>
-                    </div>
-                    <!-- End .product-desc -->
+                        <!-- End .price-box -->
 
-                    <form action="index.php?act=product&id_sanpham=<?= $id_sanpham ?>" method="post">
+                        <div class="product-desc">
+                            <p>
+                                <?= $onesp['mota'] ?>
+                            </p>
+                        </div>
+                        <!-- End .product-desc -->
 
-                        <div class="product-action">
-                            <div class="product-single-qty">
-                                <input class="horizontal-quantity form-control"type="number" name="soluong" min="1" max="<?= $soluong ?>"  >
+                        <form action="index.php?act=product&id_sanpham=<?= $id_sanpham ?>" method="post">
+
+                            <div class="product-action">
+                                <div class="product-single-qty">
+                                    <input class="horizontal-quantity form-control" name="soluong" min="1" max="<?= $sp['soluong'] ?>" style="font-size:20px;" type="text">
+                                </div>
+                                <!-- End .product-single-qty -->
+                                <button type="submit" name="themgiohang" style="background: black;color:white;border:none;padding: 10px 15px">
+                                    <span class="" title="Thêm vào giỏ hàng">Thêm vào giỏ hàng
+                                    </span></button>
+                                <button name="dathangngay" style="background: black;color:white;border:none;padding: 10px 15px">
+                                    <span class="">Đặt Hàng</span></button>
+                                <input type="hidden" name="id_sanpham_thetich" value="<?= $sp['id'] ?>">
+                                <!-- <input type="hidden" name="gia" value="<?= $gia ?>"> -->
                             </div>
-                            <!-- End .product-single-qty -->
-                            <button type="submit" name="themgiohang" style="background: black; color:white;padding: 10px 15px;border: none;">
-                                <span class="" title="Add to Cart">Thêm vào giỏ hàng
-                                </span></button>
-                            <button type="submit" name="dathangngay"style="background: black; color:white;padding: 10px 15px;border: none;">
-                                <span>Đặt Hàng</span></button>
-                            <!-- <input type="hidden" name="id_sanpham_thetich" value="<?= $id ?>">
-                            <input type="hidden" name="gia" value="<?= $gia ?>"> -->
+                        </form>
+                        <!-- Mua hàng -->
+
+                        <!-- End mua hàng -->
+                        <!-- End .product-action -->
+
+                        <hr class="divider mb-0 mt-0">
+
+                        <div class="product-single-share mb-3">
+                            <label class="sr-only">Share:</label>
+
+                            <div class="social-icons mr-2">
+                                <a href="#" class="social-icon social-facebook icon-facebook" target="_blank" title="Facebook"></a>
+                                <a href="#" class="social-icon social-twitter icon-twitter" target="_blank" title="Twitter"></a>
+                                <a href="#" class="social-icon social-linkedin fab fa-linkedin-in" target="_blank" title="Linkedin"></a>
+                                <a href="#" class="social-icon social-gplus fab fa-google-plus-g" target="_blank" title="Google +"></a>
+                                <a href="#" class="social-icon social-mail icon-mail-alt" target="_blank" title="Mail"></a>
+                            </div>
+                            <!-- End .social-icons -->
+
+
                         </div>
-                    </form>
-                    <!-- Mua hàng -->
-
-                    <!-- End mua hàng -->
-                    <!-- End .product-action -->
-
-                    <hr class="divider mb-0 mt-0">
-
-                    <div class="product-single-share mb-3">
-                        <label class="sr-only">Share:</label>
-
-                        <div class="social-icons mr-2">
-                            <a href="#" class="social-icon social-facebook icon-facebook" target="_blank" title="Facebook"></a>
-                            <a href="#" class="social-icon social-twitter icon-twitter" target="_blank" title="Twitter"></a>
-                            <a href="#" class="social-icon social-linkedin fab fa-linkedin-in" target="_blank" title="Linkedin"></a>
-                            <a href="#" class="social-icon social-gplus fab fa-google-plus-g" target="_blank" title="Google +"></a>
-                            <a href="#" class="social-icon social-mail icon-mail-alt" target="_blank" title="Mail"></a>
-                        </div>
-                        <!-- End .social-icons -->
+                        <!-- End .product single-share -->
 
 
                     </div>
-                    <!-- End .product single-share -->
-
-
-                </div>
+                <?php } ?>
                 <!-- End .product-single-details -->
             </div>
             <h2 style="line-height: 10px; height: 40px; border-bottom:1px solid #ccc">Bình luận</h2>

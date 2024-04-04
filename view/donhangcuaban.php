@@ -36,30 +36,34 @@
               </tr>
             </thead>
             <tbody>
-           
+            <?php 
+              foreach($listdonhang as $key => $donhang):
+                extract($donhang);
+             ?>
               <tr>
                 <td class="text-center" scope="row">
-                  1
+                <?=$key+1??""?> 
                 </td>
                 <td class="text-center" scope="row">
-                  chung
+                <?=$ten_nguoinhan??""?>
                 </td>
                 <td class="text-center" scope="row">
-                  00000000
+                <?=$sdt_nguoinhan??""?>
                 </td>
                 <td class="text-center" scope="row">
-                  nhận
+                <?=$pttt??""?>
                 </td>
                 <td class="text-center" scope="row">
-                  30000
+                <?=number_format($tongtien,0,",",".")."<u>đ</u>"??""?>
                 </td>
                 <td class="text-center " scope="row">
-                  hủy
+                <?=$trangthaidonhang??""?>
                 </td>
                 <td class="text-center">
                   <a href="index.php?act=chitietdonhang&id_donhang=<?=$id??""?>" class="btn btn-dark btn--lg">Xem</a>
                 </td>
               </tr>
+              <?php endforeach ?>
               <style>
                 .trangthai{
                   border-radius: 15px;
