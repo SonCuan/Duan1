@@ -60,7 +60,7 @@
                 <?=$trangthaidonhang??""?>
                 </td>
                 <td class="text-center">
-                  <a href="index.php?act=chitietdonhang&id_donhang=<?=$id??""?>" class="btn btn-dark btn--lg">Xem</a>
+                  <a href="index.php?act=chitietdonhang&id_donhang=<?=$id??""?>" class="btn btn-dark btn--lg moi">Xem</a>
                 </td>
               </tr>
               <?php endforeach ?>
@@ -70,6 +70,10 @@
                   color:white;
                   padding: 1px 5px;
                   font-size:10px;
+                }
+                .moi:hover{
+                  background: #ccc;
+                  color: #f3412f ;
                 }
               </style>
             </tbody>

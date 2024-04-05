@@ -1,3 +1,48 @@
+<div class="category-banner-container">
+        <div class="category-banner">
+            <div class="container">
+                <!-- Cửa hàng -->
+
+                <!-- breadcrumb-section start -->
+                <nav class="breadcrumb-section theme1 bg-lighten2 pt-110 pb-110">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="section-title text-center">
+                                    <h2 class="title pb-4 text-dark text-capitalize">
+                                        <img src="assets/images/demoes/demo23/logo.png" alt="Porto Logo" width="113" height="48">
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ol class="breadcrumb bg-transparent m-0 p-0 align-items-center justify-content-center">
+                                    <li class="breadcrumb-item"><a href="index.php">Trang Chủ</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        Giỏ hàng
+                                        <?= $namedm ?? "" ?>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <style>
+                    /* form {
+                        /* display: flex;
+                        align-items: center; */
+                     */
+
+                    .search-input {
+                        margin-left: 10px;
+                        border: 2px solid #fff;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+
+
 <div class="container">
   <div class="row">
     <div class="col-12">

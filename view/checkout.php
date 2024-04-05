@@ -47,7 +47,7 @@
 				<label class="lb">Phương thức thanh toán:</label>
 				<div class="nut_radio">
 					<input type="radio" class="ip" name="id_pttt" value="1" checked=""> Thanh toán khi giao hàng (COD) <br> <br>
-					<input type="radio" class="ip" name="id_pttt" value="2"> Thanh toán bằng VNPAY
+					<input type="radio" class="ip" name="id_pttt" value="2"> Thanh toán bằng MOMO
 				</div>
 
 
@@ -86,7 +86,7 @@
 				<p><strong>Vận chuyển :</strong> Miễn phí vận chuyển</p>
 				<p><strong>Thành tiền :</strong> <?= number_format($tong_gia_don_hang, 0, ",", ".") . " <u>đ</u>" ?></p>
 				<input type="hidden" name="gia" value="<?= $sp['gia'] ?>">
-				<input type="text" name="tongtien" value="<?= $tong_gia_don_hang ?>">
+				<input type="hidden" name="tongtien" value="<?= $tong_gia_don_hang ?>">
 
 
 			</div>

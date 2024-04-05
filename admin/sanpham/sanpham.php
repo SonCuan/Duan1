@@ -64,7 +64,7 @@
                foreach($listsanpham as $sanpham): 
                    extract($sanpham);
                    $suasp ="index.php?act=suasp&id_sanpham=".$id;
-                   $xoasp ="index.php?act=xoasp&id_sanpham=$id";
+                //    $xoasp ="index.php?act=xoasp&id_sanpham=$id";
                    $danhsachbienthe ="index.php?act=homebienthe&id_sanpham=$id";
                 //    $themmoibienthe ="index.php?act=themmoibienthe&id=$id";
                    $thongbao='';
@@ -127,7 +127,7 @@
                ?>
                <td><?=$gia?></td>
                <td><?=$tendm?></td>
-                    <td><a href="<?= $suasp?>"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="<?= $danhsachbienthe?>"><i class="fa-regular fa-eye"></i></a><a href="<?= $xoasp?>" onclick = "return confirm('Bạn có muốn xóa: <?= $tensp?>')"><i class="fa-regular fa-trash-can" style="background: rgb(237, 144, 144);color: rgb(125, 4, 4); font-weight: 700;"></i></a></td>
+                    <td><a href="<?= $suasp?>"><i class="fa-solid fa-pen-to-square" style="background: rgb(241, 241, 143);color: rgb(110, 110, 6);font-weight: 700;"></i></a><a href="<?= $danhsachbienthe?>"><i class="fa-regular fa-eye"></i></a></td>
                 </tr>
                 <?php endforeach;?>
                 <!-- <tr>

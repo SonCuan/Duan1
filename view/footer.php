@@ -41,7 +41,7 @@
                                     <li>
                                         <a href="?act=blog">Liên hệ</a>
                                     </li>
-                                    <li><a href="?act=login">Thông tin tài khoản</a></li>
+                                    <li><a href="?act=dangnhap">Thông tin tài khoản</a></li>
                                 </ul>
                             </div>
                         </div>

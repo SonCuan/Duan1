@@ -28,13 +28,13 @@
                     <div class="container-fluid">
                         <div class=" appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200" style="margin-left: 1100px;" >
                             <h2 class="font-weight-light ls-10 text-primary">Bộ sưu tập!</h2>
-                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big" style="color:#f5f6f8;" ></i></a>
+                            <a href="index.php" class="btn btn-link" style="color: white;"><i>Xem nước hoa của chúng tôi</i><i class="icon-right-open-big" ></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+                
         <!-- End phần slide -->
 
     </section>

@@ -61,7 +61,7 @@
                     <div class="product-slider-container">
                         <div class="label-group">
                             <div class="product-label label-sale">
-                                -89%
+                                -20%
                             </div>
                         </div>
 
@@ -173,17 +173,32 @@
                                     <input class="horizontal-quantity form-control" name="soluong" min="1" max="<?= $sp['soluong'] ?>" style="font-size:20px;" type="text">
                                 </div>
                                 <!-- End .product-single-qty -->
-                                <button type="submit" name="themgiohang" style="background: black;color:white;border:none;padding: 10px 15px">
+                                <button class="themvaogiohang" type="submit"  name="themgiohang" >
                                     <span class="" title="Thêm vào giỏ hàng">Thêm vào giỏ hàng
                                     </span></button>
-                                <button name="dathangngay" style="background: black;color:white;border:none;padding: 10px 15px">
+                                <button class="themvaogiohang" name="dathangngay">
                                     <span class="">Đặt Hàng</span></button>
                                 <input type="hidden" name="id_sanpham_thetich" value="<?= $sp['id'] ?>">
                                 <!-- <input type="hidden" name="gia" value="<?= $gia ?>"> -->
                             </div>
                         </form>
                         <!-- Mua hàng -->
+                                    <style>
+                                        .themvaogiohang{
+                                            background: black;
+                                             color:white; 
+                                             border:none;
+                                            padding: 15px 15px ;
+                                            margin-left: 10px;
+                                            transition: 0.5s;
+                                        }
+                                        .themvaogiohang:hover{
+                                            background: #ccc;
+                                            color: #534a4a;
 
+
+                                        }
+                                    </style>
                         <!-- End mua hàng -->
                         <!-- End .product-action -->
 
@@ -237,9 +252,21 @@
                         if (!empty($_SESSION['taikhoan'])) : ?>
                             <input style=" border-radius:5px 0 0 5px ; " type=" text" class="form-control form-control-sm" placeholder="Gửi bình luận" name="noidung" required>
                             <div class="input-group-append">
-                                <button style="border-radius:0 5px 5px 0; width: 100px;" class="btn btn-sm" type="submit" name="guibinhluan">Gửi
+                                <button  class="btn btn-sm moi" type="submit" name="guibinhluan">Gửi
                                 </button>
                             </div>
+                            <style>
+                                .moi{
+                                    border-radius:0 5px 5px 0;
+                                     width: 100px;
+                                     background: #000;
+                                     color: white;
+                                }
+                                .moi:hover{
+                                    background: #ccc;
+                                     color: #534a4a;
+                                }
+                            </style>
                         <?php
                         else :
                         ?>
@@ -269,7 +296,7 @@
                             <img src="upload/<?= $lq['hinh'] ?>" style="width: 300px; height: 300px; " alt="product">
                         </a>
                         <div class="label-group">
-                            <div class="product-label label-sale">-10%</div>
+                            <div class="product-label label-sale">-20%</div>
                         </div>
 
 
