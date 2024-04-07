@@ -73,4 +73,10 @@ function insert_donhang($id_taikhoan, $ten_nguoinhan, $email_nguoinhan, $sdt_ngu
         $donhangnew = pdo_execute($sql); 
         return $donhangnew ;
     }
+    function check_soluong_cart($id_taikhoan){
+        $sql="SELECT count(id) as tongsoluong FROM giohang 
+        where id_taikhoan =$id_taikhoan";
+        $check= pdo_query_one($sql);
+        return $check['tongsoluong'];
+    }
 ?>

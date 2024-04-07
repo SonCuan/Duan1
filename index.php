@@ -283,77 +283,79 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                             if(isset($_SESSION['listsanpham'])) {
                                 unset($_SESSION['listsanpham']);
                             }
-                            // if($_POST['id_pttt'] == 2) {
-                            //     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-                            //     $vnp_Returnurl = "https://localhost/Duan1/vnpay_php/vnpay_return.php";
-                            //     $vnp_TmnCode = "UN0L5TCK"; //Mã website tại VNPAY 
-                            //     $vnp_HashSecret = "EXYVEJLRKGRAAWZXKOQMKMEOWVXLENMC"; //Chuỗi bí mật
-                            //     $vnp_TxnRef = $checkid; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
-                            //     $vnp_OrderInfo = "Thông tin mua hàng";
-                            //     $vnp_OrderType = "billpayment";
-                            //     $vnp_Amount = $tong_gia_don_hang * 100;
-                            //     $vnp_Locale = "vn";
-                            //     $vnp_BankCode = "";
-                            //     $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
-                            //     //Add Params of 2.0.1 Version
-                            //     $inputData = array(
-                            //         "vnp_Version" => "2.1.0",
-                            //         "vnp_TmnCode" => $vnp_TmnCode,
-                            //         "vnp_Amount" => $vnp_Amount,
-                            //         "vnp_Command" => "pay",
-                            //         "vnp_CreateDate" => date('YmdHis'),
-                            //         "vnp_CurrCode" => "VND",
-                            //         "vnp_IpAddr" => $vnp_IpAddr,
-                            //         "vnp_Locale" => $vnp_Locale,
-                            //         "vnp_OrderInfo" => $vnp_OrderInfo,
-                            //         "vnp_OrderType" => $vnp_OrderType,
-                            //         "vnp_ReturnUrl" => $vnp_Returnurl,
-                            //         "vnp_TxnRef" => $vnp_TxnRef,
-                            //         //
-                            //         // "vnp_Bill_ten_nguoinhan" =>$ten_nguoinhan,
-                            //         // "vnp_Bill_email_nguoinhan"=>$email_nguoinhan,
-                            //         // "vnp_Bill_diachi_nguoinhan" =>$diachi_nguoinhan,
-                            //         // "vnp_Bill_pttt"=>$pttt,
-                            //         // "vnp_Bill_ghichu"=>$ghichu
-                            //     );
+                            if($_POST['id_pttt'] == 2) {
+                                $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+                                $vnp_Returnurl = "https://localhost/duan1/vnpay_php/vnpay_return.php";
+                                $vnp_TmnCode = "U196OP1P"; //Mã website tại VNPAY 
+                                $vnp_HashSecret = "NIQUZAGTOZJLDHSOEDFENLQTZOUTUWOW"; //Chuỗi bí mật
+                                $vnp_TxnRef = $checkid; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
+                                $vnp_OrderInfo = "Thông tin mua hàng";
+                                $vnp_OrderType = "billpayment";
+                                $vnp_Amount = $tong_gia_don_hang * 100;
+                                $vnp_Locale = "vn";
+                                $vnp_BankCode = "";
+                                $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
+                                //Add Params of 2.0.1 Version
+                                $inputData = array(
+                                    "vnp_Version" => "2.1.0",
+                                    "vnp_TmnCode" => $vnp_TmnCode,
+                                    "vnp_Amount" => $vnp_Amount,
+                                    "vnp_Command" => "pay",
+                                    "vnp_CreateDate" => date('YmdHis'),
+                                    "vnp_CurrCode" => "VND",
+                                    "vnp_IpAddr" => $vnp_IpAddr,
+                                    "vnp_Locale" => $vnp_Locale,
+                                    "vnp_OrderInfo" => $vnp_OrderInfo,
+                                    "vnp_OrderType" => $vnp_OrderType,
+                                    "vnp_ReturnUrl" => $vnp_Returnurl,
+                                    "vnp_TxnRef" => $vnp_TxnRef,
+                                    //
+                                    // "vnp_Bill_ten_nguoinhan" =>$ten_nguoinhan,
+                                    // "vnp_Bill_email_nguoinhan"=>$email_nguoinhan,
+                                    // "vnp_Bill_diachi_nguoinhan" =>$diachi_nguoinhan,
+                                    // "vnp_Bill_pttt"=>$pttt,
+                                    // "vnp_Bill_ghichu"=>$ghichu
+                                );
             
-                            //     if(isset($vnp_BankCode) && $vnp_BankCode != "") {
-                            //         $inputData['vnp_BankCode'] = $vnp_BankCode;
-                            //     }
-                            //     if(isset($vnp_Bill_State) && $vnp_Bill_State != "") {
-                            //         $inputData['vnp_Bill_State'] = $vnp_Bill_State;
-                            //     }
-                            //     //var_dump($inputData);
-                            //     ksort($inputData);
-                            //     $query = "";
-                            //     $i = 0;
-                            //     $hashdata = "";
-                            //     foreach($inputData as $key => $value) {
-                            //         if($i == 1) {
-                            //             $hashdata .= '&'.urlencode($key)."=".urlencode($value);
-                            //         } else {
-                            //             $hashdata .= urlencode($key)."=".urlencode($value);
-                            //             $i = 1;
-                            //         }
-                            //         $query .= urlencode($key)."=".urlencode($value).'&';
-                            //     }
+                                if(isset($vnp_BankCode) && $vnp_BankCode != "") {
+                                    $inputData['vnp_BankCode'] = $vnp_BankCode;
+                                }
+                                if(isset($vnp_Bill_State) && $vnp_Bill_State != "") {
+                                    $inputData['vnp_Bill_State'] = $vnp_Bill_State;
+                                }
+                                //var_dump($inputData);
+                                ksort($inputData);
+                                $query = "";
+                                $i = 0;
+                                $hashdata = "";
+                                foreach($inputData as $key => $value) {
+                                    if($i == 1) {
+                                        $hashdata .= '&'.urlencode($key)."=".urlencode($value);
+                                    } else {
+                                        $hashdata .= urlencode($key)."=".urlencode($value);
+                                        $i = 1;
+                                    }
+                                    $query .= urlencode($key)."=".urlencode($value).'&';
+                                }
             
-                            //     $vnp_Url = $vnp_Url."?".$query;
-                            //     if(isset($vnp_HashSecret)) {
-                            //         $vnpSecureHash = hash_hmac('sha512', $hashdata, $vnp_HashSecret); //  
-                            //         $vnp_Url .= 'vnp_SecureHash='.$vnpSecureHash;
-                            //     }
-                            //     $returnData = array('code' => '00'
-                            //         , 'message' => 'success'
-                            //         , 'data' => $vnp_Url);
-                            //     if(isset($_POST['id_pttt'])) {
-                            //         header('Location: '.$vnp_Url);
-                            //         die();
-                            //     } else {
-                            //         echo json_encode($returnData);
-                            //     }
-                            // }
-                            // require_once("PHPMailer/sendmail.php");
+                                $vnp_Url = $vnp_Url."?".$query;
+                                if(isset($vnp_HashSecret)) {
+                                    $vnpSecureHash = hash_hmac('sha512', $hashdata, $vnp_HashSecret); //  
+                                    $vnp_Url .= 'vnp_SecureHash='.$vnpSecureHash;
+                                }
+                                $returnData = array('code' => '00'
+                                    , 'message' => 'success'
+                                    , 'data' => $vnp_Url);
+                                if(isset($_POST['id_pttt'])) {
+                                    header('Location: '.$vnp_Url);
+                                    die();
+                                } else {
+                                    echo json_encode($returnData);
+                                }
+                            }
+                            if ($_POST['id_pttt'] == 1) {
+                                header("location: http://localhost/duan1/index.php?act=giohang");
+                            }
                             // chuyển đến trang đơn hàng của bạn
                             header("location: index.php?act=donhangcuaban");
                         }

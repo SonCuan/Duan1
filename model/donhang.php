@@ -56,6 +56,10 @@ function loadall_donhang($id_taikhoan)
     $donhang = pdo_query($sql);
     return $donhang;
 }
+function huy_donhang($id_donhang){
+    $sql = "Update donhang set id_trangthai =4 where id = $id_donhang";
+    pdo_execute($sql);
+}
 function insert_donhangchitiet($id_donhang, $id_sanpham_thetich, $soluong, $gia)
 {
     $sql = "INSERT INTO chitietdonhang(id_donhang,id_sanpham_thetich,soluong,gia)

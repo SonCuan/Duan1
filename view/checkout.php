@@ -47,12 +47,12 @@
 				<label class="lb">Phương thức thanh toán:</label>
 				<div class="nut_radio">
 					<input type="radio" class="ip" name="id_pttt" value="1" checked=""> Thanh toán khi giao hàng (COD) <br> <br>
-					<input type="radio" class="ip" name="id_pttt" value="2"> Thanh toán bằng MOMO
+					<input type="radio" class="ip" name="id_pttt" value="2"> Thanh toán bằng VNPAY
 				</div>
 
 
 				<label for="address">Ghi chú :</label>
-				<textarea id="address" name="ghichu" rows="4" placeholder="Ghi chú về đơn hàng của bạn, ví dụ ghi chú bí mật khi giao hàng." required></textarea> <br> <br>
+				<textarea id="address" name="ghichu" rows="4" placeholder="Ghi chú về đơn hàng của bạn, ví dụ ghi chú bí mật khi giao hàng." ></textarea> <br> <br>
 
 				<button type="submit" name="hoantatdathang">Xác nhận đặt hàng</button>
 

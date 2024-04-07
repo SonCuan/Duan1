@@ -29,7 +29,7 @@
           </p>
           <p>Số người nhận : <td scope="col"><?= $ttdonhang['sdt_nguoinhan'] ?? "" ?></td>
           </p>
-          <p>Ngày đặt hàng : <td scope="col"><?= date("d/m/Y", strtotime($ttdonhang['ngaydat'])) ?? "" ?></td>
+          <p>Ngày đặt hàng : <td scope="col"><?=date("d/m/Y", strtotime($ttdonhang['ngaydat']))??""?></td>
 
           </p>
           <p>Phương thức thanh toán : <td scope="col"><?= $ttdonhang['pttt'] ?? "" ?></td>
