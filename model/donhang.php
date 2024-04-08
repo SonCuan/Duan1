@@ -84,8 +84,7 @@ function loadall_donhangchitiet($id_donhang, $id_taikhoan)
         join thetich on thetich.id = sanpham_thetich.id_thetich
         join donhang on donhang.id = chitietdonhang.id_donhang
         WHERE id_donhang=$id_donhang and id_taikhoan =$id_taikhoan  
-        group by id_donhang
-        order by id_donhang desc";
+        order by chitietdonhang.id_donhang desc";
     $donhang = pdo_query($sql);
     return $donhang;
 }

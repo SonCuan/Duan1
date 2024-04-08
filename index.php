@@ -192,12 +192,17 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 }
                
             }
+            if(isset($taikhoan['id'])) {
             //lấy số lượng và id-sanpham-bienthe người dùng muốn đặt hàng ngay
             if(isset($_POST['dathangngay'])) {
+                
                 $soluong = $_POST['soluong'];
                 $id_sanpham_thetich = $_POST['id_sanpham_thetich'];
                 header("Location:index.php?act=thanhtoan&id_sanpham_thetich=$id_sanpham_thetich&soluong=$soluong");
             }
+        } else {
+            include "view/yeucaudangnhap.php";
+        }
             include_once "view/product.php";
             break;
             case "giohang":
@@ -362,6 +367,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             
                         include "view/checkout.php";
                         break;
+                        case "camon":
+                            include_once "order-complete.php";
+                            break;
         case "donhangcuaban":
             $listdonhang = loadall_donhang($taikhoan['id']);
         
