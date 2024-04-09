@@ -290,7 +290,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                             }
                             if($_POST['id_pttt'] == 2) {
                                 $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-                                $vnp_Returnurl = "https://localhost/duan1/vnpay_php/vnpay_return.php";
+                                $vnp_Returnurl = "http://localhost/duan1/index.php?act=camon";
                                 $vnp_TmnCode = "U196OP1P"; //Mã website tại VNPAY 
                                 $vnp_HashSecret = "NIQUZAGTOZJLDHSOEDFENLQTZOUTUWOW"; //Chuỗi bí mật
                                 $vnp_TxnRef = $checkid; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
@@ -359,10 +359,10 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                                 }
                             }
                             if ($_POST['id_pttt'] == 1) {
-                                header("location: http://localhost/duan1/index.php?act=giohang");
+                                header("location: http://localhost/duan1/index.php?act=camon");
                             }
                             // chuyển đến trang đơn hàng của bạn
-                            header("location: index.php?act=donhangcuaban");
+                            header("location: index.php?act=camon");
                         }
             
                         include "view/checkout.php";

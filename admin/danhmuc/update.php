@@ -34,7 +34,7 @@
             </script>
         </section>
         <section class="danhmuc">
-            <section class="them"> Tạo mới danh mục</section>
+            <section class="them"> Cập nhập danh mục</section>
             <section class="taodm">
                 <form action="index.php?act=updatedm" method="post">
                 <div class="dm">
