@@ -121,7 +121,7 @@
                             <table>
                                 <tr>
                                     <th>Tháng</th>
-                                    <th>Số lượng sản phẩm</th>
+                                    <th>Số tiền thu về</th>
                                     <br>
                                 </tr>
                                 <?php

@@ -167,14 +167,13 @@
                         <!-- End .product-desc -->
 
                         <form action="index.php?act=product&id_sanpham=<?= $id_sanpham ?>" method="post">
-
                             <div class="product-action">
                                 <div class="product-single-qty">
                                     <input class="horizontal-quantity form-control" name="soluong" min="1" max="<?= $sp['soluong'] ?>" style="font-size:20px;" type="text">
                                 </div>
                                 <!-- End .product-single-qty -->
                                 <button class="themvaogiohang" type="submit"  name="themgiohang" >
-                                    <span class="" title="Thêm vào giỏ hàng">Thêm vào giỏ hàng
+                                    <span class="" onclick = "return confirm('Sản phẩm <?= $onesp['tensp'] ?> đã thêm vào giỏ hàng ')"title="Thêm vào giỏ hàng">Thêm vào giỏ hàng
                                     </span></button>
                                 <button class="themvaogiohang" name="dathangngay">
                                     <span class="">Đặt Hàng</span></button>
